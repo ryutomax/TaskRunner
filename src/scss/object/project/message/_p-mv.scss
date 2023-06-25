@@ -1,0 +1,153 @@
+@use "global" as *;
+
+.p-mv {
+  @include mq (o-tb) {
+    padding: 0 60px
+  }
+}
+
+.p-mv-inner {
+  position: relative;
+  height: calc(100vh - 80px);
+
+  @include mq (o-tb) {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-mv-inner {
+  height: calc(100svh - 80px);
+}
+
+.p-mv-title {
+  position: absolute;
+  top: 44.3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq (o-tb) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.p-mv-title-fonts {
+  display: flex;
+}
+
+.p-mv-title-font {
+  font-size: rem(96);
+  font-weight: 600;
+  font-family: $ff-eng;
+  font-stretch: condensed;
+  color: $white;
+  letter-spacing: 0.064em;
+
+  @include mq (o-sp-s) {
+    font-size: rem(112);
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(200);
+    font-weight: 700;
+    transform: translate(10px, -50%);
+  }
+
+  @include mq (o-tb) {
+    display: flex;
+    align-items: center;
+    left: 0;
+    transform: translate(15px, -50%);
+  }
+}
+
+// タイトルアニメーション
+
+.js-title {
+  display: flex;
+  overflow: hidden;
+
+  .js-title-font {
+    // display: inline-block;
+    transform: translateY(105%);
+
+    @for $i from 1 to 15 {
+      &:nth-child(#{$i}) {
+        animation: fadeInText 1s ease .5+.1*$i+s forwards;
+      }
+    }
+  }
+}
+
+@keyframes fadeInText {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.p-mv-title-sub {
+  position: relative;
+  font-size: rem(30);
+  font-weight: 900;
+  font-family: $ff-jp;
+  letter-spacing: 0.075em;
+  color: $white;
+  padding-left: 20px;
+
+  @include mq (o-tb) {
+    padding-left: 30px;
+  }
+
+  @include mq (o-pc) {
+    padding-left: 80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    top: 10px;
+    left: 5px;
+    background-color: $white;
+    border-radius: 2px;
+
+    @include mq (o-tb) {
+      height: 245%;
+      top: -16px;
+      left: 14px;
+    }
+
+    @include mq (o-pc) {
+      height: 425%;
+      top: -40px;
+      left: 40px;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-mv-title-sub {
+  font-weight: 800;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-mv-title-sub::before {
+  top: 9px;
+
+  @include mq (o-tb) {
+    top: -16px;
+  }
+
+  @include mq (o-pc) {
+    top: -40px;
+  }
+}

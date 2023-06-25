@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.p-cultureIcon{
+    max-width: 990px;
+    margin: 124px auto 0;
+    padding: 0 20px;
+    position: relative;
+
+    @include mq (o-bigPc){
+        max-width: 1200px;
+    }
+
+    @include mq (o-pc){
+        padding: 0;
+        margin-top: 152px;
+    }
+}
+
+.p-cultureIcon-head{
+    height: 19px;
+    margin-bottom: 3px;
+    img{
+        height: 100%;
+        width: auto;
+    }
+
+    @include mq (o-sp){
+        height: 27px;
+        margin-bottom: -10px;
+    }
+    
+}
+
+.p-cultureIcon-boxWrap{
+
+}
+
+.p-cultureIcon-box{
+    padding: 40px 0 50px;
+    &:nth-child(n+2){
+        border-top: 1px solid #F2F2F2;
+    }
+    
+    @include mq (o-sp){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+
+        br{
+            display: none;
+        }
+
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        &:nth-child(1){
+            margin-top: -15px;
+        }
+    }
+}
+
+.p-cultureIcon-title{
+    font-size: rem(20);
+    line-height: calc(32/20);
+    text-align: center;
+    margin-bottom: 14px;
+    font-weight: 900;
+    letter-spacing: .07em;
+    @include mq (o-sp){
+        font-size: rem(25);
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    @include mq (o-tb){
+        font-size: rem(30);
+    }
+}
+
+.p-cultureIcon-desc{
+    font-size: rem(14);
+    line-height: calc(24/14);
+    font-weight: 500;
+    letter-spacing: .04em;
+    @include mq (o-sp){
+        font-size: rem(15);
+        line-height: 2;
+    }
+
+    @include mq (o-tb){
+        font-size: rem(16);
+    }
+}
+
+.p-cultureIcon-txt{
+    @include mq (o-sp){
+        width: 642px;
+    }
+
+    @include mq (o-tb){
+        width: 755px;
+    }
+
+    @include mq(o-bigPc){
+        width: calc(755 / 990 * 100%);
+    }
+}
+
+.p-cultureIcon-pct{
+    width: 140px;
+    margin: 0 auto 20px;
+    @include mq (o-sp){
+        width: 170px;
+        margin: 0;
+    } 
+
+    @include mq (o-tb){
+        width: 200px;
+        margin: 0;
+    } 
+    @include mq(o-bigPc){
+        width: calc(200 / 990 * 100%);
+    }  
+}

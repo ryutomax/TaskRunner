@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+//** global
+@use "global/*";
+
+//** foundation
+@use "foundation/reset";
+@use "foundation/base";
+@use "foundation/swiper-bundle";
+
+//** layout
+@use "layout/*";
+
+//** object
+@use "object/component/*";
+@use "object/project/**";
+@use "object/utility/*";

@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.c-pageHeader {
+  padding: 10px 20px 22px 20px;
+
+  @include mq (o-sp) {
+    display: none;
+  }
+}
+
+.c-pageHeader-title {
+  display: flex;
+  align-items: center;
+}
+
+.c-pageHeader-title-eng {
+  font-size: rem(30);
+  font-weight: 600;
+  font-family: $ff-eng;
+  font-stretch: condensed;
+}
+
+.c-pageHeader-title-jp {
+  position: relative;
+  font-size: rem(12);
+  font-weight: 900;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 190%;
+    border-radius: 15px;
+    background-color: $black;
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .c-pageHeader-title-jp {
+  font-weight: 800;
+}

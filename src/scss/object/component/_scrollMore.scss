@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.c-scrollMore {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translate(-50%, -50%);
+
+  span {
+    position: relative;
+    font-family: $ff-eng;
+    font-stretch: condensed;
+    font-size: rem(15);
+    font-weight: 600;
+    color: $black;
+    letter-spacing: 0.14em;
+
+    &::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background-color: $black;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -15px;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: circleMove 2s infinite;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .c-scrollMore {
+
+  // @include mq (o-sp) {
+  //   bottom: 24px;
+  // }
+}
+
+@keyframes circleMove {
+  0% {
+    // top: -20px;
+    bottom: -15px;
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    // top: 5px;
+    bottom: -40px;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

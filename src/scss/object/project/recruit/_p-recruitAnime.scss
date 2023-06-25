@@ -1,0 +1,308 @@
+@use "global" as *;
+
+
+.p-recruitAnime{
+    z-index: 0;
+    position: relative;
+    width: 335px;
+    height: 307px;
+    margin: 0 auto;
+    .pc{
+        display: none!important;
+    }
+    @include mq (o-sp){
+        width: 510px;
+        height: 469px;
+        margin: 0 auto;
+        .sp{
+            display: none!important;
+        }
+        .pc{
+            display: block!important;
+        }
+    }
+}
+.p-recruitAnime-iconwrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // opacity: 0;;
+    li{
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: auto;
+        }
+        &:nth-child(1){
+            background-image: url('../images/recruit/message/iconbg_01.png');
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            img{
+                height: 50px;
+            }
+        }
+        &:nth-child(2){
+            background-image: url('../images/recruit/message/iconbg_02.png');
+            right: 0;
+            top: 67px;
+            img{
+                height: 50px;
+            }
+        }
+        &:nth-child(3){
+            background-image: url('../images/recruit/message/iconbg_03.png');
+            bottom: 0;
+            right: 43px;
+            img{
+                height: 34px;
+            }
+        }
+        &:nth-child(4){
+            background-image: url('../images/recruit/message/iconbg_04.png');
+            bottom: 0;
+            left: 43px;
+            img{
+                height: 34px;
+            }
+        }
+        &:nth-child(5){
+            background-image: url('../images/recruit/message/iconbg_05.png');
+            top: 67px;
+            left: 0;
+            img{
+                height: 34px;
+            }
+        }
+    }
+
+    @include mq (o-sp){
+        li{
+            width: 181px;
+            height: 181px;
+            &:nth-child(1){
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                img{
+                    height: 39px;
+                }
+            }
+            &:nth-child(2){
+                right: 0;
+                top: 102px;
+                img{
+                    height: 65px;
+                }
+            }
+            &:nth-child(3){
+                bottom: 0;
+                right: 65px;
+                img{
+                    height: 39px;
+                }
+            }
+            &:nth-child(4){
+                bottom: 0;
+                left: 65px;
+                img{
+                    height: 40px;
+                }
+            }
+            &:nth-child(5){
+                top: 102px;
+                left: 0;
+                img{
+                    height: 41px;
+                }
+            }
+        }
+    }
+}
+
+.p-recruitAnime-center{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 96px;
+    width: 124px;
+    height: 124px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: auto;
+        height: 33px;
+    }
+    @include mq (o-sp){
+        width: 188px;
+        height: 188px;
+        img{
+            height: 50px;
+        }
+        top: 145px;
+    }
+}
+
+.p-recruitAnime-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 45px;
+    svg ,img{
+        // transform: rotate(-90deg);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+    }
+
+    img{
+        width: 224px;
+        height: 224px;
+    }
+    
+    circle {
+        fill: transparent;
+        stroke-width: 4;
+        width:calc(244 / 375 * 100vw);
+        height: calc(244 / 375 * 100vw);
+        // animation: circle_sp 1s;
+        @include mq (o-sp){
+            // animation: circle 1s;
+        }
+    }
+
+    circle{
+    }
+    @keyframes circle_sp {
+        0% { stroke-dasharray: 0 703; }
+        99.9%,to { stroke-dasharray: 703 703; }
+    }
+    
+    @keyframes circle {
+        0% { stroke-dasharray: 0 1073; }
+        99.9%,to { stroke-dasharray: 1073 1073; }
+    }
+
+    @include mq (o-sp){
+        svg,img{
+            width: 342px;
+            height: 342px;
+            top: 68px;
+
+            circle{
+
+            }
+        }
+    }
+
+    @include mq(o-sp){
+        top: 3px;
+    }
+}
+
+// .p-recruitAnime-iconwrap{
+//     opacity: 0;;
+// }
+
+.p-cultureRecAnime-main{
+    .p-cultureRecAnime-main-txtwrap,
+    .p-recruitAnime-iconwrap li,
+    .p-recruitAnime-iconwrap li img,
+    .p-recruitAnime-center,
+    .p-recruitAnime-center img,
+    .p-recruitAnime-bg img{
+        opacity: 0;;
+        transition: opacity .3s;
+    }
+    circle{
+        transition: .3s;
+        transition-delay: .1s;
+        opacity: 0;
+    }
+
+    .p-cultureRecAnime-main-txtwrap{
+
+    }
+    .p-recruitAnime-iconwrap li{
+        &:nth-child(1){
+            img{
+                transition-delay: .15s;
+            }
+        }
+        &:nth-child(2){
+            transition-delay: .4s;
+            img{
+                transition-delay: .55s;
+            }
+        }
+        &:nth-child(3){
+            transition-delay: .8s;
+            img{
+                transition-delay: .95s;
+            }
+        }
+        &:nth-child(4){
+            transition-delay: 1.2s;
+            img{
+                transition-delay: 1.3s;
+            }
+        }
+        &:nth-child(5){
+            transition-delay: 1.55s;
+            img{
+                transition-delay: 1.7s;
+            }
+        }
+
+    }
+    .p-recruitAnime-center{
+        transition-delay: 1.85s;
+
+    }
+    .p-recruitAnime-center img{
+        transition-delay: 2s;
+    }
+
+    .p-recruitAnime-bg img{
+        transition-delay: 2.2s;
+    }
+
+    .p-cultureRecAnime-main-txtwrap{
+        transition-delay: 2.5s;
+    }
+
+    &.is-start{
+        .p-cultureRecAnime-main-txtwrap,
+        .p-recruitAnime-iconwrap li,
+        .p-recruitAnime-iconwrap li img,
+        .p-recruitAnime-center,
+        .p-recruitAnime-center img,
+        .p-recruitAnime-bg img{
+        opacity: 1;;
+    }
+        circle{
+            opacity: 1;
+            animation: circle_sp 3.0s;
+        }
+
+        @include mq(o-sp){
+            circle{
+                animation: circle 3.0s;
+            } 
+        }
+    }
+
+}

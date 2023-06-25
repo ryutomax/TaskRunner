@@ -1,0 +1,163 @@
+@use "global" as *;
+
+// html{
+//   background-color: white;
+// }
+// .l-wrap{
+//   background-color: transparent !important;
+// }
+.webgl {
+  position: fixed;
+  z-index: -1000;
+}
+
+.bgcircle {
+  position: relative;
+  @include mq (o-pc) {
+    flex-wrap: nowrap;
+    margin: 0;
+    width: 0;
+  }
+
+  &-circle1 {
+    overflow-x: hidden;
+    width: min(92vw, 1010px);
+    z-index: -1000;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    transform: translate(-50%,-50%) rotateY(180deg);
+    animation: 8s fuwafuwa infinite;
+    transition: opacity 0.5s ease;
+    circle{
+      position: absolute;
+      stroke-dashoffset: 1683px;
+      stroke-dasharray: 1683px;
+    }
+    &.show{
+      circle {
+        -webkit-animation: animate-svg-stroke-1 1s ease-in-out 1s ;
+        animation: animate-svg-stroke-1 1s ease-in-out 1s ;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+    }
+
+
+  }
+  &-circle2{
+    width: min(70vw,430px);
+    z-index: -1000;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 80vh;
+    left: min( calc(6vw - 100px),12px);
+    transform: translate(0, -50%);
+    animation: 8s fuwafuwa2 infinite;
+    transition: opacity 0.5s ease;
+
+    path {
+      position: absolute;
+      stroke-dashoffset: 1353px;
+      stroke-dasharray: 1353px;
+    }
+    &.show{
+      path {
+        -webkit-animation: animate-svg-stroke-2 1.3s ease-in-out 1s ;
+        animation: animate-svg-stroke-2 1.3s ease-in-out 1s ;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+    }
+
+
+
+  }
+}
+
+@-webkit-keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 1683px;
+    stroke-dasharray: 1683px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 1683px;
+  }
+}
+
+@keyframes animate-svg-stroke-1 {
+  0% {
+    stroke-dashoffset: 1683px;
+    stroke-dasharray: 1683px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1683px;
+  }
+}
+
+@-webkit-keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 1353px;
+    stroke-dasharray: 1353px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1353px;
+  }
+}
+
+@keyframes animate-svg-stroke-2 {
+  0% {
+    stroke-dashoffset: 1353px;
+    stroke-dasharray: 1353px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1353px;
+  }
+}
+
+@keyframes fuwafuwa {
+  0%, 100% {
+    transform: translate(-50%,-50%) rotateY(180deg);
+  }
+
+  25% {
+    transform: translate(-51%,-50.2%) rotateY(180deg);
+  }
+
+  50% {
+    transform: translate(-50.2%,-49%) rotateY(180deg);
+  }
+
+  75% {
+    transform: translate(-49%,-51%) rotateY(180deg);
+  }
+}
+
+@keyframes fuwafuwa2 {
+  0%, 100% {
+    transform: translate(-50%,-50%);
+  }
+
+  25% {
+    transform: translate(-50%,-50%);
+  }
+
+  50% {
+    transform: translate(-50%,-49%);
+  }
+
+  75% {
+    transform: translate(-49%,-51%);
+  }
+}
+
+// circle_yellow(circle1)

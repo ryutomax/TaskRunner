@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.u-sp-show {
+  display: none;
+
+  @include mq (o-sp) {
+    display: block;
+  }
+}
+
+.u-sp-none {
+  display: block;
+
+  @include mq (o-sp) {
+    display: none;
+  }
+}
+
+.u-tb-show {
+  display: none;
+
+  @include mq (o-tb) {
+    display: block;
+  }
+}
+
+.u-pc-show {
+  display: none;
+
+  @include mq (o-pc) {
+    display: block;
+  }
+}
+
+.u-tb-none {
+  //タブレット以下で表示
+  display: block;
+
+  @include mq (o-tb) {
+    display: none;
+  }
+}
+
+.u-sp-show-reverse {
+  //スマホで表示　タブレット以上で非表示
+  display: block;
+
+  @include mq (o-sp) {
+    display: none;
+  }
+}
+
+.u-sp-m-show-reverse {
+  //スマホで表示　タブレット以上で非表示
+  display: block;
+
+  @include mq (o-sp-m) {
+    display: none;
+  }
+}
+
+.u-sp-s-show-reverse {
+  //スマホで表示　タブレット以上で非表示
+  display: block;
+
+  @include mq (o-sp-s) {
+    display: none;
+  }
+}
+
+.u-sp-tb-show-flex {
+  display: none;
+
+  @include mq (sp-tb) {
+    display: flex;
+  }
+}
+
+.u-sp-tb-none-flex {
+  display: flex;
+
+  @include mq (sp-tb) {
+    display: none;
+  }
+}

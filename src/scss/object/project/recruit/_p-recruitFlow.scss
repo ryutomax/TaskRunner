@@ -1,0 +1,504 @@
+@use "global" as *;
+
+.p-recruitFlow {
+  margin-top: -20px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+
+  @include mq (o-pc) {
+    margin-top: -30px;
+  }
+}
+
+.p-recruitFlow-inner {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-recruitFlow-search-toggle {
+  position: relative;
+  font-size: rem(18);
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding: 13px 20px 15px 64px;
+  background-color: #F4F4F4;
+  border: 2px solid #C6C6C6;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include mq (o-sp) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+
+  &::before {
+    width: 27px;
+    height: 21px;
+    top: 16px;
+    left: 24px;
+    background-image: url(../images/recruit/search_system.png);
+  }
+
+  &::after {
+    width: 20px;
+    height: 12px;
+    top: 16px;
+    right: 20px;
+    background-image: url(../images/recruit/toggle_arrow.png);
+    transition: transform 0.3s;
+    transform: rotate(180deg);
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-recruitFlow-search-toggle::before {
+  top: 14px;
+}
+
+.is-arrow-active {
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+
+.p-recruitFlow-search {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  display: none;
+
+  @include mq (o-sp) {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.p-recruitFlow-search-check {
+  display: inline-block;
+  margin-right: 25px;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label {
+    display: inline;
+    font-size: rem(15);
+    font-weight: 700;
+    letter-spacing: 0.040em;
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  input[type=checkbox]:checked+label {
+    color: $skyBlue;
+  }
+
+  input[type=checkbox]:checked+label .p-recruitFlow-search-checkbox {
+    border: 2px solid $skyBlue;
+
+    &::after {
+      // background-color: $skyBlue;
+      position: absolute;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-image: url(../images/recruit/img_check.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+
+      @include mq (o-sp) {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.p-recruitFlow-search-checkbox {
+  position: relative;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 5px;
+  border: 2px solid $black;
+  border-radius: 4px;
+
+  @include mq (o-sp) {
+    top: 4px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    bottom: 4px;
+    right: 4px;
+
+    @include mq (o-sp) {
+      top: 3px;
+      left: 0px;
+    }
+  }
+
+}
+
+.p-recruitFlow-result {
+  color: $black;
+  text-align: start;
+  font-size: rem(16);
+  font-weight: 700;
+  margin-bottom: 14px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url(../images/recruit/search_scope.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+  }
+}
+
+.p-recruitFlow-search-inner {
+  @include mq (o-sp) {
+    border-radius: 10px;
+    border: 2px solid #C6C6C6;
+    margin-bottom: 26px;
+    overflow: hidden;
+  }
+}
+
+.p-recruitFlow-search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: $white;
+  border-radius: 10px;
+
+  @include mq (o-sp) {
+    flex-wrap: nowrap;
+    border-radius: 0px;
+    background-color: #F4F4F4;
+  }
+
+  &:first-child {
+    margin-bottom: 10px;
+
+    @include mq (o-sp) {
+      margin-bottom: 0;
+      // border-bottom: 2px dotted #C6C6C6;
+      background-image: linear-gradient(to left, #C6C6C6, #C6C6C6 7px, transparent 0px, transparent 0px);
+      background-size: 14px 2px;
+      background-position:
+        right bottom;
+      background-repeat:
+        repeat-x;
+
+      .p-recruitFlow-search-content {
+        background-image: linear-gradient(to left, #C6C6C6, #C6C6C6 7px, transparent 0px, transparent 0px);
+        background-size: 14px 2px;
+        background-position:
+          right bottom;
+        background-repeat:
+          repeat-x;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+
+    @include mq (o-sp) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.p-recruitFlow-search-ttl {
+  width: 100%;
+  color: $black;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  background-color: #F4F4F4;
+  padding-left: 16px;
+  border: 2px solid #C6C6C6;
+  border-radius: 10px 10px 0 0;
+
+  @include mq (o-sp) {
+    width: 15%;
+    text-align: center;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(18);
+  }
+}
+
+.p-recruitFlow-search-content {
+  width: 100%;
+  padding: 13px 20px 7px 20px;
+  border-left: 2px solid #C6C6C6;
+  border-bottom: 2px solid #C6C6C6;
+  border-right: 2px solid #C6C6C6;
+  border-radius: 0 0 10px 10px;
+
+  @include mq (o-sp) {
+    border-bottom: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 25px 20px 12px 20px;
+    background-color: $white;
+  }
+}
+
+.p-recruitFlow-search-release {
+  text-align: center;
+  color: $black;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 38px;
+  background-color: #F4F4F4;
+  border: 2px solid #C6C6C6;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #777777;
+  }
+
+  @include mq (o-sp) {
+    width: 262px;
+    font-size: rem(15);
+    margin-left: auto;
+    line-height: 42px;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #000000;
+  }
+}
+
+
+
+.p-recruitFlow-result-list {
+  font-size: 14px;
+}
+
+.p-recruitFlow-result-item {
+  background-color: $white;
+  border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @include mq (o-sp) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.p-recruitFlow-result-link {
+  display: block;
+  padding: 30px 20px 26px 20px;
+  box-sizing: border-box;
+  border: 2px solid $black;
+  border-radius: 10px;
+  background-color: $white;
+  transition: border 0.3s;
+
+  @include mq (o-sp) {
+    padding: 30px 30px 27px 30px;
+  }
+
+  &:hover {
+    border: 2px solid rgba(25, 166, 255, 1);
+
+    .p-recruitFlow-result-tags,
+    .p-recruitFlow-result-title,
+    .p-recruitFlow-result-content {
+      opacity: 0.6;
+    }
+
+    .p-recruitFlow-result-btn {
+
+      &::before {
+        opacity: 1;
+        background: linear-gradient(270deg, #6EF6FF 0%, #63EEFF 50%, rgb(25, 166, 255) 100%);
+        background-size: 220% auto;
+        background-position: 1% 50%;
+      }
+
+      span {
+        width: 27px;
+        height: 27px;
+        background-color: $white;
+
+        @include mq (o-sp) {
+          width: 34px;
+          height: 34px;
+        }
+      }
+
+      &::after {
+        background-image: url(../images/recruit/arrow_skyblue.png);
+      }
+
+    }
+  }
+}
+
+.p-recruitFlow-result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  transition: opacity 0.3s;
+
+  @include mq (o-sp) {
+    margin-bottom: 18px;
+  }
+}
+
+.p-recruitFlow-result-tag {
+  color: $skyBlue;
+  border: 2px solid $skyBlue;
+  border-radius: 4px;
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 20px;
+  margin-bottom: 8px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.p-recruitFlow-result-title {
+  font-size: rem(16);
+  font-weight: 700;
+  margin-bottom: 22px;
+  transition: opacity 0.3s;
+
+  @include mq (o-sp) {
+    font-size: rem(24);
+  }
+}
+
+.p-recruitFlow-result-content {
+  margin-bottom: 30px;
+  transition: opacity 0.3s;
+
+  @include mq (o-sp) {
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: rem(14);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+
+    @include mq (o-sp) {
+      font-size: rem(16);
+    }
+  }
+
+  p+p {
+    margin-top: 20px;
+
+    @include mq (o-sp) {
+      margin-top: 22px;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-recruitFlow-result-content p {
+  font-weight: 600;
+}
+
+.p-recruitFlow-result-btn {
+  width: 117px;
+  line-height: 40px;
+  background: $black;
+  color: $white;
+  font-size: rem(18);
+  letter-spacing: 0.2em;
+  margin-left: auto;
+  padding: 1px 28px 1px 0;
+
+  span {
+    transition: all 0.3s;
+
+    &::before {
+      transition: all 0.4s;
+
+      @include mq (o-sp) {
+        left: 50%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  @include mq (o-sp) {
+    width: 160px;
+    font-size: rem(24);
+    line-height: 48px;
+
+    span {
+      left: 82%;
+    }
+  }
+
+  &::after {
+    top: 49%;
+    left: 76%;
+    transition: all 0.4s;
+
+    @include mq (o-sp) {
+      top: 55%;
+      left: 82%;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

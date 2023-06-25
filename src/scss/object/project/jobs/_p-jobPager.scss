@@ -1,0 +1,163 @@
+@use "global" as *;
+
+.p-jobPager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto 80px;
+}
+
+.p-jobPager-num {
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $ff-eng;
+    font-stretch: semi-condensed;
+    font-weight: 700;
+}
+
+.p-jobPager-link,
+.p-jobPager-arrow { 
+    @include mq (o-pc) {
+        transition: .3s;
+        cursor: pointer;
+        path{
+            transition: .3s;
+        }
+
+        &:hover {
+            background: #000;
+            color: #fff;
+            path{
+                stroke:#fff;
+            }
+        }
+    }
+}
+
+.p-jobPager-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    font-size: rem(19);
+
+    &.is-active {
+        background: #000;
+        color: #fff;
+    }
+
+    @include mq (o-pc) {
+        width: 52px;
+        height: 52px;
+        font-size: rem(24);
+    }
+}
+
+.p-jobPager-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 45px;
+    width: 43px;
+    border: 2px solid #000;
+
+    &:before,
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: cover;
+        display: block;
+        transition: .3s;
+        width: 14px;
+        height: 10px;
+    }
+
+    &:before{
+        background-image: url('../images/jobs/pager_arw.svg');
+    }
+    &:after{
+        opacity: 0;
+        z-index: 1;
+        background-image: url('../images/jobs/pager_arw_wt.svg');
+    }
+    
+    &.disabled{
+        pointer-events: none;
+    }
+
+    svg {
+        // content: '';
+        // background-image: url('../images/jobs/pager.svg');
+        background-size: cover;
+        width: 13px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    &.prev {
+        border-right: none;
+        border-radius: 23px 0 0 23px;
+
+        svg {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &.next {
+        border-left: none;
+        border-radius: 0 23px 23px 0;
+        &:before,
+        &:after{
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    @include mq (o-pc) {
+        height: 56px;
+        width: 59px;
+
+        &:before,
+        &:after {
+            width: 15px;
+            height: 12px;
+        }
+
+        &.prev {
+            border-radius: 28px 0 0 28px;
+            &:before,
+            &:after {
+                right: -3px;
+            }
+        }
+
+        &.next {
+            border-radius: 0 28px 28px 0;
+            &:before,
+            &:after {
+                left: -3px;
+            }
+        }
+
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+
+}

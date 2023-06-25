@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.c-logo {}
+
+.c-logo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 60px;
+  background-color: $white;
+  border-radius: 40px;
+}
+
+.c-logo-img {
+  width: 80px;
+}
+
+.c-logo-text {
+  font-size: rem(12);
+  font-family: $ff-eng;
+  font-stretch: condensed;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.012em;
+}

@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.p-cultureBusinessLabel{
+    margin-top: 125px;
+    max-width: 990px;
+    margin: 85px auto 0;
+    padding: 0 20px;
+    position: relative;
+    margin-bottom: 80px;
+
+    @include mq (o-bigPc){
+        max-width: 1200px;
+    }
+
+    @include mq (o-sp){
+        padding: 0 30px;
+        margin-top: 225px;
+        margin-bottom: 105px;
+    }
+
+    @include mq (o-pc){
+        padding:0;
+    }
+}
+
+.p-cultureBusinessLabel-head{
+    margin-bottom: 40px;
+    height: 19px;
+    img{
+        height: 100%;
+        width: auto;
+    }
+    @include mq (o-sp){
+        margin-bottom: 60px;
+        height: 27px;
+    }
+}
+
+.p-cultureBusinessLabel-list{
+
+    @include mq (o-sp){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.p-cultureBusinessLabel-txt{
+    font-weight: 700;
+    margin-top: 16px;
+    font-size: rem(14);
+    text-align: center;
+    letter-spacing: .04em;
+
+    @include mq (o-sp){
+        font-size: rem(16);
+        margin-top: 14px;
+    }
+}
+
+.p-cultureBusinessLabel-item{
+    & + .p-cultureBusinessLabel-item{
+        margin-top: 42px;
+    }
+
+    @include mq (o-sp){
+        width: calc(476 / 992 * 100%);
+        & + .p-cultureBusinessLabel-item{
+            margin-top: 0;
+        }
+        &:nth-child(n+3){
+            margin-top: 45px;
+        }
+
+        &:nth-of-type(2){
+            animation-delay: .2s;
+        }
+
+        &:nth-of-type(3){
+            animation-delay: .4s;
+        }
+
+        &:nth-of-type(4){
+            animation-delay: .6s;
+        }
+    }
+
+    @include mq(o-pc){
+        width: 476px;
+    }
+
+    @include mq (o-bigPc){
+        width: calc(476 / 1000 * 100% );
+    }
+}
+
+.p-cultureBusinessLabel-link{
+    @include mq(o-pc){
+        img{
+            transition: transform .4s;
+        }
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.p-cultureBusinessLabel-pctwrap{
+    overflow: hidden;
+}

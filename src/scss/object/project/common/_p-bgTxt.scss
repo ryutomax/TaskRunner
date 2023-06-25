@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.p-bgTxt{
+    font-family: $ff-eng;
+    color: rgba(0,0,0,.05);
+    font-size: rem(60);
+    line-height: calc(60/44);
+    position: absolute;
+    line-height: calc(44/60);
+    white-space: nowrap;
+    top: -35px;
+    letter-spacing: .08em;
+    font-weight: 600;
+    font-stretch: condensed;
+
+    &--large{
+        @extend .p-bgTxt;
+        font-size: rem(80);
+        top: -75px;
+        white-space: wrap;
+    }
+
+    &.col-01{
+        top: -55px;
+    }
+
+    &.col-02{
+        top: -93px;
+    }
+
+    &.col-03{
+        top: -115px;
+        letter-spacing: .06em;
+    }
+
+    @include mq(o-sp-s){
+        &.txt-adj01{
+            top: -78px;
+        }
+    }
+
+    @include mq(o-tb){
+        font-size: rem(100);
+        top: -57px;
+        letter-spacing: .06em;
+        br{
+            display: none;
+        }
+
+        &.col-03{
+            top: -55px;
+        }
+        &--large{
+            font-size: rem(140);
+            top: -100px;
+            left: -6px;
+
+            &.txt-adj01{
+                top:  -102px;
+            }
+
+            &.col-02{
+                top: -72px;
+            }
+        }
+    }
+
+    @include mq(o-pc){
+        font-size: rem(100);
+        top: -57px;
+        letter-spacing: .06em;
+        br{
+            display: none;
+        }
+
+        &.col-03{
+            top: -55px;
+        }
+        &--large{
+            @extend .p-bgTxt;
+            font-size: rem(140);
+            top: -100px;
+            left: -6px;
+
+            &.txt-adj01{
+                top:  -102px;
+            }
+
+            &.col-02{
+                top: -72px;
+            }
+        }
+    }
+}

@@ -1,0 +1,1019 @@
+@use "global" as *;
+
+.p-tour {
+  padding: 0 20px 60px 20px;
+}
+
+.p-tour-inner {
+  max-width: 750px;
+  margin: 0 auto;
+
+  @include mq (o-sp) {
+    max-width: 992px;
+  }
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-tour-list01,
+.p-tour-list02,
+.p-tour-list03,
+.p-tour-list04,
+.p-tour-list05,
+.p-tour-list06 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// ENTRANCE
+.p-tour-list01 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+
+    &:nth-of-type(4) {
+      width: 100%;
+    }
+  }
+}
+
+// CAFE AREA
+.p-tour-list02 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+
+    &:nth-of-type(4) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(5) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(6) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+
+    &:nth-of-type(7) {
+      width: 100%;
+    }
+
+    &:nth-of-type(8) {
+      width: 100%;
+    }
+
+    &:nth-of-type(9) {
+      width: 100%;
+    }
+
+    &:nth-of-type(10) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(11) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(12) {
+      width: 100%;
+    }
+
+    &:nth-of-type(13) {
+      width: 100%;
+    }
+
+    &:nth-of-type(14) {
+      width: 100%;
+    }
+
+    &:nth-of-type(15) {
+      width: 100%;
+    }
+
+    &:nth-of-type(16) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(17) {
+      width: calc((100% - 10px) / 2);
+    }
+  }
+}
+
+.p-tour-list02-list01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .p-tour-item {
+
+    &:first-of-type {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    .p-tour-item {
+
+      &:first-of-type {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        width: calc((100% - 12px) / 2);
+      }
+
+      &:nth-of-type(3) {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+  }
+
+  .p-tour-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+}
+
+.p-tour-list02-list02 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .p-tour-item {
+    &:first-of-type {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    .p-tour-item {
+
+      &:first-of-type {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        width: calc((100% - 12px) / 2);
+      }
+
+      &:nth-of-type(3) {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+  }
+
+  .p-tour-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+}
+
+.p-tour-list03 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((50% - 12px) / 2);
+      }
+
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((50% - 12px) / 2);
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc(50% - 12px);
+      }
+    }
+
+    &:nth-of-type(4) {
+      width: 100%;
+    }
+
+    &:nth-of-type(5) {
+      width: 100%;
+    }
+
+    &:nth-of-type(6) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: 100%;
+      }
+    }
+
+    &:nth-of-type(7) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px)/ 4);
+      }
+    }
+
+    &:nth-of-type(8) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px)/ 4);
+      }
+    }
+
+    &:nth-of-type(9) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+  }
+}
+
+.p-tour-list03-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .p-tour-item {
+    &:first-of-type {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    .p-tour-item {
+
+      &:first-of-type {
+        position: relative;
+        width: calc((100% - 12px) / 2);
+      }
+
+      &:nth-of-type(2) {
+        width: calc((100% - 12px) / 2);
+      }
+
+      &:nth-of-type(3) {
+        width: 100%;
+      }
+    }
+  }
+
+  .p-tour-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+}
+
+.p-tour-list04 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px)/ 4);
+      }
+
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px)/ 4);
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+  }
+}
+
+.p-tour-list05 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(4) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(5),
+    &:nth-of-type(6),
+    &:nth-of-type(7) {
+      width: 100%;
+    }
+
+    &:nth-of-type(6),
+    &:nth-of-type(7) {
+      @include mq (o-sp) {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+
+    &:nth-of-type(8),
+    &:nth-of-type(9) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(10) {
+      width: 100%;
+
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+
+    &:nth-of-type(11),
+    &:nth-of-type(12) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(13) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(14) {
+      width: 100%;
+    }
+
+    &:nth-of-type(15) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(16) {
+      width: calc((100% - 10px) / 2);
+    }
+  }
+}
+
+.p-tour-list05-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .p-tour-item {
+    &:first-of-type {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    .p-tour-item {
+
+      &:first-of-type,
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        width: calc((100% - 12px) / 2);
+      }
+    }
+  }
+
+  .p-tour-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+}
+
+.p-tour-list06 {
+  >.p-tour-item {
+    &:first-of-type {
+      position: relative;
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 10px) / 2);
+
+      @include mq (o-sp) {
+        width: calc((100% - 36px) / 4);
+      }
+    }
+
+    &:nth-of-type(3) {
+      @include mq (o-sp) {
+        width: calc((100% - 12px) * 2 / 4);
+      }
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      width: 100%;
+    }
+
+    &:nth-of-type(5) {
+      width: 100%;
+    }
+
+    &:nth-of-type(6) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(7) {
+      width: calc((100% - 10px) / 2);
+    }
+
+    &:nth-of-type(8) {
+      width: 100%;
+    }
+  }
+}
+
+.p-tour-list06-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .p-tour-item {
+    cursor: pointer;
+
+    &:first-of-type {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    &:nth-of-type(2) {
+      width: calc((100% - 12px) * 2 / 4);
+    }
+
+    .p-tour-item {
+
+      &:first-of-type,
+      &:nth-of-type(2) {
+        width: calc((100% - 12px) / 2);
+      }
+
+      &:nth-of-type(3) {
+        width: 100%;
+      }
+    }
+  }
+
+  .p-tour-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -12px;
+  }
+}
+
+.p-tour-item-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-tour-item-title-eng {
+  display: inline-block;
+  font-size: rem(28);
+  font-family: $ff-eng;
+  letter-spacing: 0.08em;
+  font-stretch: condensed;
+
+
+  span {
+    margin-left: 0.2em;
+  }
+
+  @include mq (o-sp-s) {
+    font-size: rem(32);
+  }
+
+  @include mq (o-sp-m) {
+    font-size: rem(42);
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(36);
+    margin-bottom: 4px;
+  }
+
+  @include mq (o-tb) {
+    font-size: rem(47);
+  }
+}
+
+.p-tour-item-title-jp {
+  font-size: rem(12);
+  letter-spacing: 0.08em;
+
+  @include mq (o-sp-m) {
+    font-size: rem(15);
+  }
+}
+
+.p-tour-item {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include mq (o-sp) {
+    margin-bottom: 12px;
+  }
+
+  &:hover {
+    >img {
+      transform: scale(1.05);
+    }
+  }
+
+  >img {
+    transition: transform 0.2s;
+  }
+}
+
+.js-modalOpen {
+  cursor: pointer;
+}
+
+// =========================
+// //モーダル
+// =========================
+
+.swiperModalButton {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  // opacity: 1; //開発中
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* モーダルがactiveの時 */
+.modal.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 100;
+}
+
+/* モーダル背景のオーバーレイ部分 */
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* モーダルのコンテンツ */
+.modal__content {
+  position: relative;
+  width: 100%;
+
+  @include mq (o-sp) {}
+}
+
+.modal_inner {
+  width: 89%;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq (o-tb) {
+    max-width: 570px;
+    // padding: 0 120px;
+  }
+
+  @include mq (o-mac) {
+    max-width: 740px;
+    padding-top: 50px;
+  }
+}
+
+.modalInSlider {
+  border-radius: 6px;
+  background-color: $white;
+  height: 540px;
+  height: auto;
+  // margin: 0 125px;
+
+  @include mq (o-sp) {
+    border-radius: 10px;
+  }
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  color: $white;
+  font-size: rem(18);
+  border: 1px solid $white;
+  font-weight: 500;
+  width: 122px;
+  background-color: transparent;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+
+    .lineClose {
+      background: $black;
+
+      &::before {
+        background: $black;
+      }
+    }
+  }
+}
+
+/* 閉じるボタンのX */
+.lineClose {
+  display: inline-block;
+  vertical-align: middle;
+  color: $white;
+  width: 9px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 0.1rem;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    transform: rotate(90deg);
+  }
+}
+
+.swiper-slide {
+  padding: 10px;
+
+  @include mq (o-sp) {
+    padding: 20px;
+  }
+}
+
+.swiper-img {
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  @include mq (o-sp) {
+    margin-bottom: 14px;
+    border-radius: 10px;
+  }
+
+  img {
+    object-fit: cover;
+    height: 180px;
+
+    @include mq (o-sp-s) {
+      height: 210px;
+    }
+
+    @include mq (o-sp-m) {
+      height: 336px;
+    }
+
+    @include mq (o-sp) {
+      height: 270px;
+    }
+
+    @include mq (o-tb) {
+      height: 340px;
+    }
+
+    @include mq (o-mac) {
+      height: 467px;
+    }
+  }
+}
+
+.swiperText {
+  margin: 0;
+  text-align: justify;
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  @include mq (o-sp) {
+    font-size: rem(15);
+  }
+}
+
+.p-tour-modal-pagination {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15px;
+
+  @include mq (o-sp) {}
+}
+
+.swiper-pagination {
+  color: #fff;
+  font-size: rem(12);
+  letter-spacing: -0.08em;
+  font-weight: 500;
+  right: 0;
+
+  @include mq (o-sp) {
+    font-size: rem(15);
+  }
+}
+
+/* 現在のスライド番号 */
+.swiper-pagination-current {}
+
+/* スライド総数 */
+.swiper-pagination-total {}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  width: auto;
+  top: 108px;
+
+  @include mq (o-sp-s) {
+    top: 120px;
+  }
+
+  @include mq (o-sp-m) {
+    top: 180px;
+  }
+
+  @include mq (o-sp) {
+    top: 190px;
+  }
+
+  @include mq (o-tb) {
+    top: 220px;
+  }
+
+  @include mq (o-mac) {
+    top: 328px;
+  }
+
+  &::before {
+    top: 23%;
+    left: 47%;
+    width: 8px;
+    height: 12px;
+    transform: rotate(0);
+
+    @include mq (o-sp) {
+      width: 18px;
+      height: 14px;
+      top: 20%;
+      left: 43%;
+    }
+
+  }
+
+  &::after {
+    content: "";
+  }
+}
+
+.swiper-button-prev {
+  left: 30px;
+
+  @include mq (o-sp) {
+    left: -64px;
+  }
+
+  @include mq (o-tb) {
+    left: -100px;
+  }
+
+  @include mq (o-mac) {
+    left: -164px;
+  }
+
+  &::before {
+    background-image: url(../images/culture/slide/slide_arrow_left_sp.png);
+    z-index: 1;
+    left: -4px;
+
+    @include mq (o-sp) {
+      background-image: url(../images/common/arrow_white_left.png);
+      z-index: -1;
+      left: -7px;
+    }
+
+  }
+}
+
+.swiper-button-next {
+  right: 30px;
+
+  @include mq (o-sp) {
+    right: -64px;
+  }
+
+  @include mq (o-tb) {
+    right: -100px;
+  }
+
+  @include mq (o-mac) {
+    right: -164px;
+  }
+
+  &::before {
+    background-image: url(../images/culture/slide/slide_arrow_right_sp.png);
+    z-index: 1;
+    left: -3px;
+
+    @include mq (o-sp) {
+      background-image: url(../images/common/arrow_white_right.png);
+      z-index: -1;
+      left: -7px;
+    }
+  }
+}
+
+.swiper-button-next-btn,
+.swiper-button-prev-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0);
+
+  &:hover {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include mq (o-sp) {
+    background-color: rgba(255, 255, 255, 0);
+    width: 76px;
+    height: 76px;
+    border: 3px solid $white;
+
+    &:hover {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+}

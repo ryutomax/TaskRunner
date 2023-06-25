@@ -1,0 +1,154 @@
+@use "global" as *;
+
+.p-sectionHeader {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 40px;
+
+  @include mq (o-pc) {
+    padding-top: 60px;
+    margin-bottom: rem(60);
+  }
+}
+
+.p-sectionHeader-inner {
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-sectionHeader-title {
+  font-size: rem(32);
+  font-weight: 900;
+  margin-bottom: 32px;
+
+  @include mq (o-pc) {
+    margin-bottom: rem(60);
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-sectionHeader-title {
+  font-weight: 800;
+}
+
+.p-sectionHeader-title-sub {
+  display: flex;
+  align-items: center;
+  font-size: rem(30);
+  font-weight: 600;
+  font-family: $ff-eng;
+  font-stretch: condensed;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+
+  @include mq (o-sp) {
+    font-size: rem(38);
+  }
+
+  span {
+    position: relative;
+    font-size: rem(12);
+    font-weight: 900;
+    font-family: $ff-jp;
+    margin-left: 14px;
+    padding-left: 14px;
+    line-height: 1.7;
+
+    @include mq (o-sp) {
+      font-size: rem(18);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      width: 3px;
+      height: 110%;
+      background-color: $black;
+      border-radius: 15px;
+
+      @include mq (o-sp) {
+        height: 85%;
+      }
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-sectionHeader-title-sub span {
+  font-weight: 800;
+}
+
+.p-sectionHeader-title-main {
+  font-size: rem(32);
+  font-weight: 900;
+  letter-spacing: 0.075em;
+
+  &.pc {
+    display: none;
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(50);
+  }
+
+  @include mq (o-tb) {
+    font-size: rem(65);
+  }
+
+  @include mq (o-sp) {
+    &.pc {
+      display: block;
+    }
+
+    &.sp {
+      display: none;
+    }
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(80);
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-sectionHeader-title-main {
+  font-weight: 800;
+}
+
+.p-sectionHeader-title-main-fonts {
+  line-height: 1.1;
+}
+
+.p-sectionHeader-content {}
+
+.p-sectionHeader-content-text {
+  font-size: rem(15);
+  line-height: 1.75;
+  letter-spacing: .13em;
+  text-align: justify;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+
+  @include mq (o-pc) {
+    font-size: rem(18);
+  }
+
+  a {
+    color: $skyBlue;
+    text-decoration: underline;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

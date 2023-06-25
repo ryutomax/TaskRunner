@@ -1,0 +1,350 @@
+@use "global" as *;
+
+.p-nextPrev {
+  padding: 80px 20px 60px 20px;
+  background-color: #F4F4F4;
+  position: relative;
+
+  @include mq (o-sp) {
+    padding: 80px 20px 60px 20px;
+  }
+
+  @include mq (o-pc) {
+    padding: 132px 84px 60px 84px;
+  }
+}
+
+.p-nextPrev-inner {}
+
+.p-nextPrev-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 92px;
+
+  @include mq (o-sp) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2px;
+      height: 280px;
+      background-color: $black;
+
+      @include mq (o-bigPc) {
+        height: 310px;
+      }
+    }
+  }
+
+  @include mq (o-pc) {
+    margin-bottom: 130px;
+  }
+}
+
+.p-nextPrev-next,
+.p-nextPrev-prev {
+  position: relative;
+
+  @include mq (o-sp) {
+    width: calc((100% - 40px) / 2);
+    height: 237px;
+    overflow: hidden;
+
+    &:hover {
+      .p-nextPrev-img-inner {
+        transform: scale(1.08);
+      }
+
+      .p-nextPrev-img-mask {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @include mq (o-tb) {
+    width: calc((100% - 64px) / 2);
+  }
+
+  @include mq (o-pc) {
+    width: calc((100% - 110px)/ 2);
+  }
+
+  @include mq (o-bigPc) {
+    height: 270px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    background-image: url(../images/interview/arrow_pre-next_sp.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+
+    @include mq (o-sp) {
+      background-image: url(../images/interview/arrow_pre-next_pc.png);
+      width: 20px;
+      height: 34px;
+    }
+  }
+}
+
+.p-nextPrev-next {
+  margin-bottom: 40px;
+
+  @include mq (o-sp) {
+    margin-bottom: 0px;
+    padding-right: 40px;
+
+    &:hover {
+      &::after {
+        right: -10px;
+      }
+    }
+  }
+
+  @include mq (o-tb) {
+    padding-right: 50px;
+  }
+
+  @include mq (o-pc) {
+    padding-right: 70px;
+  }
+
+  &::after {
+    right: -2px;
+    transition: right 0.3s;
+  }
+}
+
+.p-nextPrev-prev {
+  text-align: end;
+
+  @include mq (o-sp) {
+    text-align: start;
+    padding-left: 40px;
+
+    &:hover {
+      &::after {
+        left: 2px;
+      }
+    }
+  }
+
+  @include mq (o-tb) {
+    padding-left: 50px;
+  }
+
+  @include mq (o-pc) {
+    padding-left: 70px;
+  }
+
+  &::after {
+    top: 48%;
+    left: 12px;
+    transform: rotate(180deg);
+    transition: left 0.3s;
+
+    @include mq (o-sp) {
+      top: 43%;
+    }
+  }
+}
+
+.p-nextPrev-link {
+  display: block;
+  position: relative;
+  padding: 20px 20px;
+  height: 237px;
+  border-radius: 10px;
+  background-size: cover;
+
+  @include mq (o-sp) {
+    width: 99%;
+    display: flex;
+    padding: 20px 0px;
+  }
+}
+
+.p-nextPrev-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 237px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  @include mq (o-sp) {
+    position: relative;
+    height: 230px;
+    top: -20px;
+    margin-left: -160%;
+  }
+
+  @include mq (o-pc) {
+    margin-left: -182%;
+  }
+
+  @include mq (o-bigPc) {
+    height: 270px;
+  }
+}
+
+.p-nextPrev-link-inner {
+  @include mq (o-sp) {
+    width: 300%;
+    // margin-left: -100px;
+  }
+}
+
+.p-nextPrev-img-mask {
+  height: 237px;
+  transition: opacity 0.3s;
+  height: 100%;
+
+  // @include mq (o-sp) {
+  //   height: 230px;
+  // }
+}
+
+.p-nextPrev-img-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 237px;
+  transition: all 0.3s;
+  height: 100%;
+
+  // @include mq (o-sp) {
+  //   height: 230px;
+  // }
+}
+
+.p-nextPrev-prev-num,
+.p-nextPrev-next-num {
+  display: block;
+  font-size: rem(70);
+  font-stretch: semi-condensed;
+  font-family: $ff-eng;
+  color: $white;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+
+  @include mq (o-sp) {
+    color: $black;
+    font-size: 100px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+  }
+}
+
+.p-nextPrev-next-copy,
+.p-nextPrev-prev-copy {
+  color: $white;
+  font-size: rem(15);
+  letter-spacing: 0.1em;
+  font-stretch: condensed;
+  font-family: $ff-jp;
+  font-weight: 900;
+  line-height: calc(23/15);
+  margin-bottom: 4px;
+  display: inline;
+
+  @include mq (o-tb) {
+    line-height: 1.75;
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(16);
+  }
+
+  @media print,
+  screen and (min-width:1366px) {
+    font-size: rem(18);
+  }
+
+  @include mq (o-bigPc) {
+    font-size: rem(20);
+  }
+
+  span {
+    padding: 0 1px 0 4px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+
+    @include mq (o-tb) {
+      padding: 2.5px 1px 2.5px 4px;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-nextPrev-next-copy {
+  font-weight: 800;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-nextPrev-next-copy span,
+.p-nextPrev-prev-copy span {
+  padding: 0.8px 1px 0.8px 4px;
+}
+
+.p-nextPrev-next-job,
+.p-nextPrev-prev-job {
+  display: block;
+  font-size: rem(40);
+  color: $white;
+  letter-spacing: 0.06em;
+  font-stretch: condensed;
+  font-family: $ff-eng;
+  font-weight: 700;
+  margin-bottom: 4px;
+
+  @include mq (o-sp) {
+    font-size: rem(50);
+    color: $black;
+    margin-bottom: 6px;
+  }
+}
+
+.p-nextPrev-next-name,
+.p-nextPrev-prev-name {
+  display: block;
+  font-size: rem(16);
+  color: $white;
+  letter-spacing: 0.04em;
+  font-stretch: condensed;
+  font-family: $ff-eng;
+  font-weight: 700;
+  margin-top: 5px;
+
+  @include mq (o-sp) {
+    color: $black;
+  }
+
+  @include mq (o-tb) {
+    font-size: rem(20);
+  }
+
+  @include mq (o-bigPc) {
+    font-size: rem(24);
+  }
+}

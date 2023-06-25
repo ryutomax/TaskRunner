@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.u-mb30-tb {
+  @include mq (o-pc) {
+    margin-bottom: 30px;
+  }
+}
+
+.u-nav-item-mb {
+  @include mq (o-sp) {
+    margin-bottom: -15.5px;
+  }
+
+  @include mq (o-tb) {
+    margin-bottom: -15px;
+  }
+
+  @include mq (o-pc) {
+    margin-bottom: -7.5px;
+  }
+}
+
+.u-ml-1em-sp {
+  margin-left: -0.4em;
+}

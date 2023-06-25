@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.p-indexHeader {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 40px;
+
+  @include mq (o-pc) {
+    padding-top: 55px;
+    margin-bottom: 60px;
+  }
+}
+
+.p-indexHeader-inner {
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-indexHeader-title {
+  margin-bottom: 32px;
+
+  &--col,
+  &--row{
+    @extend .p-indexHeader-title;
+  }
+
+  &--row{
+    display: flex;
+    align-items: center;
+    .p-indexHeader-title-sub{
+      height: 16px;
+      margin-left: 9px;
+      padding-left: 19px;
+    }
+  }
+
+  @include mq (o-sp) {
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+
+.p-indexHeader-title-main {
+  font-size: rem(70);
+  font-weight: 600;
+  font-family: $ff-eng;
+  letter-spacing: 0.075em;
+  font-stretch: condensed;
+
+  @include mq (o-sp) {
+    font-size: rem(150);
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(200);
+  }
+}
+
+.p-indexHeader-title-font {
+  letter-spacing: 0.06em;
+}
+
+.p-indexHeader-title-sub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: rem(16);
+  font-weight: 900;
+  font-family: $ff-jp;
+  letter-spacing: 0.075em;
+  padding-left: 12px;
+
+  @include mq (o-sp) {
+    font-size: rem(18);
+    padding-left: 30px;
+  }
+
+  @include mq (o-tb) {
+    padding-left: 30px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 4px;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 110%;
+    background-color: $black;
+    border-radius: 15px;
+
+    @include mq (o-sp) {
+      height: 58px;
+      top: 50%;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-indexHeader-title-sub {
+  font-weight: 800;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-indexHeader-title-sub::after {
+  top: 56%;
+
+  @include mq (o-tb) {
+    top: 50%;
+  }
+}
+
+.p-indexHeader-content {
+  @include mq(o-sp){
+    padding: 0 20px;
+  }
+
+  @include mq(o-pc){
+    padding: 0;
+  }
+}
+
+.p-indexHeader-content-text {
+  font-size: rem(15);
+  line-height: calc(25/15);
+  letter-spacing: 0.13em;
+  text-align: justify;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+
+  @include mq (o-pc) {
+    font-size: rem(20);
+  }
+}

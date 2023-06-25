@@ -1,0 +1,194 @@
+@use "global" as *;
+
+.p-jobsSearch{
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 0 20px;
+    @include mq (o-sp){
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        padding: 0;
+        max-width: 100%;
+    }
+
+    @include mq (o-tb){
+        flex-direction: row;
+        width: 1022px;
+        padding:  0 15px;
+    }
+
+    @include mq (o-bigPc){
+        width: 1200px;
+        padding: 0;
+    }
+
+    button{
+        display: block;
+        background: transparent;
+        width: 100%;
+    }
+    @include mq (o-sp){
+        button{
+            width: auto;
+        }
+    }
+
+    & > button{
+        &:nth-child(1){
+            @include mq (o-sp){
+                width: 100%;
+            }
+        
+            @include mq (o-tb){
+                width: 700px;
+            }
+            @include mq (o-bigPc){
+                width: 846px;
+            }
+        }
+
+        &:nth-child(2){
+            @include mq (o-sp){
+                width: 100%;
+            }
+        
+            @include mq (o-tb){
+                width: 262px;
+            }
+            @include mq (o-bigPc){
+                width: 316px;
+            }
+        }
+    }
+}
+
+.p-jobsSearc-sp{
+    display: none;
+    @include mq (o-sp){
+        display: block;
+    }
+}
+
+.p-jobsSearch-fix{
+    margin: 0 auto;
+    font-size: rem(18);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F4F4F4;
+    border: 2px solid #C6C6C6;
+    border-radius: 10px;
+    position: relative;
+    height: 50px;
+    width: calc(100% - 30px);
+    font-weight: 700;
+    padding: 0 20px;
+    margin-top: 20px;
+    &.is-arrow-active{
+        &:after{
+            transform: rotate(0) translateY(-50%);
+        }
+    }
+
+    &:before{
+        content: '';
+        background-image: url('../images/jobs/fix.png');
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        margin-right: 14px;
+    }
+    &:after{
+        content: '';
+        background-image: url('../images/jobs/arrow.png');
+        background-size: cover;
+        width: 20px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        transition: .3s ease-in-out;
+        right: 20px;
+    }
+    &.is-active{
+        &:after{
+            transform: translateY(-50%);
+        }
+    }
+
+    @include mq (o-sp){
+        display: none;
+    }
+}
+
+.p-jobsSearch-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    height: 50px;
+    font-size: rem(18);
+    font-weight: 700;
+
+    @include mq (o-sp){
+        height: 46px;
+        margin-bottom: 10px;
+        &:before{
+            content: '';
+            background-image: url('../images/jobs/search.png');
+            background-size: cover;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+    }
+
+    @include mq (o-tb){
+        margin: 0;
+    }
+    @include mq (o-bigPc){
+        width: 846px;
+    }
+}
+
+.p-jobsSearch-lift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #C6C6C6;
+    background: #F4F4F4;
+    border-radius: 10px;
+    height: 42px;
+    font-size: rem(16);
+    margin-top: 26px;
+    font-weight: 700;
+    color: #000;
+
+    @include mq (o-sp){
+        height: 46px;
+        margin: 0;
+    }
+
+    @include mq (o-tb){
+    }
+    @include mq (o-bigPc){
+    }
+}
+
+.p-jobsSearch-lift,
+.p-jobsSearch-btn {
+    width: 100%;
+    @include mq (o-sp) {
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

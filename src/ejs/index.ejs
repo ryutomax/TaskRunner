@@ -1,0 +1,664 @@
+<% var info={ title : "採用情報｜Happy Element株式会社" , desc : "京都に主要拠点に、モバイルゲームの開発・運営を行うHappy Elements株式会社の採用情報サイトです。社風や働く環境、職種紹介、社員のインタビュー、最新の募集職種情報などを掲載しています。" , css: "./" }; %>
+  <!-- 画像相対パス(dist参照) -->
+  <% const mediaPath=["./assets/images/"]%>
+    <%- include("./include/_head",{meta: info}) -%>
+      <div class="l-wrap-layer top">
+        <!-- 閉じタグは_footer.ejs -->
+        <%- include("./include/_header", {path: './' }) -%>
+          <main class="l-main">
+            <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css"> -->
+            <button class="c-toUpBtn js-toUpBtn u-zindex_10" aria-label="TOPへ戻る">
+            </button>
+            <section class="p-video u-zindex_-10">
+              <video class="p-video-inner" poster="<%= mediaPath %>common/top_mv_img.jpg" webkit-playsinline playsinline muted autoplay loop>
+                <!--
+                  poster：動画ファイルが利用できない環境で代替表示される画像
+                  webkit-playsinline：iOS 9までのSafari用インライン再生指定
+                  playsinline：iOS 10以降のSafari用インライン再生指定
+                  muted：音声をミュートさせる
+                  autoplay：動画を自動再生させる
+                  loop：動画をループさせる
+                  controls：コントロールバーを表示する
+              -->
+                <source src="./assets/movie/top_mv.mp4" type="video/mp4">
+                <p>動画を再生できる環境ではありません。</p>
+              </video>
+              <!--/video-area-->
+            </section>
+            <section class="p-mv">
+              <div class="p-mv-inner">
+                <h2 id="mv-title" class="p-mv-title anime">
+                  <ul id="mvTitle" class="p-mv-title-fonts">
+                    <li class="p-mv-title-font js-mv-font">C</li>
+                    <li class="p-mv-title-font js-mv-font">R</li>
+                    <li class="p-mv-title-font js-mv-font">E</li>
+                    <li class="p-mv-title-font js-mv-font">A</li>
+                    <li class="p-mv-title-font js-mv-font">T</li>
+                    <li class="p-mv-title-font js-mv-font">O</li>
+                    <li class="p-mv-title-font js-mv-font">R</li>
+                  </ul>
+                  <div class="p-mv-title-center">
+                    <ul id="mvTitle" class="p-mv-title-fonts">
+                      <li class="p-mv-title-font js-mv-font">F</li>
+                      <li class="p-mv-title-font js-mv-font">I</li>
+                      <li class="p-mv-title-font js-mv-font">R</li>
+                      <li class="p-mv-title-font js-mv-font">S</li>
+                      <li class="p-mv-title-font js-mv-font">T</li>
+                    </ul>
+                    <div class="p-mv-title-center-right">
+                      <picture>
+                        <source srcset="<%= mediaPath %>top/mv/mv_title_jp_pc.svg" media="(min-width: 768px)" /><!-- 幅500px以上なら表示 -->
+                        <img id="mvTitle" class="p-mv-title-center-right-jp" src="<%= mediaPath %>top/mv/mv_title_jp.svg" alt="RECRUITING INFORMATION"><!-- それ以外で表示 -->
+                      </picture>
+                      <p id="mvTitle" class="p-mv-title-center-right-info"><img src="<%= mediaPath %>top/mv/mv_title_info.svg" alt="RECRUITING INFORMATION"></p>
+                    </div>
+                  </div>
+                  <p id="mvTitle" class="p-mv-title-info"><img src="<%= mediaPath %>top/mv/mv_title_info.svg" alt="RECRUITING INFORMATION"></p>
+                </h2>
+                <div class="c-scrollMore js-anime04">
+                  <span>SCROLL</span>
+                </div>
+              </div>
+              <!-- /.p-mv-inner -->
+            </section>
+            <section class="p-top-message p-top-section">
+              <div class="pc">
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">ゲームを通じて、世の中を幸せにしたい。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text for-eng2">それが、私たちHappy Elements株式会社の思いです。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">この実現に向けて、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">「熱狂的に愛されるコンテンツをつくる」ことを目指し、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">クリエイターは自由と責任を持って進めていきます。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">そう、｢クリエイター・ファースト」が、私たちのカルチャー。</span>
+                </p>
+              </div>
+              <div class="sp">
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">ゲームを通じて、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">世の中を幸せにしたい。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">それが、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text for-eng2">私たちHappy Elements株式会社の</span>
+                </p>
+                <p class="p-top-message-txt js-split-block M-bottom">
+                  <span class="js-split-text">思いです。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">この実現に向けて、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">「熱狂的に愛されるコンテンツを</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">つくる」ことを目指し、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">クリエイターは自由と責任を持って</span>
+                </p>
+                <p class="p-top-message-txt js-split-block M-bottom">
+                  <span class="js-split-text">進めていきます。</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">そう、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">「クリエイター・ファースト」が、</span>
+                </p>
+                <p class="p-top-message-txt js-split-block">
+                  <span class="js-split-text">私たちのカルチャー。</span>
+                </p>
+              </div>
+              <a href="./message" class="c-btn-black">MESSAGE <div class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                    <defs>
+                      <style>
+                        .a,
+                        .c {
+                          fill: none;
+                        }
+
+                        .b {
+                          clip-path: url("#a");
+                        }
+
+                        .c {
+                          stroke: #fff;
+                          stroke-linecap: round;
+                          stroke-width: 3px;
+                        }
+
+                      </style>
+                      <clipPath id="a">
+                        <rect class="a" width="17.514" height="13.021" />
+                      </clipPath>
+                    </defs>
+                    <g class="b">
+                      <g transform="translate(-8.737 1.772)">
+                        <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                        <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </a>
+            </section>
+            <section class="p-top-menu p-top-section">
+              <ul>
+                <li class="about js-anime01">
+                  <a href="./about">
+                    <h3>Happy Elements株式会社について</h3>
+                    <p>ABOUT</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="js-anime02">
+                <li class="business half">
+                  <a href="./business">
+                    <h3>事業紹介</h3>
+                    <p>BUSINESS</p>
+                  </a>
+                </li>
+                <li class="jobs half">
+                  <a href="./jobs">
+                    <h3>職種紹介</h3>
+                    <p>JOBS</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section class="p-top-interview p-top-section">
+              <div class="p-top-interview-header">
+                <h2 class="p-top-section-title">
+                  <ul class="js-anime05">
+                    <li>I</li>
+                    <li>N</li>
+                    <li>T</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>V</li>
+                    <li>I</li>
+                    <li>E</li>
+                    <li>W</li>
+                  </ul>
+                </h2>
+                <div class="p-top-interview-header-btnbox">
+                  <div class="">
+                    <button type="button" name="button" onclick="interviewPCprev();" aria-label="左にスライド"><img src="<%= mediaPath %>common/arrow_white.png" alt=""></button>
+                  </div>
+                  <div class="">
+                    <button type="button" name="button" onclick="interviewPCnext();" aria-label="右にスライド"><img src="<%= mediaPath %>common/arrow_white.png" alt=""></button>
+                  </div>
+                </div>
+              </div>
+              <!-- backgroundの画像はstyle属性から変えてください。 -->
+              <ul id="interviewSlide" class="p-top-interview-list js-anime06">
+                <li class="p-top-interview-list-elem" type="planner" style="background-image: url('<%= mediaPath %>top/interview/bg1.jpg');">
+                  <a href="./interview/01/">
+                    <h3 class="title"><span>PLANNER</span></h3>
+                    <p class="message"><span class="txt">ゲームにイベントに｡自分達の世界観で､ユーザーを沸かせたい。</span><br><span class="name">NAME：Y.U</span></p>
+                    <p class="no">01</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem " type="engineer" style="background-image: url('<%= mediaPath %>top/interview/bg2.jpg');">
+                  <a href="./interview/tt/">
+                    <h3 class="title"><span>ENGINEER</span></h3>
+                    <p class="message"><span class="txt">過度にバグを恐れず、新しい機能や楽しいイベントをいち早くリリース。</span><br><span class="name">NAME：T.T</span></p>
+                    <p class="no">02</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem" type="illustrator" style="background-image: url('<%= mediaPath %>top/interview/bg3.jpg');">
+                  <a href="./interview/03/">
+                    <h3 class="title"><span>ILLUSTRATOR</span></h3>
+                    <p class="message"><span class="txt">自分の描いたキャラクターがやがてステージに立ち、アイドルとして熱狂を生みだす。</span><br><span class="name">NAME：K.M</span></p>
+                    <p class="no">03</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem " type="designer" style="background-image: url('<%= mediaPath %>top/interview/bg4.jpg');">
+                  <a href="./interview/04/">
+                    <h3 class="title"><span>DESIGNER</span></h3>
+                    <p class="message"><span class="txt">ユーザーの喜ぶ姿を間近で見ながら、心を動かすクリエイティブを追求。</span><br><span class="name">NAME：K.A</span></p>
+                    <p class="no">04</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem " type="designer" style="background-image: url('<%= mediaPath %>top/interview/bg5.jpg');">
+                  <a href="./interview/st/">
+                    <h3 class="title"><span>DESIGNER</span></h3>
+                    <p class="message"><span class="txt">誰かを感動させたい、という想いがないと自社開発はできない。</span><br><span class="name">NAME：S.T</span></p>
+                    <p class="no">05</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem " type="illustrator" style="background-image: url('<%= mediaPath %>top/interview/bg6.jpg');">
+                  <a href="./interview/06/">
+                    <h3 class="title"><span>ILLUSTRATOR</span></h3>
+                    <p class="message"><span class="txt">苦手なタッチへの挑戦がユーザーのフェチ心に届き、わたしの武器を増やした。</span><br><span class="name">NAME：M.T</span></p>
+                    <p class="no">06</p>
+                  </a>
+                </li>
+                <li class="p-top-interview-list-elem " type="engineer" style="background-image: url('<%= mediaPath %>top/interview/bg7.jpg');">
+                  <a href="./interview/07/">
+                    <h3 class="title"><span>ENGINEER</span></h3>
+                    <p class="message"><span class="txt">コンテンツファーストでのゲーム作りに取り組む。</span><br><span class="name">NAME：K.K</span></p>
+                    <p class="no">07</p>
+                  </a>
+                </li>
+                <!-- <li class="p-top-interview-list-elem coming">
+                  <h3 class="title"><span>COMING SOON</span></h3>
+                </li> -->
+                <li class="blank-box"></li>
+              </ul>
+              <div class="p-top-interview-footer-btnbox">
+                <div class="">
+                  <button type="button" name="button" onclick="interviewSPprev();" aria-label="左にスライド"><img src="<%= mediaPath %>common/arrow_white.png" alt="↑"></button>
+                </div>
+                <div class="">
+                  <button type="button" name="button" onclick="interviewSPnext();" aria-label="右にスライド"><img src="<%= mediaPath %>common/arrow_white.png" alt="↑"></button>
+                </div>
+              </div>
+            </section>
+            <section class="p-top-culture p-top-section">
+              <h2 class="p-top-section-title">
+                <ul class="js-anime05">
+                  <li>C</li>
+                  <li>U</li>
+                  <li>L</li>
+                  <li>T</li>
+                  <li>U</li>
+                  <li>R</li>
+                  <li>E</li>
+                </ul>
+              </h2>
+              <ul class="js-anime02 p-top-culture-ul">
+                <li class="p-top-culture-ul-li">
+                  <a href="./culture/character/" class="c-button-arrow">
+                    <p>01.</p>
+                    <p>HappyElements株式会社の<span class="inline-block">カルチャー</span></p>
+                    <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-top-culture-ul-li">
+                  <a href="./culture/officetour/" class="c-button-arrow">
+                    <p>02.</p>
+                    <p>オフィスツアー</p>
+                    <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-top-culture-ul-li">
+                  <a href="./culture/data/" class="c-button-arrow">
+                    <p>03.</p>
+                    <p>データで見る<span class="inline-block">HappyElements株式会社</span></p>
+                    <!-- <br class="u-sp-show-reverse"> -->
+                    <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-top-culture-ul-li">
+                  <a href="./culture/benefit/" class="c-button-arrow">
+                    <p>04.</p>
+                    <p>福利厚生/制度</p>
+                    <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section class="p-top-loop">
+              <div class="wrapper">
+                <div class="marquee-anim">
+                  <div class="marquee-inline"> Make The World Happy! </div>
+                  <div class="marquee-inline"> Make The World Happy! </div>
+                  <div class="marquee-inline"> Make The World Happy! </div>
+                  <div class="marquee-inline"> Make The World Happy! </div>
+                  <div class="marquee-inline"> Make The World Happy! </div>
+                </div><!-- marquee-anim -->
+              </div>
+            </section>
+            <section class="p-top-other p-top-section" id="top-recruit">
+              <ul class="p-top-other-row js-anime02">
+                <li class="p-top-other-row-cell recruit">
+                  <p class="p-top-other-row-cell-tag">RECRUIT</p>
+                  <h3 class="p-top-other-row-cell-title">採用情報</h3>
+                  <ul class="">
+                    <li>
+                      <a href="./recruit/joblist/">
+                        <p>募集要項/選考の流れ<br><span>RECRUIT INFO</span></p>
+                        <div class="">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                            <defs>
+                              <style>
+                                .a,
+                                .c {
+                                  fill: none;
+                                }
+
+                                .b {
+                                  clip-path: url("#a");
+                                }
+
+                                .c {
+                                  stroke: #fff;
+                                  stroke-linecap: round;
+                                  stroke-width: 3px;
+                                }
+
+                              </style>
+                              <clipPath id="a">
+                                <rect class="a" width="17.514" height="13.021" />
+                              </clipPath>
+                            </defs>
+                            <g class="b">
+                              <g transform="translate(-8.737 1.772)">
+                                <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                                <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./recruit/faq/">
+                        <p>よくある質問<br><span>FAQ</span></p>
+                        <div class="">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                            <defs>
+                              <style>
+                                .a,
+                                .c {
+                                  fill: none;
+                                }
+
+                                .b {
+                                  clip-path: url("#a");
+                                }
+
+                                .c {
+                                  stroke: #fff;
+                                  stroke-linecap: round;
+                                  stroke-width: 3px;
+                                }
+
+                              </style>
+                              <clipPath id="a">
+                                <rect class="a" width="17.514" height="13.021" />
+                              </clipPath>
+                            </defs>
+                            <g class="b">
+                              <g transform="translate(-8.737 1.772)">
+                                <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                                <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="./recruit/message/">
+                        <p>人事からのメッセージ<br><span>RECRUIT MESSAGE</span></p>
+                        <div class="">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                            <defs>
+                              <style>
+                                .a,
+                                .c {
+                                  fill: none;
+                                }
+
+                                .b {
+                                  clip-path: url("#a");
+                                }
+
+                                .c {
+                                  stroke: #fff;
+                                  stroke-linecap: round;
+                                  stroke-width: 3px;
+                                }
+
+                              </style>
+                              <clipPath id="a">
+                                <rect class="a" width="17.514" height="13.021" />
+                              </clipPath>
+                            </defs>
+                            <g class="b">
+                              <g transform="translate(-8.737 1.772)">
+                                <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                                <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="p-top-other-row-cell twitter">
+                  <p class="p-top-other-row-cell-tag">Twitter</p>
+                  <div class="twitter-inner">
+                    <a class="twitter-timeline" data-tweet-limit="5" data-chrome="noborders nofooter noheader" data-height=”280” href="https://twitter.com/HappyElementsRC">Tweets by cacalianz</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                  <a href="https://twitter.com/HappyElementsRC" target="_blank" rel="noopener noreferrer" class="c-btn-black">Twitterを開く <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="p-top-other-row rowsp js-anime02">
+                <li class="p-top-other-row-cell media">
+                  <h3 class="media-h3">MEDIA<br>CONTENTS</h3>
+                  <div class="">
+                    <a href="https://www.youtube.com/channel/UCnGsO8vRLlw4L87fUQlTwMg" target="_blank" rel="noopener noreferrer" class="youtube"><img src="<%= mediaPath %>common/youtube_icon.png" alt="youtube"></a>
+                    <a href="https://note.com/happyelements/" target="_blank" rel="noopener noreferrer" class="note"><img src="<%= mediaPath %>common/note_icon.png" alt="note"></a>
+                    <a href="https://twitter.com/HappyElementsRC" target="_blank" rel="noopener noreferrer" class="twitter"><img src="<%= mediaPath %>common/twitter_icon.png" alt="twitter"></a>
+                  </div>
+                </li>
+                <li class="p-top-other-row-cell entry">
+                  <h3>ENTRY</h3>
+                  <p>カジュアル面談・WEB面談も実施中。<br>お気軽にご応募ください。</p>
+                  <a href="./recruit/joblist/">
+                    <p>ENTRY / <span>応募する</span></p>
+                    <div class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.514" height="13.021" viewBox="0 0 17.514 13.021">
+                        <defs>
+                          <style>
+                            .a,
+                            .c {
+                              fill: none;
+                            }
+
+                            .b {
+                              clip-path: url("#a");
+                            }
+
+                            .c {
+                              stroke: #fff;
+                              stroke-linecap: round;
+                              stroke-width: 3px;
+                            }
+
+                          </style>
+                          <clipPath id="a">
+                            <rect class="a" width="17.514" height="13.021" />
+                          </clipPath>
+                        </defs>
+                        <g class="b">
+                          <g transform="translate(-8.737 1.772)">
+                            <path class="c" d="M0,0H6.207V6.208" transform="translate(19.74 0.349) rotate(45)" />
+                            <path class="c" d="M13.794,0H0" transform="translate(10.237 4.832)" />
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </main>
+          <script src="./assets/js/nonBundle/Top-min.js"></script>
+          <%- include("./include/_footer", {js: "./" }) -%>

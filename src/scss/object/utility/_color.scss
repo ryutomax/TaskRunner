@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.u-color-w {
+  color: $white;
+
+  &:first-child {
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  @include mq (o-sp) {
+    &:nth-child(2) {
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.u-color-mask {
+  background-color: rgba(138, 138, 138, .302);
+}
+
+.u-color-whiteGray {
+  background-color: #F4F4F4;
+}
+
+.u-mask-pink {
+  background-image: linear-gradient(135deg, rgb(255 106 169 / 65%) 0%, rgb(255 106 169 / 65%) 40%, rgb(254 218 149 / 65%) 100%);
+}
+
+.u-mask-green {
+  background-image: linear-gradient(180deg, rgba(191, 240, 152, .65) 0, rgba(191, 240, 152, .65) 20%, rgba(113, 212, 255, .65) 100%);
+}
+
+.u-mask-blue {
+  background-image: linear-gradient(135deg, rgba(65, 226, 255, .65) 0, rgba(65, 226, 255, .65) 0, rgba(179, 133, 244, .65) 100%);
+}
+
+.u-interview-title-green {
+  color: rgb(51 243 167 / 89%);
+}
+
+.u-interview-title-pink {
+  color: #ff4ea0e3;
+}
+
+.u-interview-title-blue {
+  color: #00aaff;
+}

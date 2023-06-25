@@ -1,0 +1,158 @@
+@use "global" as *;
+
+//ヘッダーナビ　メニュー
+
+.is-menu-show {
+  display: block;
+}
+
+.is-menu-show {
+  animation-name: menu-background;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-background {
+  0% {
+    background-color: hsl(0deg 0% 100% / 0%);
+    backdrop-filter: blur(0px);
+  }
+
+  100% {
+    background-color: hsl(0deg 0% 100% / 95%);
+    backdrop-filter: blur(6px);
+  }
+}
+
+.is-menu-show-text {
+  animation-name: menu-text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.is-menu-show-icons {
+  animation-name: menu-text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.is-stay {
+  overflow: hidden;
+}
+
+.js-menu-btn-bar {
+  transition: all 0.1s;
+}
+
+.is-bar-move {
+  left: 33%;
+  transform-origin: 50% 50%;
+
+  &:first-child {
+    transform: rotate(45deg);
+    top: 50%;
+
+  }
+
+  &:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+
+  @include mq (o-tb) {
+    left: 35%;
+  }
+}
+
+// スクロールトップ
+
+.is-btn-show {
+  opacity: 1;
+}
+
+// コンテンツ出現アニメーション
+
+.js-content-show,
+.js-content-show01,
+.js-content-show02,
+.js-content-show03,
+.js-content-show04 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.is-showUp,
+.is-showUp01,
+.is-showUp02,
+.is-showUp03,
+.is-showUp04 {
+  animation-name: showUp;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-delay: 0.8s;
+}
+
+.is-showUp02 {
+  animation-delay: 0.3s;
+}
+
+.is-showUp03 {
+  animation-delay: 0.4s;
+}
+
+.is-showUp04 {
+  animation-delay: 0.5s;
+}
+
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//　絞り込み検索
+
+.js_target {
+  display: none;
+}
+
+.js_target.js_selected {
+  display: block;
+}
+
+.is-blue {
+  background-color: rgb(109, 118, 254);
+}
+
+// message スクロールマスク
+
+.js-scroll-mask {
+  transition: all 1s;
+}
+
+.is-scroll-mask {
+  background-color: rgba(138, 138, 138, 0.302);
+}

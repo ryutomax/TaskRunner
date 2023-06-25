@@ -1,0 +1,641 @@
+<% const info={ title : "メッセージ｜採用情報｜Happy Elements株式会社" , desc : "京都に主要拠点に、モバイルゲームの開発・運営を行うHappy Elements株式会社の採用情報サイトです。会社として何を大切にし、何を目指すのか。私たちの想いを短いメッセージにまとめました。" , css: "../" }; %>
+  <%- include("../include/_head",{meta: info}) -%>
+    <div class="l-wrap-layer">
+      <!-- 閉じタグは_footer.ejs -->
+      <!-- 画像相対パス(dist参照) -->
+      <% const mediaPath=["../assets/images/"]%>
+        <%- include("../include/_header", {path: '../' }) -%>
+          <main class="l-main js-scroll-mask">
+            <button class="c-toUpBtn js-toUpBtn u-zindex_1">
+            </button>
+            <section class="p-video u-zindex_-10">
+              <video class="p-video-inner" poster="<%= mediaPath %>common/top_mv_img.jpg" webkit-playsinline playsinline muted autoplay loop>
+                <!--
+                  poster：動画ファイルが利用できない環境で代替表示される画像
+                  webkit-playsinline：iOS 9までのSafari用インライン再生指定
+                  playsinline：iOS 10以降のSafari用インライン再生指定
+                  muted：音声をミュートさせる
+                  autoplay：動画を自動再生させる
+                  loop：動画をループさせる
+                  controls：コントロールバーを表示する
+              -->
+                <source src="../assets/movie/top_mv.mp4" type="video/mp4">
+                <p>動画を再生できる環境ではありません。</p>
+              </video>
+              <!--/video-area-->
+            </section>
+            <!-- /.c-toUpBtn -->
+            <section class="p-mv">
+              <div class="p-mv-inner">
+                <h2 class="p-mv-title">
+                  <ul class="p-mv-title-fonts js-title">
+                    <li class="p-mv-title-font js-title-font">M</li>
+                    <li class="p-mv-title-font js-title-font">E</li>
+                    <li class="p-mv-title-font js-title-font">S</li>
+                    <li class="p-mv-title-font js-title-font">S</li>
+                    <li class="p-mv-title-font js-title-font">A</li>
+                    <li class="p-mv-title-font js-title-font">G</li>
+                    <li class="p-mv-title-font js-title-font">E</li>
+                  </ul>
+                  <span class="p-mv-title-sub">メッセージ</span>
+                  <!-- <h2 class="p-mv-title"> MESSAGE <span class="p-mv-title-sub">メッセージ</span> -->
+                </h2>
+                <div class="c-scrollMore">
+                  <span>SCROLL</span>
+                </div>
+              </div>
+              <!-- /.p-mv-inner -->
+            </section>
+            <section class="p-message" id="js-scroll-mask-trigger">
+              <div class="p-message-inner">
+                <h3 class="p-message-title"> クリエイター・ファースト。 <span class="p-message-title-sub">− すべてはユーザーのために −</span>
+                </h3>
+                <!-- <div class="p-message-wrapper"> -->
+                <div class="p-message-wrapper u-sp-show">
+                  <p class="p-message-txt">
+                    <span class="js-split-block">
+                      <span class="js-underLine js-split-text">「Make The World Happy!」</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block">
+                      <span class="js-split-text">ゲームを通じて、世の中を幸せにしたい。</span>
+                    </span><br class="u-sp-show">
+                    <span class="js-split-block">
+                      <span class="js-split-text">それが、私たちHappy Elements株式会社の思いです。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block">
+                      <span class="js-split-text">この実現に向けて、やろうとしていることは</span>
+                    </span><br class="u-sp-show">
+                    <span class="js-split-block">
+                      <span class="js-split-text js-underLine">「クリエイターにとって理想的なゲーム会社をつくる」こと。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block">
+                      <span class="js-split-text">売上目標に追われて、思い通りにゲームがつくれない。</span><br class="u-tb-none">
+                      <span class="js-split-text">現場を理解しない経営陣や </span><br class="u-sp-show">
+                    </span>
+                    <span class="js-split-block">
+                      <span class="js-split-text">ビジネスサイドの介入で、ゲームづくりが混乱する。</span><br class="u-sp-show">
+                    </span>
+                    <span class="js-split-block">
+                      <span class="js-split-text">外注に頼りきりで、予算と納期ありきの</span><br class="u-tb-none">
+                      <span class="js-split-text u-ml-1em-sp">こだわりきれないゲームができ上がる。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">才能や努力ではどうにもならないことに、</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">悔しい思いをしたことはありませんか？</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">私たちは、制作・運営チームに一切の裁量とジャッジを委ねます。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">たとえ社長でも、チームの決定を簡単に覆すことはありません。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">また、売上目標を上から一方的に押しつけることもありません。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">オリジナルにこだわり、できるだけ内部でこだわってつくります。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block">
+                      <span class="js-underLine js-split-text">「熱狂的に愛されるコンテンツをつくる」</span>
+                      <span class="js-split-text">ために、</span>
+                    </span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">クリエイターは自由と責任を持ってゲーム作りを進めます。</span></span><br>
+                    <span class="js-split-block"><span class="js-split-text">すべてはユーザーのために。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">そう、</span></span>
+                    <span class="js-split-block">
+                      <span class="js-underLine">
+                        <span class="js-split-text">「クリエイター　ファースト」</span>
+                      </span>
+                      <span class="js-split-text">が、</span>
+                    </span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">私たちのカルチャー。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">クリエイターたちが自由と責任を持ってゲームづくりを行えば、</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">きっと愛着とこだわりが生まれてくる。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">そのゲームは研ぎ澄まされ、</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">ユーザーに感動と熱狂を生み出す。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">結果として売上が上がり、私たちもユーザーも幸せになる。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">それが私たちの描く理想の姿です。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">そんなの理想論だよ、と笑われるかもしれません。</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">でも、まず理想を掲げないと、何も実現しないじゃないですか。</span></span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block"><span class="js-split-text">こんな青くさい会社で、</span></span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">自分も一緒にやってやろうという人がいれば、うれしい。</span></span><br class="u-sp-show">
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-underLine">
+                      <span class="js-split-block"><span class="js-split-text">京都から、世界へ。</span></span><br>
+                    </span>
+                    <span class="js-split-block">
+                      <span class="js-underLine">
+                        <span class="js-split-text">ユーザーに熱狂的に愛されるゲーム</span>
+                      </span>
+                      <span class="js-split-text">を</span>
+                    </span><br class="u-sp-show">
+                    <span class="js-split-block"><span class="js-split-text">いっしょに生み出していきませんか。</span></span>
+                  </p>
+                </div>
+                <!-- スマホサイズテキスト修正用 -->
+                <!-- <div class="p-message-wrapper u-sp-none">
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine js-split-text-sp">「Make The World Happy!」</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">ゲームを通じて、世の中を幸せにしたい。</span>
+                      <span class="js-split-text-sp">それが、私たちHappy Elements株式会社の思いです。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">この実現に向けて、やろうとしていることは</span>
+                      <span class="js-split-text-sp js-underLine">「クリエイターにとって理想的なゲーム会社をつくる」こと。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">売上目標に追われて、思い通りにゲームがつくれない。</span>
+                      <span class="js-split-text-sp">現場を理解しない経営陣や </span>
+                      <span class="js-split-text-sp">ビジネスサイドの介入で、ゲームづくりが混乱する。</span>
+                      <span class="js-split-text-sp">外注に頼りきりで、予算と納期ありきの</span>
+                      <span class="js-split-text-sp u-ml-1em-sp">こだわりきれないゲームができ上がる。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">才能や努力ではどうにもならないことに、</span>
+                      <span class="js-split-text-sp">悔しい思いをしたことはありませんか？</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">私たちは、制作・運営チームに一切の裁量とジャッジを委ねます。</span>
+                      <span class="js-split-text-sp">たとえ社長でも、チームの決定を簡単に覆すことはありません。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">また、売上目標を上から一方的に押しつけることもありません。</span>
+                      <span class="js-split-text-sp">オリジナルにこだわり、できるだけ内部でこだわってつくります。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine js-split-text-sp">「熱狂的に愛されるコンテンツをつくる」</span>
+                      <span class="js-split-text-sp">ために、</span>
+                      <span class="js-split-text-sp">クリエイターは自由と責任を持ってゲーム作りを進めます。</span>
+                      <span class="js-split-text-sp">すべてはユーザーのために。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">そう、</span>
+                      <span class="js-underLine">
+                        <span class="js-split-text-sp">「クリエイター　ファースト」</span>
+                      </span>
+                      <span class="js-split-text-sp">が、</span>
+                      <span class="js-split-text-sp">私たちのカルチャー。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">クリエイターたちが自由と責任を持ってゲームづくりを行えば、</span>
+                      <span class="js-split-text-sp">きっと愛着とこだわりが生まれてくる。</span>
+                      <span class="js-split-text-sp">そのゲームは研ぎ澄まされ、</span>
+                      <span class="js-split-text-sp">ユーザーに感動と熱狂を生み出す。</span>
+                      <span class="js-split-text-sp">結果として売上が上がり、私たちもユーザーも幸せになる。</span>
+                      <span class="js-split-text-sp">それが私たちの描く理想の姿です。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">そんなの理想論だよ、と笑われるかもしれません。</span>
+                      <span class="js-split-text-sp">でも、まず理想を掲げないと、何も実現しないじゃないですか。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp">こんな青くさい会社で、</span>
+                      <span class="js-split-text-sp">自分も一緒にやってやろうという人がいれば、うれしい。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-underLine">
+                      <span class="js-split-block-sp"><span class="js-split-text-sp">京都から、世界へ。</span></span><br>
+                    </span>
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine">
+                        <span class="js-split-text-sp">ユーザーに熱狂的に愛されるゲーム</span>
+                      </span>
+                      <span class="js-split-text-sp">を</span>
+                      <span class="js-split-text-sp u-ml-1em-sp">いっしょに生み出していきませんか。</span>
+                    </span>
+                  </p>
+                </div> -->
+                <div class="p-message-wrapper u-sp-none">
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine js-split-text-sp "><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">「</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">M</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">a</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">k</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">e</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;"> </span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">T</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">h</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">e</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;"> </span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">W</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">o</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">r</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">l</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">d</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;"> </span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">H</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">a</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">p</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">p</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">y</span></span><span class="visuallyHidden">「Make The World Happy!」</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">通</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">じ</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">て、</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">世</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">中</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">幸</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">い。</span></span><span class="visuallyHidden">ゲームを通じて、世の中を幸せにしたい。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">そ</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">が、</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">私</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">H</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">a</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">p</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">p</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">y</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;"> </span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">E</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">l</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">e</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">m</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">e</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">n</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">t</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">s</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">株</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">式</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">会</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">社</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">思</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">す。</span></span><span class="visuallyHidden">それが、私たちHappy Elements株式会社の思いです。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">実</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">現</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">向</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">け</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">て、</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">や</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">ろ</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">う</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">は</span></span><span class="visuallyHidden">この実現に向けて、やろうとしていることは</span>
+                      <span class="js-split-text-sp js-underLine"><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">「</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">ク</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">リ</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">エ</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">イ</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">タ</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">理</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">想</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">的</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">会</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">社</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">つ</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">る」</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">と。</span></span><span class="visuallyHidden">「クリエイターにとって理想的なゲーム会社をつくる」こと。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">売</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">目</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">標</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">追</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">て、</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">思</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">通</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">つ</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">い。</span></span><span class="visuallyHidden">売上目標に追われて、思い通りにゲームがつくれない。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">現</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">場</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">理</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">解</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">経</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">営</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">陣</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">や</span></span><span class="visuallyHidden">現場を理解しない経営陣や </span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">ビ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">ジ</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">ネ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">ス</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">サ</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">イ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">ド</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">介</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">入</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">で、</span><span class="char" aria-hidden="true" style="animation-delay: 0.6533333333333333s, 0.7066666666666667s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.68s, 0.7333333333333333s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.6933333333333334s, 0.7466666666666667s;">づ</span><span class="char" aria-hidden="true" style="animation-delay: 0.7066666666666667s, 0.76s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.72s, 0.7733333333333333s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.7333333333333333s, 0.7866666666666666s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 0.7466666666666667s, 0.8s;">混</span><span class="char" aria-hidden="true" style="animation-delay: 0.76s, 0.8133333333333334s;">乱</span><span class="char" aria-hidden="true" style="animation-delay: 0.7733333333333333s, 0.8266666666666667s;">す</span><span class="char" aria-hidden="true" style="animation-delay: 0.7866666666666666s, 0.84s;">る。</span></span><span class="visuallyHidden">ビジネスサイドの介入で、ゲームづくりが混乱する。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.8133333333333334s, 0.8666666666666667s;">外</span><span class="char" aria-hidden="true" style="animation-delay: 0.8266666666666667s, 0.88s;">注</span><span class="char" aria-hidden="true" style="animation-delay: 0.84s, 0.8933333333333333s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.8533333333333334s, 0.9066666666666666s;">頼</span><span class="char" aria-hidden="true" style="animation-delay: 0.8666666666666667s, 0.92s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.88s, 0.9333333333333333s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 0.8933333333333333s, 0.9466666666666667s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.9066666666666666s, 0.96s;">で、</span><span class="char" aria-hidden="true" style="animation-delay: 0.9333333333333333s, 0.9866666666666667s;">予</span><span class="char" aria-hidden="true" style="animation-delay: 0.9466666666666667s, 1s;">算</span><span class="char" aria-hidden="true" style="animation-delay: 0.96s, 1.0133333333333334s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.9733333333333334s, 1.0266666666666666s;">納</span><span class="char" aria-hidden="true" style="animation-delay: 0.9866666666666667s, 1.04s;">期</span><span class="char" aria-hidden="true" style="animation-delay: 1s, 1.0533333333333332s;">あ</span><span class="char" aria-hidden="true" style="animation-delay: 1.0133333333333334s, 1.0666666666666667s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 1.0266666666666666s, 1.08s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 1.04s, 1.0933333333333333s;">の</span></span><span class="visuallyHidden">外注に頼りきりで、予算と納期ありきの</span>
+                      <span class="js-split-text-sp u-ml-1em-sp"><span class="char" aria-hidden="true" style="animation-delay: 1.0533333333333332s, 1.1066666666666667s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 1.0666666666666667s, 1.12s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 1.08s, 1.1333333333333333s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 1.0933333333333333s, 1.1466666666666667s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 1.1066666666666667s, 1.16s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 1.12s, 1.1733333333333333s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 1.1333333333333333s, 1.1866666666666668s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 1.1466666666666667s, 1.2s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 1.16s, 1.2133333333333334s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 1.1733333333333333s, 1.2266666666666666s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 1.1866666666666668s, 1.24s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 1.2s, 1.2533333333333334s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 1.2133333333333334s, 1.2666666666666666s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 1.2266666666666666s, 1.28s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 1.24s, 1.2933333333333332s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 1.2533333333333334s, 1.3066666666666666s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 1.2666666666666666s, 1.32s;">る。</span></span><span class="visuallyHidden">こだわりきれないゲームができ上がる。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">才</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">能</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">や</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">努</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">力</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">ど</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">う</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">ら</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">に、</span></span><span class="visuallyHidden">才能や努力ではどうにもならないことに、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">悔</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">思</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">あ</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">ん</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">か？</span></span><span class="visuallyHidden">悔しい思いをしたことはありませんか？</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">私</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">は、</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">制</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">作</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">・</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">運</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">営</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">チ</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">一</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">切</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">裁</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">量</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">ジ</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">ャ</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">ッ</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">ジ</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">委</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">ね</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">す。</span></span><span class="visuallyHidden">私たちは、制作・運営チームに一切の裁量とジャッジを委ねます。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">え</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">社</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">長</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">も、</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">チ</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">決</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">定</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">簡</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">単</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">覆</span><span class="char" aria-hidden="true" style="animation-delay: 0.6533333333333333s, 0.7066666666666667s;">す</span><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.68s, 0.7333333333333333s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.6933333333333334s, 0.7466666666666667s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.7066666666666667s, 0.76s;">あ</span><span class="char" aria-hidden="true" style="animation-delay: 0.72s, 0.7733333333333333s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.7333333333333333s, 0.7866666666666666s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.7466666666666667s, 0.8s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.76s, 0.8133333333333334s;">ん。</span></span><span class="visuallyHidden">たとえ社長でも、チームの決定を簡単に覆すことはありません。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">た、</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">売</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">目</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">標</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">か</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">ら</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">一</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">方</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">的</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">押</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">つ</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">け</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">あ</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">ん。</span></span><span class="visuallyHidden">また、売上目標を上から一方的に押しつけることもありません。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">オ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">リ</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">ジ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">ナ</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">ル</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">り、</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">け</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">内</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">部</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6533333333333333s, 0.7066666666666667s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 0.68s, 0.7333333333333333s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6933333333333334s, 0.7466666666666667s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.7066666666666667s, 0.76s;">つ</span><span class="char" aria-hidden="true" style="animation-delay: 0.72s, 0.7733333333333333s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.7333333333333333s, 0.7866666666666666s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.7466666666666667s, 0.8s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.76s, 0.8133333333333334s;">す。</span></span><span class="visuallyHidden">オリジナルにこだわり、できるだけ内部でこだわってつくります。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine js-split-text-sp "><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">「</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">熱</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">狂</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">的</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">愛</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">さ</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">コ</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">ン</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">テ</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">ン</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">ツ</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">つ</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">る」</span></span><span class="visuallyHidden">「熱狂的に愛されるコンテンツをつくる」</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">め</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">に、</span></span><span class="visuallyHidden">ために、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">ク</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">リ</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">エ</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">イ</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">タ</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">自</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">由</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">責</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">任</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">持</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">作</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">進</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">め</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">す。</span></span><span class="visuallyHidden">クリエイターは自由と責任を持ってゲーム作りを進めます。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">す</span><span class="char" aria-hidden="true" style="animation-delay: 0.68s, 0.7333333333333333s;">べ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6933333333333334s, 0.7466666666666667s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.7066666666666667s, 0.76s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.72s, 0.7733333333333333s;">ユ</span><span class="char" aria-hidden="true" style="animation-delay: 0.7333333333333333s, 0.7866666666666666s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.7466666666666667s, 0.8s;">ザ</span><span class="char" aria-hidden="true" style="animation-delay: 0.76s, 0.8133333333333334s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.7733333333333333s, 0.8266666666666667s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.7866666666666666s, 0.84s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.8s, 0.8533333333333334s;">め</span><span class="char" aria-hidden="true" style="animation-delay: 0.8133333333333334s, 0.8666666666666667s;">に。</span></span><span class="visuallyHidden">すべてはユーザーのために。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">そ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">う、</span></span><span class="visuallyHidden">そう、</span>
+                      <span class="js-underLine">
+                        <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">「</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">ク</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">リ</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">エ</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">イ</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">タ</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">　</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">フ</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">ァ</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">ス</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">ト」</span></span><span class="visuallyHidden">「クリエイター　ファースト」</span>
+                      </span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">が、</span></span><span class="visuallyHidden">が、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">私</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">カ</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">ル</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">チ</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">ャ</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">ー。</span></span><span class="visuallyHidden">私たちのカルチャー。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">ク</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">リ</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">エ</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">イ</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">タ</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">自</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">由</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">責</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">任</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">持</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">づ</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">行</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">え</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">ば、</span></span><span class="visuallyHidden">クリエイターたちが自由と責任を持ってゲームづくりを行えば、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">愛</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">着</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.48s, 0.5333333333333333s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">り</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">生</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">る。</span></span><span class="visuallyHidden">きっと愛着とこだわりが生まれてくる。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">そ</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.6533333333333333s, 0.7066666666666667s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.68s, 0.7333333333333333s;">ム</span><span class="char" aria-hidden="true" style="animation-delay: 0.6933333333333334s, 0.7466666666666667s;">は</span><span class="char" aria-hidden="true" style="animation-delay: 0.7066666666666667s, 0.76s;">研</span><span class="char" aria-hidden="true" style="animation-delay: 0.72s, 0.7733333333333333s;">ぎ</span><span class="char" aria-hidden="true" style="animation-delay: 0.7333333333333333s, 0.7866666666666666s;">澄</span><span class="char" aria-hidden="true" style="animation-delay: 0.7466666666666667s, 0.8s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.76s, 0.8133333333333334s;">さ</span><span class="char" aria-hidden="true" style="animation-delay: 0.7733333333333333s, 0.8266666666666667s;">れ、</span></span><span class="visuallyHidden">そのゲームは研ぎ澄まされ、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.8s, 0.8533333333333334s;">ユ</span><span class="char" aria-hidden="true" style="animation-delay: 0.8133333333333334s, 0.8666666666666667s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.8266666666666667s, 0.88s;">ザ</span><span class="char" aria-hidden="true" style="animation-delay: 0.84s, 0.8933333333333333s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.8533333333333334s, 0.9066666666666666s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.8666666666666667s, 0.92s;">感</span><span class="char" aria-hidden="true" style="animation-delay: 0.88s, 0.9333333333333333s;">動</span><span class="char" aria-hidden="true" style="animation-delay: 0.8933333333333333s, 0.9466666666666667s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.9066666666666666s, 0.96s;">熱</span><span class="char" aria-hidden="true" style="animation-delay: 0.92s, 0.9733333333333334s;">狂</span><span class="char" aria-hidden="true" style="animation-delay: 0.9333333333333333s, 0.9866666666666667s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.9466666666666667s, 1s;">生</span><span class="char" aria-hidden="true" style="animation-delay: 0.96s, 1.0133333333333334s;">み</span><span class="char" aria-hidden="true" style="animation-delay: 0.9733333333333334s, 1.0266666666666666s;">出</span><span class="char" aria-hidden="true" style="animation-delay: 0.9866666666666667s, 1.04s;">す。</span></span><span class="visuallyHidden">ユーザーに感動と熱狂を生み出す。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 1.0133333333333334s, 1.0666666666666667s;">結</span><span class="char" aria-hidden="true" style="animation-delay: 1.0266666666666666s, 1.08s;">果</span><span class="char" aria-hidden="true" style="animation-delay: 1.04s, 1.0933333333333333s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 1.0533333333333332s, 1.1066666666666667s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 1.0666666666666667s, 1.12s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 1.08s, 1.1333333333333333s;">売</span><span class="char" aria-hidden="true" style="animation-delay: 1.0933333333333333s, 1.1466666666666667s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 1.1066666666666667s, 1.16s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 1.12s, 1.1733333333333333s;">上</span><span class="char" aria-hidden="true" style="animation-delay: 1.1333333333333333s, 1.1866666666666668s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 1.1466666666666667s, 1.2s;">り、</span><span class="char" aria-hidden="true" style="animation-delay: 1.1733333333333333s, 1.2266666666666666s;">私</span><span class="char" aria-hidden="true" style="animation-delay: 1.1866666666666668s, 1.24s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 1.2s, 1.2533333333333334s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 1.2133333333333334s, 1.2666666666666666s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 1.2266666666666666s, 1.28s;">ユ</span><span class="char" aria-hidden="true" style="animation-delay: 1.24s, 1.2933333333333332s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 1.2533333333333334s, 1.3066666666666666s;">ザ</span><span class="char" aria-hidden="true" style="animation-delay: 1.2666666666666666s, 1.32s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 1.28s, 1.3333333333333333s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 1.2933333333333332s, 1.3466666666666667s;">幸</span><span class="char" aria-hidden="true" style="animation-delay: 1.3066666666666666s, 1.36s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 1.32s, 1.3733333333333333s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 1.3333333333333333s, 1.3866666666666667s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 1.3466666666666667s, 1.4s;">る。</span></span><span class="visuallyHidden">結果として売上が上がり、私たちもユーザーも幸せになる。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 1.3733333333333333s, 1.4266666666666667s;">そ</span><span class="char" aria-hidden="true" style="animation-delay: 1.3866666666666667s, 1.44s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 1.4s, 1.4533333333333334s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 1.4133333333333333s, 1.4666666666666666s;">私</span><span class="char" aria-hidden="true" style="animation-delay: 1.4266666666666667s, 1.48s;">た</span><span class="char" aria-hidden="true" style="animation-delay: 1.44s, 1.4933333333333334s;">ち</span><span class="char" aria-hidden="true" style="animation-delay: 1.4533333333333334s, 1.5066666666666666s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 1.4666666666666666s, 1.52s;">描</span><span class="char" aria-hidden="true" style="animation-delay: 1.48s, 1.5333333333333334s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 1.4933333333333334s, 1.5466666666666666s;">理</span><span class="char" aria-hidden="true" style="animation-delay: 1.5066666666666666s, 1.56s;">想</span><span class="char" aria-hidden="true" style="animation-delay: 1.52s, 1.5733333333333333s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 1.5333333333333334s, 1.5866666666666667s;">姿</span><span class="char" aria-hidden="true" style="animation-delay: 1.5466666666666666s, 1.6s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 1.56s, 1.6133333333333333s;">す。</span></span><span class="visuallyHidden">それが私たちの描く理想の姿です。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">そ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">ん</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">の</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">理</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">想</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">論</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">だ</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">よ、</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">笑</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">わ</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">か</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">ん。</span></span><span class="visuallyHidden">そんなの理想論だよ、と笑われるかもしれません。</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">も、</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">ず</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">理</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">想</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">を</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">掲</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">げ</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">と、</span><span class="char" aria-hidden="true" style="animation-delay: 0.49333333333333335s, 0.5466666666666666s;">何</span><span class="char" aria-hidden="true" style="animation-delay: 0.5066666666666667s, 0.56s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 0.52s, 0.5733333333333334s;">実</span><span class="char" aria-hidden="true" style="animation-delay: 0.5333333333333333s, 0.5866666666666667s;">現</span><span class="char" aria-hidden="true" style="animation-delay: 0.5466666666666666s, 0.6s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.56s, 0.6133333333333333s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.5733333333333334s, 0.6266666666666667s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.5866666666666667s, 0.64s;">じ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6s, 0.6533333333333333s;">ゃ</span><span class="char" aria-hidden="true" style="animation-delay: 0.6133333333333333s, 0.6666666666666666s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.6266666666666667s, 0.68s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.64s, 0.6933333333333334s;">で</span><span class="char" aria-hidden="true" style="animation-delay: 0.6533333333333333s, 0.7066666666666667s;">す</span><span class="char" aria-hidden="true" style="animation-delay: 0.6666666666666666s, 0.72s;">か。</span></span><span class="visuallyHidden">でも、まず理想を掲げないと、何も実現しないじゃないですか。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-split-block-sp">
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">こ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">ん</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">な</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">青</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">く</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">さ</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">会</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">社</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">で、</span></span><span class="visuallyHidden">こんな青くさい会社で、</span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">自</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">分</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">も</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">一</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">緒</span><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">や</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">や</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">ろ</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">う</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">と</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">う</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">人</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">が</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">ば、</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">う</span><span class="char" aria-hidden="true" style="animation-delay: 0.44s, 0.49333333333333335s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.4533333333333333s, 0.5066666666666667s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.4666666666666667s, 0.52s;">い。</span></span><span class="visuallyHidden">自分も一緒にやってやろうという人がいれば、うれしい。</span>
+                    </span>
+                  </p>
+                  <p class="p-message-txt">
+                    <span class="js-underLine">
+                      <span class="js-split-block-sp"><span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">京</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">都</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">か</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">ら、</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">世</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">界</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">へ。</span></span><span class="visuallyHidden">京都から、世界へ。</span></span><br>
+                    </span>
+                    <span class="js-split-block-sp">
+                      <span class="js-underLine">
+                        <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0s, 0.05333333333333334s;">ユ</span><span class="char" aria-hidden="true" style="animation-delay: 0.013333333333333334s, 0.06666666666666667s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.02666666666666667s, 0.08s;">ザ</span><span class="char" aria-hidden="true" style="animation-delay: 0.04s, 0.09333333333333334s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.05333333333333334s, 0.10666666666666667s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.06666666666666667s, 0.12s;">熱</span><span class="char" aria-hidden="true" style="animation-delay: 0.08s, 0.13333333333333333s;">狂</span><span class="char" aria-hidden="true" style="animation-delay: 0.09333333333333334s, 0.14666666666666667s;">的</span><span class="char" aria-hidden="true" style="animation-delay: 0.10666666666666667s, 0.16s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.12s, 0.17333333333333334s;">愛</span><span class="char" aria-hidden="true" style="animation-delay: 0.13333333333333333s, 0.18666666666666668s;">さ</span><span class="char" aria-hidden="true" style="animation-delay: 0.14666666666666667s, 0.2s;">れ</span><span class="char" aria-hidden="true" style="animation-delay: 0.16s, 0.21333333333333335s;">る</span><span class="char" aria-hidden="true" style="animation-delay: 0.17333333333333334s, 0.22666666666666666s;">ゲ</span><span class="char" aria-hidden="true" style="animation-delay: 0.18666666666666668s, 0.24s;">ー</span><span class="char" aria-hidden="true" style="animation-delay: 0.2s, 0.25333333333333335s;">ム</span></span><span class="visuallyHidden">ユーザーに熱狂的に愛されるゲーム</span>
+                      </span>
+                      <span class="js-split-text-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.21333333333333335s, 0.26666666666666666s;">を</span></span><span class="visuallyHidden">を</span>
+                      <span class="js-split-text-sp u-ml-1em-sp"><span class="char" aria-hidden="true" style="animation-delay: 0.22666666666666666s, 0.28s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.24s, 0.29333333333333333s;">っ</span><span class="char" aria-hidden="true" style="animation-delay: 0.25333333333333335s, 0.30666666666666664s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.26666666666666666s, 0.32s;">ょ</span><span class="char" aria-hidden="true" style="animation-delay: 0.28s, 0.3333333333333333s;">に</span><span class="char" aria-hidden="true" style="animation-delay: 0.29333333333333333s, 0.3466666666666667s;">生</span><span class="char" aria-hidden="true" style="animation-delay: 0.30666666666666664s, 0.36s;">み</span><span class="char" aria-hidden="true" style="animation-delay: 0.32s, 0.37333333333333335s;">出</span><span class="char" aria-hidden="true" style="animation-delay: 0.3333333333333333s, 0.38666666666666666s;">し</span><span class="char" aria-hidden="true" style="animation-delay: 0.3466666666666667s, 0.4s;">て</span><span class="char" aria-hidden="true" style="animation-delay: 0.36s, 0.41333333333333333s;">い</span><span class="char" aria-hidden="true" style="animation-delay: 0.37333333333333335s, 0.4266666666666667s;">き</span><span class="char" aria-hidden="true" style="animation-delay: 0.38666666666666666s, 0.44s;">ま</span><span class="char" aria-hidden="true" style="animation-delay: 0.4s, 0.4533333333333333s;">せ</span><span class="char" aria-hidden="true" style="animation-delay: 0.41333333333333333s, 0.4666666666666667s;">ん</span><span class="char" aria-hidden="true" style="animation-delay: 0.4266666666666667s, 0.48s;">か。</span></span><span class="visuallyHidden">いっしょに生み出していきませんか。</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <!-- /.p-message-wrapper-->
+              <div class="p-message-ceo">
+                <p class="p-message-ceo-txt">代表取締役CEO</p>
+                <svg version="1.1" id="js-svg-ceo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 227.5 72.7" style="enable-background:new 0 0 227.5 72.7;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st1 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st2 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st3 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st4 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st5 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st6 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st7 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st8 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st9 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st10 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st11 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st12 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st13 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st14 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st15 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st16 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 2;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st17 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st18 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 2;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st19 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 4;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st20 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 3;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st21 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st22 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st23 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st24 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                    .st25 {
+                      fill: none;
+                      stroke: #ffffff;
+                      stroke-width: 5;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10;
+                    }
+
+                  </style>
+                  <polyline class="st0" points="22.4,12.1 21.3,11.5 22.4,12.1 27.1,14.7 27.2,18.2 17.3,26.2 13.4,28.8 24,22.1 33.5,12.9 " />
+                  <polyline class="st1" points="23.7,25.1 23.7,31 31.6,21.9 21.3,36.5 31.9,28.8 " />
+                  <path class="st2" d="M13,53.3c-2.1,2.1-4.5,4.1-6.6,6.2c-1.3,1.1-2.6,2.2-3.9,3.3l17.2-12.9l6.4-6l5.8-4.3c1.3-0.9,5.7-4.4,5.6-7.8
+                	l0,0" />
+                  <polyline class="st3" points="26.7,35.7 28.2,44.2 28.6,49.7 29.1,55.6 29.1,60.3 28.6,65.9 28.1,70.2 " />
+                  <polyline class="st4" points="27.2,49.5 23.6,54 20.9,58.9 35.6,48.6 " />
+                  <polyline class="st5" points="43.2,20.2 41.3,27.6 40.5,33.8 39.9,40.7 39.4,48 39.8,54.3 40.5,58.7 " />
+                  <polyline class="st6" points="56.7,29.6 53.9,31.8 48.6,35.7 41.3,40.2 " />
+                  <polyline class="st7" points="49.8,36.6 50.8,43.8 50.8,47.3 50.8,51.9 50.3,57.8 49.9,63.4 " />
+                  <polyline class="st8" points="77.1,31.6 83.8,27.7 88.6,24.2 92.6,21.9 " />
+                  <polyline class="st9" points="67.6,47.5 71.2,46.5 77.2,42.8 90.3,34.7 100.5,28.3 104.3,25.3 101.2,25.7 " />
+                  <polyline class="st10" points="82.4,24.6 81.1,32.5 80.4,40.2 80.4,48.6 " />
+                  <polyline class="st11" points="88.4,18.8 89.5,15.4 91.3,25.1 90.3,30.5 90.3,47.4 90.4,56.4 91.3,68.4 " />
+                  <polyline class="st12" points="144.1,19.1 146.8,18.8 153.4,18.4 " />
+                  <polyline class="st13" points="137.2,40.9 143.1,37.6 150.2,33.3 153.9,30.9 148.8,41.4 144.6,48.3 140.6,54.3 139,58.1 137.9,62.6
+                	" />
+                  <polyline class="st14" points="148.8,43.3 152.6,47.3 156.3,50.8 160.2,51 163.8,49.6 168.1,46.5 174.8,41.1 " />
+                  <polyline class="st15" points="184.5,14.5 187.5,14.5 191.3,13.1 197.6,11.1 201.6,9.4 203.1,7.8 " />
+                  <polyline class="st16" points="201.9,6.3 198.8,6.3 195,6.4 190.7,6.4 " />
+                  <polyline class="st17" points="190.6,7.5 190.3,11.1 190,17.2 190,21.9 190,25.9 190,29.1 190.3,31.6 190.4,33.8 " />
+                  <polyline class="st18" points="191.9,33.5 192.3,32.2 192.4,30.7 191.6,32 " />
+                  <polyline class="st19" points="196.6,9 198.7,2 199.8,11.1 199.8,17.2 199.9,26.3 199.9,30.1 " />
+                  <polyline class="st20" points="191.4,15.4 193.8,16.7 197.6,18.3 194.4,20.1 190.3,25.1 194.5,23.3 198.7,21.9 " />
+                  <polyline class="st21" points="175.2,44.8 185.4,38.5 197.7,32.4 207.5,26.6 214.6,22.5 " />
+                  <polyline class="st22" points="196.6,34.5 189.9,42.2 181.7,51 178.8,55.3 176.7,58.8 " />
+                  <polyline class="st23" points="201.1,32.4 205.2,35.7 212.4,38.3 220,40.2 225,40.2 " />
+                  <polyline class="st24" points="190.5,53 194.9,51 200.3,48.6 204.9,45 " />
+                  <polyline class="st25" points="195.4,43 196.3,46.4 197.8,54.5 195.8,58.4 195.8,59 212.7,52.5 " />
+                </svg>
+              </div>
+              <!-- /.p-message-ceo -->
+              <!-- /.p-message -->
+            </section>
+          </main>
+          <footer class="l-footer p-footer u-color-mask">
+            <div class="p-footer-inner">
+              <ul class="p-footer-nav">
+                <li class="p-footer-nav-item u-color-w">
+                  <a href="https://www.happyelements.co.jp/privacy-policy/" class="p-footer-nav-link u-color-w" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+                </li>
+                <li class="p-footer-nav-item u-color-w">
+                  <a href="https://www.happyelements.co.jp/contents-guideline/" class="p-footer-nav-link u-color-w" target="_blank" rel="noopener noreferrer">コンテンツ利用ガイドライン</a>
+                </li>
+                <li class="p-footer-nav-item u-color-w">
+                  <a href="https://www.happyelements.co.jp/contact/" class="p-footer-nav-link u-color-w" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+                </li>
+              </ul>
+              <small class="p-footer__copy u-color-w">&copy; Happy Elements K.K</small>
+            </div>
+            <!-- /.l-footer__inner -->
+          </footer>
+    </div><!-- l-wrap -->
+    </body>
+    <script src="../assets/js/bundle.js"></script>
+    <script>
+
+    </script>
+
+    </html>

@@ -1,0 +1,27 @@
+@use "../setting/" as *;
+
+@mixin bgLRextend($duration: 2s, $b: 10%, $h: 25%, $z: -1) {
+  animation-name: underL;
+  animation-duration: $duration;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $b;
+  z-index: $z;
+  width: 100%;
+  height: $h;
+  background-color: #19B8FF;
+}
+
+@keyframes underL {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}

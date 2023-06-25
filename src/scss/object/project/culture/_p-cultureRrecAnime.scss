@@ -1,0 +1,241 @@
+@use "global" as *;
+
+.p-cultureRecAnime {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    margin-top: 185px;
+    margin-bottom: 80px;
+
+    @include mq (o-bigPc) {
+        max-width: 1200px;
+    }
+
+    @include mq (o-pc) {
+        margin-top: 165px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
+.p-cultureRecAnime-title {
+    margin-bottom: 25px;
+    height: 19px;
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    @include mq(o-sp) {
+        height: 27px;
+        margin-bottom: 40px;
+    }
+
+}
+
+.p-cultureRecAnime-lead {
+    font-size: rem(15);
+    line-height: calc(25/15);
+    margin-bottom: 30px;
+    letter-spacing: .15em;
+    font-weight: 500;
+
+    @include mq(o-sp){
+        font-size: rem(16);
+        margin-bottom: 50px;
+    }
+}
+
+.p-cultureRecAnime-main {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include mq(o-sp) {
+        position: relative;
+    }
+}
+
+.p-cultureRecAnime-main-anime {
+    @include mq(o-sp) {
+        width: 512px;
+        position: absolute;
+        top: 115px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}
+
+.p-cultureRecAnime-main-txt {
+    &+.p-cultureRecAnime-main-txt {
+        margin-top: 20px;
+    }
+
+    @include mq(o-sp) {
+        &+.p-cultureRecAnime-main-txt {
+            margin-top: 0;
+        }
+    }
+}
+
+.p-cultureRecAnime-main-txtwrap {
+    position: relative;
+    background: #F2F2F2;
+    margin-top: 40px;
+    padding: 24px 14px;
+    border-radius: 10px;
+
+    @include mq(o-sp) {
+        border-radius: 0;
+        margin-top: 0;
+        background: transparent;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+    }
+
+    @include mq(o-pc) {
+        width: 992px;
+    }
+}
+
+.p-cultureRecAnime-main-txt-title {
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 11px;
+    font-size: 15px;
+
+    @include mq(o-sp){
+        margin-bottom: 10px;
+    }
+
+    &--creat,
+    &--pro,
+    &--team,
+    &--since,
+    &--growth {
+        @extend .p-cultureRecAnime-main-txt-title;
+    }
+
+    &--creat {
+        color: #D478BB
+    }
+
+    &--pro {
+        color: #55B8ED
+    }
+
+    &--team {
+        color: #92DFB3
+    }
+
+    &--since {
+        color: #FDB51F
+    }
+
+    &--growth {
+        color: #FE7B95
+    }
+}
+
+.p-cultureRecAnime-main-txt {
+    z-index: 1;
+
+    @include mq(o-sp) {
+        position: absolute;
+        background: #F2F2F2;
+        border-radius: 10px;
+        padding: 15px 16px;
+        &:nth-child(1){
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            width: 330px;
+        }
+
+        &:nth-child(2) {
+            right: 0;
+            top: 135px;
+            width: 215px;
+        }
+        &:nth-child(3){
+            bottom: -100px;
+            right: 0;
+            width: 240px;
+        }
+
+        &:nth-child(4) {
+            left: 0;
+            bottom: -100px;
+            width: 225px;
+        }
+
+        &:nth-child(5) {
+            left: 0;
+            top: 155px;
+            width: 200px;
+        }
+    }
+
+    @include mq(o-pc) {
+        padding: 15px 16px;
+        &:nth-child(1){
+            width: 367px;
+        }
+
+        &:nth-child(2) {
+            width: 241px;
+        }
+        &:nth-child(3){
+            bottom: -12px;
+            width: 268px;
+        }
+
+        &:nth-child(4) {
+            bottom: 0;
+            width: 281px;
+        }
+
+        &:nth-child(5) {
+            width: 227px;
+        }
+    }
+}
+
+.p-cultureRecAnime-main-txt-desc {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: calc(19/13)+em;
+    display: flex;
+
+    &:before {
+        content: '・';
+    }
+    & + .p-cultureRecAnime-main-txt-desc{
+        margin-top: 8px;
+    }
+
+    @include mq(o-sp) {
+        &+.p-cultureRecAnime-main-txt-desc {
+            margin-top: 5px;
+        }
+    }
+}
+
+// .test{
+//     position: absolute;
+//     width: 992px;
+//     margin: 0;
+//     margin: 0 auto;
+//     left: 0;
+//     right: 0;
+//     opacity: 0;
+//     z-index: 100;
+//     pointer-events: none;
+//     top: 142px;
+// }

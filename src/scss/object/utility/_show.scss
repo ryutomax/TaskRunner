@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.u-show-pc {
+  display: none;
+
+  @include mq (o-tb) {
+    display: block;
+  }
+}
+
+.u-show-sp-tb {
+  display: block;
+
+  @include mq (o-tb) {
+    display: none;
+  }
+}
+
+.u-border-none {
+  border-bottom: none;
+}
+
+.u-event-none {
+  pointer-events: none;
+
+  &::after {
+    display: none !important;
+  }
+}
+
+.u-sp-border {
+  @include mq (o-sp) {
+    border-bottom: 2px solid #000;
+  }
+}
+
+.u-sp-border-none {
+  @include mq (o-sp) {
+    border-bottom: none;
+  }
+}

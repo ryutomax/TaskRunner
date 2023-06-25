@@ -1,0 +1,135 @@
+@use "global" as *;
+
+.p-cultureLead {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .pc {
+    display: none !important;
+  }
+
+  &--business {
+    @extend .p-cultureLead;
+  }
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+    padding: 0;
+  }
+
+  @include mq (o-sp) {
+    padding: 0 20px;
+    &--business {
+      margin-top: -35px;
+    }
+
+    .sp {
+      display: none !important;
+    }
+
+    .pc {
+      display: block !important;
+    }
+  }
+
+  @include mq(o-pc){
+  }
+}
+
+.p-cultureLead-title{
+    font-weight: 900;
+    font-size: rem(20);
+    line-height: calc(30/20);
+    margin-bottom: 18px;
+    .sp{
+        display: block;
+    }
+
+  &--mgt {
+    @extend .p-cultureLead-title;
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(25);
+    margin-bottom: 25px;
+
+    &--mgt {
+      margin-top: -25px;
+    }
+  }
+  @include mq (o-sp-s){
+    letter-spacing: 0.05em;
+}
+
+@include mq (o-tb){
+  font-size: rem(32);
+    letter-spacing: 0.08em;
+}
+
+
+@include mq (o-sp){
+    // font-size: rem(32);
+    // margin-bottom: 25px;
+    &--mgt{
+        margin-top: -30px;
+        min-height: 60px;
+    }
+    .sp{
+        display: none;
+    }
+}
+}
+
+.p-cultureLead-txt{
+    font-size: rem(15);
+    line-height: calc(25/15);
+    font-weight: 500;
+    letter-spacing: .08em;
+    
+    & + .p-cultureLead-txt{
+        margin-top: 25px;
+    }
+
+    &+.p-cultureLead-txt {
+      margin-top: 45px;
+    }
+
+    @include mq(o-sp){
+      font-size: rem(16);
+      line-height: calc(32/18);
+      & + .p-cultureLead-txt{
+        margin-top: 25px;
+    }
+    }
+
+    @include mq(o-tb){                                                                                                                                                                                     
+      font-size: rem(18);
+    }
+  }
+
+
+
+
+.p-cultureLead-btm {
+  font-weight: 700;      
+  font-size: rem(16);
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  small {
+    font-size: rem(13);
+    display: block;
+    margin-right: 6px;
+  }
+
+  @include mq(o-sp) {
+    font-size: rem(18);
+
+    small {
+      font-size: rem(15);
+    }
+  }
+}

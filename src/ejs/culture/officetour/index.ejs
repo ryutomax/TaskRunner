@@ -1,0 +1,683 @@
+<% const info={ title : "オフィスツアー｜採用情報｜Happy Elements株式会社" , desc : "京都に主要拠点に、モバイルゲームの開発・運営を行うHappy Elements株式会社の採用情報サイトです。採用に関するよくあるご質問についてお答えします。" , css: "../../" }; %>
+  <%- include("../../include/_head",{meta: info}) -%>
+    <div class="l-wrap">
+      <!-- 閉じタグは_footer.ejs -->
+      <!-- 画像相対パス(dist参照) -->
+      <% const path=["../../assets/images/"]%>
+        <%- include("../../include/_header", {path: '../../' }) -%>
+          <%- include("../../include/_threecanvas", {path: '../../' }) -%>
+            <main class="l-main">
+              <button class="c-toUpBtn js-toUpBtn u-zindex_10">
+              </button>
+              <section class="p-sectionHeader">
+                <div class="p-sectionHeader-inner">
+                  <div class="p-sectionHeader-title">
+                    <h3 class="p-sectionHeader-title-sub">CULTURE _ 02<span>Happy Elements株式会社の企業文化</span></h3>
+                    <h2 class="p-sectionHeader-title-main">
+                      <ul class="p-sectionHeader-title-main-fonts js-title">
+                        <li class="p-sectionHeader-title-main-font js-title-font">オ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">フ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">ィ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">ス</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">ツ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">ア</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">ー</li>
+                      </ul>
+                    </h2>
+                  </div>
+                  <!-- /.p-sectionHeader-title -->
+                  <div class="p-sectionHeader-content">
+                    <p class="p-sectionHeader-content-text">Happy Elementsでは、クリエイター一人ひとりがものづくりに専念しながら楽しく働けるよう、さまざまな設備・環境を整えています。熱狂を生み出す、私たちのオフィスをご紹介します。</p>
+                  </div>
+                  <!-- /.p-sectionHeader-content -->
+                </div>
+                <!-- /.p-sectionHeader-inner -->
+              </section>
+              <section class="p-tour">
+                <div class="p-tour-inner">
+                  <ul class="p-tour-list01">
+                    <li class="p-tour-item">
+                      <img src="<%- path %>culture/officetour/entrance/img_entrance_title.jpg" loading="lazy" alt="ENTRANCE">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">ENTRANCE</span><br>
+                        <span class="p-tour-item-title-jp">エントランス</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="1">
+                      <img src="<%- path %>culture/officetour/entrance/img_entrance_01.jpg" loading="lazy" alt="エントランスの受付システム。ご来社の際はこちらから担当者を呼び出してください">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="2">
+                      <img src="<%- path %>culture/officetour/entrance/img_entrance_02.jpg" loading="lazy" alt="来客用のミーティングルーム。さまざまな外部パートナーと打合せをしています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="3">
+                      <img src="<%- path %>culture/officetour/entrance/img_entrance_03.jpg" loading="lazy" alt="エントランスサイン。「カカリアスタジオ」はHappy Elements株式会社が手がけるゲームブランドおよび京都制作スタジオの名称です">
+                    </li>
+                  </ul>
+                  <ul class="p-tour-list02">
+                    <li class="p-tour-item">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_title.jpg" loading="lazy" alt="カフェスペース">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">CAFE<span>SPACE</span></span><br>
+                        <span class="p-tour-item-title-jp">カフェスペース</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="4">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_01.jpg" loading="lazy" alt="世界に１つだけ、当社公式キャラクターユニット「カカリアンズ」の特注自販機です">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="5">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_02.jpg" loading="lazy" alt="19時以降はお酒も飲み放題になります">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="6">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_03.jpg" loading="lazy" alt="フリードリンクのメニューも充実。コーヒーでほっと一息">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="7">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_04.jpg" loading="lazy" alt="座面が低くてくつろぎやすいロータイプソファー席">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="8">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_05.jpg" loading="lazy" alt="ランチで人気のサラダやフードメニューもあります">
+                    </li>
+                    <li class="u-sp-show">
+                      <ul class="p-tour-list02-list01">
+                        <li class="p-tour-item">
+                          <ul class="p-tour-item-list">
+                            <li class="p-tour-item js-modalOpen" data-modal="9">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_06.jpg" loading="lazy" alt="お座敷席は社内イベントのステージとしても活用">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="11">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_08.jpg" loading="lazy" alt="打合せにも使えるボックスシート席">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="12">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_09.jpg" loading="lazy" alt="シーンにあわせて選べるいろいろなタイプの席">
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="p-tour-item js-modalOpen" data-modal="10">
+                          <img src="<%- path %>culture/officetour/cafe/img_cafe_07.jpg" loading="lazy" alt="ゆったりくつろげる窓際の一人掛けソファー席">
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="9">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_06.jpg" loading="lazy" alt="お座敷席は社内イベントのステージとしても活用">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="10">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_07.jpg" loading="lazy" alt="ゆったりくつろげる窓際の一人掛けソファー席">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="11">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_08.jpg" loading="lazy" alt="打合せにも使えるボックスシート席">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="12">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_09.jpg" loading="lazy" alt="シーンにあわせて選べるいろいろなタイプの席">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="13">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_10.jpg" loading="lazy" alt="1フロア全体を使った開放的なカフェスペース">
+                    </li>
+                    <li class="u-sp-show">
+                      <ul class="p-tour-list02-list02">
+                        <li class="p-tour-item js-modalOpen" data-modal="14">
+                          <img src="<%- path %>culture/officetour/cafe/img_cafe_11.jpg" loading="lazy" alt="スタッフに人気のゲームコーナーにはさまざまなアイテムがズラリ">
+                        </li>
+                        <li class="p-tour-item">
+                          <ul class="p-tour-item-list">
+                            <li class="p-tour-item js-modalOpen" data-modal="15">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_12.jpg" loading="lazy" alt="仕事おわりに集まって、一緒にゲームをしたりライブ映像を見たりしています">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="16">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_13.jpg" loading="lazy" alt="パズルやボードゲームなどアナログなゲームもあります">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="17">
+                              <img src="<%- path %>culture/officetour/cafe/img_cafe_14.jpg" loading="lazy" alt="足りないカードもお約束">
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="14">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_11.jpg" loading="lazy" alt="スタッフに人気のゲームコーナーにはさまざまなアイテムがズラリ">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="15">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_12.jpg" loading="lazy" alt="仕事おわりに集まって、一緒にゲームをしたりライブ映像を見たりしています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="16">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_13.jpg" loading="lazy" alt="パズルやボードゲームなどアナログなゲームもあります">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="17">
+                      <img src="<%- path %>culture/officetour/cafe/img_cafe_14.jpg" loading="lazy" alt="足りないカードもお約束">
+                    </li>
+                  </ul>
+                  <ul class="p-tour-list03">
+                    <li class="p-tour-item u-sp-none">
+                      <img src="<%- path %>culture/officetour/library/img_library_title.jpg" loading="lazy" alt="ライブラリールーム">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">LIBRARY<br>ROOM</span><br>
+                        <span class="p-tour-item-title-jp">ライブラリールーム</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="18">
+                      <img src="<%- path %>culture/officetour/library/img_library_01.jpg" loading="lazy" alt="マッサージチェアでは読書やリフレッシュもできます">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="19">
+                      <img src="<%- path %>culture/officetour/library/img_library_02.jpg" loading="lazy" alt="専門書やマンガなど、創造力を刺激する書籍を充実させています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="20">
+                      <img src="<%- path %>culture/officetour/library/img_library_03.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                    </li>
+                    <li class="u-sp-show">
+                      <ul class="p-tour-list03-list">
+                        <li class="p-tour-item">
+                          <ul class="p-tour-item-list">
+                            <li class="p-tour-item">
+                              <img src="<%- path %>culture/officetour/library/img_library_title.jpg" loading="lazy" alt="ライブラリールーム">
+                              <div class="p-tour-item-title">
+                                <span class="p-tour-item-title-eng">LIBRARY<br>ROOM</span><br>
+                                <span class="p-tour-item-title-jp">ライブラリールーム</span>
+                              </div>
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="18">
+                              <img src="<%- path %>culture/officetour/library/img_library_01.jpg" loading="lazy" alt="マッサージチェアでは読書やリフレッシュもできます">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="20">
+                              <img src="<%- path %>culture/officetour/library/img_library_03.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="p-tour-item js-modalOpen" data-modal="19">
+                          <img src="<%- path %>culture/officetour/library/img_library_02.jpg" loading="lazy" alt="専門書やマンガなど、創造力を刺激する書籍を充実させています">
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="21">
+                      <img src="<%- path %>culture/officetour/library/img_library_04.jpg" loading="lazy" alt="過去の制作物も保管しています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="22">
+                      <img src="<%- path %>culture/officetour/library/img_library_05.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="23">
+                      <img src="<%- path %>culture/officetour/library/img_library_06.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="24">
+                      <img src="<%- path %>culture/officetour/library/img_library_07.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                    </li>
+                  </ul>
+                  <ul class="p-tour-list04">
+                    <li class="p-tour-item">
+                      <img src="<%- path %>culture/officetour/terrace/img_terrace_title.jpg" loading="lazy" alt="テラス">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">TERRACE</span><br>
+                        <span class="p-tour-item-title-jp">テラス</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="25">
+                      <img src="<%- path %>culture/officetour/terrace/img_terrace_01.jpg" loading="lazy" alt="ひと息つきたいときはテラス席で気分転換。各フロアにあります">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="26">
+                      <img src="<%- path %>culture/officetour/terrace/img_terrace_02.jpg" loading="lazy" alt="テーブルの下には電源タップもあるので仕事もできます">
+                    </li>
+                  </ul>
+                  <ul class="p-tour-list05">
+                    <li class="p-tour-item">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_title.jpg" loading="lazy" alt="ワークスペース">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">WORKSPACE</span><br>
+                        <span class="p-tour-item-title-jp">ワークスペース</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="27">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_01.jpg" loading="lazy" alt="デスクは自分の好きなものに囲まれたプライベート空間">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="28">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_02.jpg" loading="lazy" alt="自席にはお気に入りのアイテムを飾っています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="29">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_03.jpg" loading="lazy" alt="ポージング研究に使えるミラースタジオ">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="30">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_04.jpg" loading="lazy" alt="グリーンウォールのある廊下">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="31">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_05.jpg" loading="lazy" alt="フロアのいたるところに作品愛があふれ出ています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="32">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_06.jpg" loading="lazy" alt="当社ではサウンド制作にも力を入れています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="33">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_07.jpg" loading="lazy" alt="防音仕様のサウンドルーム">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="34">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_08.jpg" loading="lazy" alt="楽曲から効果音まで、さまざまなサウンドを制作しています">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="35">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_09.jpg" loading="lazy" alt="集中できるようにワークスペースには電話がありません。電話の際はフォーンブースへ">
+                    </li>
+                    <li class="u-sp-show">
+                      <ul class="p-tour-list05-list">
+                        <li class="p-tour-item">
+                          <ul class="p-tour-item-list">
+                            <li class="p-tour-item js-modalOpen" data-modal="36">
+                              <img src="<%- path %>culture/officetour/workspace/img_workspace_10.jpg" loading="lazy" alt="フォーンブースは各フロアの廊下にあります">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="37">
+                              <img src="<%- path %>culture/officetour/workspace/img_workspace_11.jpg" loading="lazy" alt="ワークスペースの1コマ">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="39">
+                              <img src="<%- path %>culture/officetour/workspace/img_workspace_13.jpg" loading="lazy" alt="椅子はアーロンチェアとシルフィーの2タイプから選べます">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="40">
+                              <img src="<%- path %>culture/officetour/workspace/img_workspace_14.jpg" loading="lazy" alt="机上がにぎやかな人もいればシンプルな人も。机には個性が出ますね">
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="p-tour-item js-modalOpen" data-modal="38">
+                          <img src="<%- path %>culture/officetour/workspace/img_workspace_12.jpg" loading="lazy" alt="籠もれるブース型デスクで集中力UP">
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="36">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_10.jpg" loading="lazy" alt="フォーンブースは各フロアの廊下にあります">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="37">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_11.jpg" loading="lazy" alt="ワークスペースの1コマ">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="38">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_12.jpg" loading="lazy" alt="籠もれるブース型デスクで集中力UP">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="39">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_13.jpg" loading="lazy" alt="椅子はアーロンチェアとシルフィーの2タイプから選べます">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="40">
+                      <img src="<%- path %>culture/officetour/workspace/img_workspace_14.jpg" loading="lazy" alt="机上がにぎやかな人もいればシンプルな人も。机には個性が出ますね">
+                    </li>
+                  </ul>
+                  <ul class="p-tour-list06">
+                    <li class="p-tour-item">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_title.jpg" loading="lazy" alt="ミーティングルーム">
+                      <div class="p-tour-item-title">
+                        <span class="p-tour-item-title-eng">MEETING<br>ROOM</span><br>
+                        <span class="p-tour-item-title-jp">ミーティングルーム</span>
+                      </div>
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="41">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_01.jpg" loading="lazy" alt="何かと打合せの多い当社ではミーティングルームが充実">
+                    </li>
+                    <li class="p-tour-item js-modalOpen" data-modal="42">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_02.jpg" loading="lazy" alt="大小さまざまなタイプのミーティングルームがあります">
+                    </li>
+                    <li class="u-sp-show">
+                      <ul class="p-tour-list06-list">
+                        <li class="p-tour-item js-modalOpen" data-modal="43">
+                          <img src="<%- path %>culture/officetour/meeting/img_meeting_03.jpg" loading="lazy" alt="ミーティングルームその1">
+                        </li>
+                        <li class="p-tour-item">
+                          <ul class="p-tour-item-list">
+                            <li class="p-tour-item js-modalOpen" data-modal="44">
+                              <img src="<%- path %>culture/officetour/meeting/img_meeting_04.jpg" loading="lazy" alt="ミーティングルームの利用状況はスマホで管理">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="45">
+                              <img src="<%- path %>culture/officetour/meeting/img_meeting_05.jpg" loading="lazy" alt="コンテンツのクオリティアップのため、顔を付き合わせての相談は欠かせません">
+                            </li>
+                            <li class="p-tour-item js-modalOpen" data-modal="46">
+                              <img src="<%- path %>culture/officetour/meeting/img_meeting_06.jpg" loading="lazy" alt="ミーティングルームその2">
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="43">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_03.jpg" loading="lazy" alt="ミーティングルームその1">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="44">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_04.jpg" loading="lazy" alt="ミーティングルームの利用状況はスマホで管理">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="45">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_05.jpg" loading="lazy" alt="コンテンツのクオリティアップのため、顔を付き合わせての相談は欠かせません">
+                    </li>
+                    <li class="p-tour-item js-modalOpen u-sp-none" data-modal="46">
+                      <img src="<%- path %>culture/officetour/meeting/img_meeting_06.jpg" loading="lazy" alt="ミーティングルームその2">
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.p-tour-inner -->
+                <!-- /.p-tour-modal -->
+              </section>
+              <!-- モーダル -->
+              <section class="modal" id="modal">
+                <div class="modal__overlay modalClose"></div>
+                <div class="modal__content">
+                  <div class="modal_inner">
+                    <div class="swiper-button-prev c-returnBtn-wrap">
+                      <div class="swiper-button-prev-btn c-returnBtn-btn"></div>
+                    </div>
+                    <!-- スライダー -->
+                    <div class="swiper modalInSlider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide01.jpg" loading="lazy" alt="エントランスの受付システム。ご来社の際はこちらから担当者を呼び出してください">
+                          </figure>
+                          <p class="swiperText">エントランスの受付システム。ご来社の際はこちらから担当者を呼び出してください</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide02.jpg" loading="lazy" alt="来客用のミーティングルーム。さまざまな外部パートナーと打合せをしています">
+                          </figure>
+                          <p class="swiperText">来客用のミーティングルーム。さまざまな外部パートナーと打合せをしています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide03.jpg" loading="lazy" alt="エントランスサイン。「カカリアスタジオ」はHappy Elements株式会社の日本法人である私たちの独自名称です">
+                          </figure>
+                          <p class="swiperText">エントランスサイン。「カカリアスタジオ」はHappy Elementsの日本法人である私たちの独自名称です</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide04.jpg" loading="lazy" alt="世界に１つだけ、当社オリジナルキャラクター「カカリアンズ」の特注自販機です">
+                          </figure>
+                          <p class="swiperText">世界に１つだけ、当社オリジナルキャラクター「カカリアンズ」の特注自販機です</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide05.jpg" loading="lazy" alt="19時以降はお酒も飲み放題になります">
+                          </figure>
+                          <p class="swiperText">19時以降はお酒も飲み放題になります。</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide06.jpg" loading="lazy" alt="フリードリンクのメニューも充実しています。">
+                          </figure>
+                          <p class="swiperText">フリードリンクのメニューも充実しています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide07.jpg" loading="lazy" alt="座面が低くてくつろぎやすいロータイプソファー席">
+                          </figure>
+                          <p class="swiperText">座面が低くてくつろぎやすいロータイプソファー席</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide08.jpg" loading="lazy" alt="サラダやフードメニューもあります">
+                          </figure>
+                          <p class="swiperText">サラダやフードメニューもあります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide09.jpg" loading="lazy" alt="お座敷席は社内イベントのステージとしても活用">
+                          </figure>
+                          <p class="swiperText">お座敷席は社内イベントのステージとしても活用</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide10.jpg" loading="lazy" alt="窓際の一人掛けソファー席">
+                          </figure>
+                          <p class="swiperText">窓際の一人掛けソファー席</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide11.jpg" loading="lazy" alt="打合せにも使えるボックスシート席">
+                          </figure>
+                          <p class="swiperText">打合せにも使えるボックスシート席</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide12.jpg" loading="lazy" alt="いろいろなタイプの席があります">
+                          </figure>
+                          <p class="swiperText">いろいろなタイプの席があります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide13.jpg" loading="lazy" alt="1フロア全体を使った開放的なカフェエリア">
+                          </figure>
+                          <p class="swiperText">1フロア全体を使った開放的なカフェエリア</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide14.jpg" loading="lazy" alt="社員に大人気のゲームコーナー">
+                          </figure>
+                          <p class="swiperText">社員に大人気のゲームコーナー</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide15.jpg" loading="lazy" alt="ゲーム制作会社だけあってみんなゲームが大好き">
+                          </figure>
+                          <p class="swiperText">ゲーム制作会社だけあってみんなゲームが大好き</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide16.jpg" loading="lazy" alt="パズルやボードゲームなどアナログなゲームもあります">
+                          </figure>
+                          <p class="swiperText">パズルやボードゲームなどアナログなゲームもあります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide17.jpg" loading="lazy" alt="ゲームコーナーでの1コマ">
+                          </figure>
+                          <p class="swiperText">ゲームコーナーでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide18.jpg" loading="lazy" alt="マッサージチェアでリフレッシュもできます">
+                          </figure>
+                          <p class="swiperText">マッサージチェアでリフレッシュもできます</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide19.jpg" loading="lazy" alt="専門書やマンガなど、創造力を刺激する書籍を充実させています">
+                          </figure>
+                          <p class="swiperText">専門書やマンガなど、創造力を刺激する書籍を充実させています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide20.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                          </figure>
+                          <p class="swiperText">ライブラリーでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide21.jpg" loading="lazy" alt="過去の制作物も保管しています">
+                          </figure>
+                          <p class="swiperText">過去の制作物も保管しています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide22.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                          </figure>
+                          <p class="swiperText">ライブラリーでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide23.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                          </figure>
+                          <p class="swiperText">ライブラリーでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide24.jpg" loading="lazy" alt="ライブラリーでの1コマ">
+                          </figure>
+                          <p class="swiperText">ライブラリーでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide25.jpg" loading="lazy" alt="ひと息つきたいときはテラス席で気分転換。各フロアにあります">
+                          </figure>
+                          <p class="swiperText">ひと息つきたいときはテラス席で気分転換。各フロアにあります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide26.jpg" loading="lazy" alt="テーブルの下には電源タップもあるので仕事もできます">
+                          </figure>
+                          <p class="swiperText">テーブルの下には電源タップもあるので仕事もできます</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide27.jpg" loading="lazy" alt="デスクは自分の好きなものに囲まれたプライベート空間">
+                          </figure>
+                          <p class="swiperText">デスクは自分の好きなものに囲まれたプライベート空間</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide28.jpg" loading="lazy" alt="ワークスペースでの1コマ">
+                          </figure>
+                          <p class="swiperText">ワークスペースでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide29.jpg" loading="lazy" alt="ポージング研究に使えるミラースタジオ">
+                          </figure>
+                          <p class="swiperText">ポージング研究に使えるミラースタジオ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide30.jpg" loading="lazy" alt="アドベンチャー感のある廊下">
+                          </figure>
+                          <p class="swiperText">アドベンチャー感のある廊下</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide31.jpg" loading="lazy" alt="フロアのいたるところに作品愛があふれ出ています">
+                          </figure>
+                          <p class="swiperText">フロアのいたるところに作品愛があふれ出ています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide32.jpg" loading="lazy" alt="当社ではサウンド制作にも力を入れています">
+                          </figure>
+                          <p class="swiperText">当社ではサウンド制作にも力を入れています</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide33.jpg" loading="lazy" alt="防音仕様のサウンドルーム">
+                          </figure>
+                          <p class="swiperText">防音仕様のサウンドルーム</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide34.jpg" loading="lazy" alt="サウンドルームでの1コマ">
+                          </figure>
+                          <p class="swiperText">サウンドルームでの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide35.jpg" loading="lazy" alt="集中できるようにワークスペースには電話がありません。電話の際はフォーンブースへ">
+                          </figure>
+                          <p class="swiperText">集中できるようにワークスペースには電話がありません。電話の際はフォーンブースへ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide36.jpg" loading="lazy" alt="フォーンブースは各フロアの廊下にあります">
+                          </figure>
+                          <p class="swiperText">フォーンブースは各フロアの廊下にあります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide37.jpg" loading="lazy" alt="ワークスペースの1コマ">
+                          </figure>
+                          <p class="swiperText">ワークスペースの1コマ</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide38.jpg" loading="lazy" alt="籠もれるブース型デスクで集中力UP">
+                          </figure>
+                          <p class="swiperText">籠もれるブース型デスクで集中力UP</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide39.jpg" loading="lazy" alt="椅子はアーロンチェアとシルフィーの2タイプから選べます">
+                          </figure>
+                          <p class="swiperText">椅子はアーロンチェアとシルフィーの2タイプから選べます</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide40.jpg" loading="lazy" alt="机上がにぎやかな人もいればシンプルな人も。机には個性が出ますね">
+                          </figure>
+                          <p class="swiperText">机上がにぎやかな人もいればシンプルな人も。机には個性が出ますね</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide41.jpg" loading="lazy" alt="何かと打合せの多い当社ではミーティングルームが充実">
+                          </figure>
+                          <p class="swiperText">何かと打合せの多い当社ではミーティングルームが充実</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide42.jpg" loading="lazy" alt="大小さまざまなタイプのミーティングルームがあります">
+                          </figure>
+                          <p class="swiperText">大小さまざまなタイプのミーティングルームがあります</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide43.jpg" loading="lazy" alt="ミーティングルームその1">
+                          </figure>
+                          <p class="swiperText">ミーティングルームその1</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide44.jpg" loading="lazy" alt="ミーティングルームの利用状況はスマホで管理">
+                          </figure>
+                          <p class="swiperText">ミーティングルームの利用状況はスマホで管理</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide45.jpg" loading="lazy" alt="毎日フル稼働">
+                          </figure>
+                          <p class="swiperText">毎日フル稼働</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <figure class="swiper-img">
+                            <img src="<%- path %>culture/slide/slide46.jpg" loading="lazy" alt="ミーティングルームその2">
+                          </figure>
+                          <p class="swiperText">ミーティングルームその2</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next c-returnBtn-wrap">
+                      <div class="swiper-button-next-btn c-returnBtn-btn"></div>
+                    </div>
+                    <div class="p-tour-modal-pagination modalClose">
+                      <div class="swiper-pagination"></div>
+                    </div>
+                    <button class="modal__close-btn modalClose c-btn" aria-label="閉じる">CLOSE<span class="lineClose"></span></button>
+                  </div>
+                  <!-- /.p-tour-modal-pagination -->
+                  <!-- </div> -->
+                </div>
+                <!-- ここまで -->
+              </section>
+              <div class="p-cultureOthers">
+                <div class="p-bgTxt js-content-show">OTHER CULTURE</div>
+                <h2 class="p-cultureOthers-head js-content-show">
+                  <img src="<%= path %>culture/character/head_02.svg" loading="lazy" alt="OTHER CULTURE">
+                </h2>
+                <ul class="p-cultureOthers-list">
+                  <li class="p-cultureOthers-item js-content-show">
+                    <a href="../character/" class="p-cultureOthers-link">
+                      <img src="<%= path %>culture/other/other_01_pc.jpg" loading="lazy" alt="Happy Elements株式会社のカルチャー" class="p-cultureOthers-img--pc">
+                      <img src="<%= path %>culture/other/other_01_sp.jpg" loading="lazy" alt="Happy Elements株式会社のカルチャー" class="p-cultureOthers-img--sp">
+                      <div class="p-cultureOthers-item-title u-top-40">
+                        <span>01.</span>
+                        <span>Happy Elements<br>株式会社のカルチャー</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="p-cultureOthers-item js-content-show">
+                    <a href="../data" class="p-cultureOthers-link">
+                      <img src="<%= path %>culture/other/other_03_pc.jpg" loading="lazy" alt="データで見るHappy Elements株式会社" class="p-cultureOthers-img--pc">
+                      <img src="<%= path %>culture/other/other_03_pc.jpg" loading="lazy" alt="データで見るHappy Elements株式会社" class="p-cultureOthers-img--sp">
+                      <div class="p-cultureOthers-item-title u-top-40">
+                        <span>03.</span>
+                        <span>データで見る<br>Happy Elements株式会社</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="p-cultureOthers-item js-content-show">
+                    <a href="../benefit/" class="p-cultureOthers-link">
+                      <img src="<%= path %>culture/other/other_04_pc.jpg" loading="lazy" alt="福利厚生/制度" class="p-cultureOthers-img--pc">
+                      <img src="<%= path %>culture/other/other_04_pc.jpg" loading="lazy" alt="福利厚生/制度" class="p-cultureOthers-img--sp">
+                      <div class="p-cultureOthers-item-title">
+                        <span>04.</span>
+                        <span>福利厚生/制度</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </main>
+            <!-- <script src="../../assets/js/nonBundle/modalSlider-min.js"></script> -->
+            <%- include("../../include/_footer", {js: "../../" }) -%>

@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.p-faq {
+  padding: 0 20px 60px 20px;
+
+  @include mq (o-sp) {
+    padding-bottom: 70px;
+  }
+}
+
+.p-faq-inner {
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-faq-list {}
+
+.p-faq-item {
+  border: 2px solid $black;
+  border-radius: 10px;
+  background-color: $white;
+  padding: 30px 20px;
+
+  @include mq (o-sp) {
+    padding: 30px 40px;
+  }
+
+  @include mq (o-pc) {
+    padding: 36px 60px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @include mq (o-sp) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.p-faq-item-inner {}
+
+.p-faq-item-q {
+  position: relative;
+  font-size: rem(15);
+  font-weight: 900;
+  letter-spacing: .12em;
+  font-family: $ff-jp;
+  -webkit-font-smoothing: antialiased;
+  line-height: calc(24/15);
+  padding-left: 23px;
+  margin-bottom: 25px;
+
+  @include mq (o-sp) {
+    font-size: rem(24);
+    padding-left: 40px;
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    content: "Q.";
+    position: absolute;
+    font-size: rem(22);
+    font-weight: 700;
+    font-stretch: semi-condensed;
+    font-family: $ff-eng;
+    top: -6px;
+    left: 0;
+
+    @include mq (o-sp) {
+      top: -16px;
+      font-size: rem(44);
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-faq-item-q {
+  font-weight: 800;
+
+  &::before {
+    font-weight: 800;
+  }
+}
+
+.p-faq-item-a {
+  position: relative;
+  font-size: rem(14);
+  line-height: calc(24/14);
+  padding-left: 24px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  text-align: justify;
+  -webkit-font-smoothing: antialiased;
+
+  @include mq (o-sp) {
+    font-size: rem(18);
+    padding-left: 40px;
+  }
+
+  &::before {
+    content: "A.";
+    position: absolute;
+    font-size: rem(18);
+    font-weight: 700;
+    font-family: $ff-eng;
+    top: -4px;
+    left: 0;
+
+    @include mq (o-sp) {
+      font-size: rem(24);
+      left: 14px;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-faq-item-a::before {
+  top: -7px;
+}
+
+
+.p-faq-item-example {
+  display: flex;
+  font-size: rem(14);
+  line-height: calc(24/14);
+  padding-left: 20px;
+  letter-spacing: 0.04em;
+  margin-top: 20px;
+
+  @include mq (o-sp) {
+    display: inline-block;
+    font-size: rem(15);
+    padding-left: 40px;
+  }
+}

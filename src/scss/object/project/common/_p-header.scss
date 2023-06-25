@@ -1,0 +1,506 @@
+@use "global" as *;
+
+.p-header {
+  position: fixed;
+  padding: 10px;
+  width: 100%;
+
+  @include mq (o-sp) {
+    padding: 18px 10px;
+  }
+
+  @include mq (o-tb) {
+    padding: 24px 10px;
+  }
+}
+
+.p-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: 0 3px 6px hsla(0, 0%, 0%, 0.12);
+  padding: 0 10px;
+
+  @include mq (o-sp) {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 3px 6px #00000000;
+  }
+}
+
+.p-header-logo-inner {
+  @include mq (o-sp) {
+    width: 280px;
+    padding: 0 20px;
+  }
+}
+
+.p-header-logo-img {
+  @include mq (o-sp) {
+    width: 135px;
+    margin-right: 20px;
+  }
+}
+
+.p-header-logo-text {
+  @include mq (o-sp) {
+    font-size: rem(20);
+  }
+}
+
+.p-header-inner-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header-entry {
+  width: 85px;
+  margin-right: 4px;
+  background-color: $white;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+
+  @include mq (o-sp-s) {
+    width: 120px;
+    margin-right: 14px;
+  }
+
+  @include mq (o-sp) {
+    margin-right: 33px;
+    font-size: rem(23);
+    line-height: 34px;
+    width: 140px;
+  }
+}
+
+.p-header-menuBtn {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0);
+
+  @include mq (o-sp) {
+    width: 70px;
+    height: 70px;
+
+    &:hover {
+      .p-header-menuBtn-inner {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+  }
+}
+
+.p-header-menuBtn-inner {
+  width: 45px;
+  height: 45px;
+  background-color: $black;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include mq (o-sp) {
+    width: 70px;
+    height: 70px;
+    transition: all 0.3s;
+  }
+}
+
+.p-header-menuBtn-bar {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: $white;
+  border-radius: 10px;
+  left: 32%;
+
+  &:first-child {
+    top: 43%;
+  }
+
+  &:nth-child(2) {
+    top: 57%;
+  }
+
+
+  @include mq (o-sp) {
+    width: 22px;
+    height: 3px;
+    left: 35%;
+  }
+}
+
+.p-header-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.p-header-nav-inner {}
+
+.p-header-nav-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 30px 100px 30px;
+  overflow: scroll;
+
+  @include mq (o-sp) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 824px;
+    padding: 65px 30px 80px 30px;
+  }
+
+  @include mq (sp-tb) {
+    @media (min-height: 750px) {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @include mq (o-tb) {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1090px;
+    margin: 0 auto;
+    padding-top: 25vh;
+    height: 100vh;
+  }
+
+  @include mq (o-pc) {
+    padding-top: 28.6vh;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+.p-header-nav-item {
+  opacity: 0;
+  border-bottom: 2px solid #000;
+
+
+  @include mq (o-sp) {
+    margin-bottom: 56px;
+  }
+
+  @include mq (o-tb) {
+    margin-bottom: 61.7px;
+  }
+
+  @include mq (o-pc) {
+    margin-bottom: 64px;
+  }
+}
+
+.p-header-nav-list {
+  width: 100%;
+
+  @include mq (o-sp) {
+    width: calc((100% - 60px) / 2);
+    width: 290px;
+    margin: 0 auto;
+
+    &:last-child {
+      margin-left: 60px;
+    }
+  }
+
+  @include mq (o-tb) {
+    width: 250px;
+    margin: 0 20px;
+
+    &:last-child {
+      margin-left: 0px;
+    }
+  }
+
+  @include mq (o-pc) {
+    width: 290px;
+
+  }
+
+  .p-header-nav-link {
+    position: relative;
+
+    &::before {
+      content: '';
+      /*絶対配置で線の位置を決める*/
+      position: absolute;
+      bottom: -2.4px;
+      left: 0%;
+      /*線の形状*/
+      width: 100%;
+      height: 2.5px;
+      background: $skyBlue;
+      /*アニメーションの指定*/
+      transition: all .3s;
+      transform: scale(0, 1);
+      /*X方向0、Y方向1*/
+      transform-origin: left top;
+      /*左上基点*/
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-image: url("../images/header/arrow_black.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      position: absolute;
+      right: -8px;
+      top: 55%;
+      transform: translate(-50%, -50%);
+
+      @include mq (o-sp) {
+        width: 17px;
+        height: 17px;
+        top: 66%;
+        transition: all 0.3s;
+      }
+
+      @include mq (o-tb) {
+        width: 14px;
+        height: 14px;
+        top: 60%;
+      }
+    }
+
+    @include mq (o-sp) {
+      transition: all 0.3s;
+
+      &:hover {
+        color: $skyBlue;
+
+        &::before {
+          transform: scale(1, 1);
+          /*X方向にスケール拡大*/
+        }
+
+        &::after {
+          background-image: url("../images/header/arrow_blue.png");
+        }
+
+        span {
+          color: $skyBlue;
+        }
+      }
+    }
+  }
+}
+
+.js-menu-show-text01 {
+  animation-delay: 0.4s;
+}
+
+.js-menu-show-text02 {
+  animation-delay: 0.45s;
+}
+
+.js-menu-show-text03 {
+  animation-delay: 0.5s;
+}
+
+.js-menu-show-text04 {
+  animation-delay: 0.55s;
+}
+
+.js-menu-show-text05 {
+  animation-delay: .6s;
+}
+
+.js-menu-show-text06 {
+  animation-delay: 0.65s;
+}
+
+.js-menu-show-text07 {
+  animation-delay: .7s;
+}
+
+.js-menu-show-text08 {
+  animation-delay: .75s;
+}
+
+.js-menu-show-text09 {
+  animation-delay: .8s;
+}
+
+.js-menu-show-icons {
+  animation-delay: .85s
+}
+
+.p-header-nav-link {
+  display: flex;
+  align-items: center;
+  color: $black;
+  font-size: rem(28);
+  font-family: $ff-eng;
+  font-stretch: condensed;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.06em;
+  padding: 18px 0;
+
+  @include mq (o-sp) {
+    font-size: rem(38);
+    padding-bottom: 10px;
+  }
+
+  @include mq (o-tb) {
+    font-size: rem(30);
+    padding: 14px 0;
+    line-height: 0.9;
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(38);
+    padding: 14px 0;
+    line-height: 0.8;
+  }
+
+  span {
+    font-size: rem(12);
+    color: $gray;
+    font-family: $ff-jp;
+    font-weight: 900;
+    margin-left: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+
+    @include mq (o-sp) {
+      line-height: 1.3;
+      transition: all 0.3s;
+    }
+
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-header-nav-link span {
+  font-weight: 800;
+  font-size: rem(11);
+}
+
+.p-header-nav-item-list {
+  padding: 0 0 25px 30px;
+
+  @include mq (o-sp) {
+    padding: 16px 0 25px 30px;
+  }
+}
+
+.p-header-nav-item-item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.p-header-nav-item-link {
+  position: relative;
+  font-size: rem(14);
+  font-weight: 900;
+  line-height: 1.2;
+  text-decoration: underline;
+
+  @include mq (o-sp) {
+    text-decoration: none;
+    transition: color 0.3s;
+    letter-spacing: 0.08em;
+
+    &:hover {
+      color: $skyBlue;
+
+      // &::before {
+      //   opacity: 1;
+      // }
+    }
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 60%;
+  //   left: -17px;
+  //   transform: translate(-50%, -50%);
+  //   width: 6px;
+  //   height: 6px;
+  //   border-radius: 50%;
+  //   background-color: $black;
+
+  //   @include mq (o-sp) {
+  //     background-color: $skyBlue;
+  //     opacity: 0;
+  //     transition: opacity 0.3s;
+  //   }
+  // }
+}
+
+// safari専用
+::-webkit-full-page-media,
+:future,
+:root .p-header-nav-item-link {
+  font-weight: 800;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-header-nav-item-link::before {
+  top: 50%;
+}
+
+.p-header-icon-list {
+  display: flex;
+  width: 100%;
+  width: 100%;
+  opacity: 0;
+  margin-top: 25px;
+
+  @include mq (sp-tb) {
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 27px;
+  }
+
+  @include mq (o-tb) {
+    margin-left: 34px;
+    margin-top: -36px;
+  }
+
+  @include mq (o-pc) {
+    margin-left: 20px;
+  }
+}
+
+.p-header-icon-item {
+  width: 30px;
+  margin-right: 16px;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

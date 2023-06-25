@@ -1,0 +1,180 @@
+@use "global" as *;
+
+.p-jobsTab {
+    margin-top: 20px;
+
+    @include mq (o-sp) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+}
+
+.p-jobsTab-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+
+    &:nth-child(n+2) {
+        margin-top: 20px;
+    }
+
+    @include mq (o-sp) {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    @include mq (o-tb) {
+        width: 100%;
+        
+        max-width: 1022px;
+        padding: 0 12px;
+    }
+
+    @include mq (o-bigPc){
+        width: 1200px;
+        padding: 0;
+        max-width: none;
+    }
+
+}
+
+.p-jobsTab-name {
+    position: relative;
+    padding-left: 8px;
+    font-size: rem(16);
+    font-weight: 700;
+    margin-bottom: 11px;
+    margin-left: 4px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 15px;
+        background-color: #000;
+    }
+
+    @include mq (o-sp) {
+        width: 82px;
+        font-size: rem(18);
+        margin-right: 4px;
+        margin-bottom: 0;
+        margin-left: 0;
+        padding-left: 0;
+
+        &:before {
+            content: none;
+        }
+
+        &:after {
+            content: '：';
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    @include mq (o-tb) {
+        width: 92px;
+        padding-left: 4px;
+    }
+    @include mq (o-bigPc){
+        padding-left: 0;
+    }
+
+
+}
+
+.p-jobsTab-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.p-jobsTab-item {
+    display: none;
+    &+label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid;
+        border-radius: 10px;
+        font-size: rem(14);
+        font-weight: 700;
+        height: 36px;
+        color: #6C6C6C;
+        border-color: #6C6C6C;
+        margin: 6px 8px;
+        background: #fff;
+        padding: 0 16px;
+
+        @include mq(o-sp){
+            padding: 0 8px;
+            &:hover {
+                background: #6C6C6C;
+                ;
+                color: #fff;
+            }
+        }
+
+        @include mq(o-tb){
+            padding: 0 16px;
+        }
+    }
+
+    &:checked {
+        &+label {
+            background: #6C6C6C;
+            ;
+            color: #fff;
+        }
+    }
+    
+
+
+
+    @include mq (o-sp) {
+        &+label {
+            font-size: rem(14);
+            padding: 0 10px;
+            height: 35px;
+            margin: 0;
+            transition: .3s;
+            border-width: 3px;
+            cursor: pointer;
+
+            &:nth-child(n+2) {
+                margin-left: 5px;
+            }
+        }
+
+    }
+
+    @include mq (o-tb) {
+        &+label {
+            font-size: rem(15);
+            padding: 0 26px;
+            cursor: pointer;
+
+            &:nth-child(n+2) {
+                margin-left: 16px;
+            }
+        }
+
+    }
+
+    &--planner,
+    &--writer,
+    &--engineer,
+    &--designer,
+    &--illustrator,
+    &--others {
+        @extend .p-jobsTab-item;
+    }
+}

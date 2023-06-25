@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.p-singleHeader {
+  padding: 20px;
+
+  @include mq (o-sp) {
+    padding: 37px 20px 30px 20px;
+  }
+}
+
+.p-singleHeader-inner {
+  position: relative;
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    border-radius: 15px;
+    width: calc(100% + 4px);
+    height: 5px;
+    left: -4px;
+    bottom: -20px;
+
+    @include mq (o-sp) {
+      bottom: -30px;
+    }
+  }
+}
+
+.p-singleHeader-title {
+  display: flex;
+  align-items: center;
+}
+
+.p-singleHeader-title-main {
+  font-size: rem(24);
+  font-stretch: condensed;
+  font-weight: 600;
+  font-family: $ff-eng;
+  letter-spacing: 0.02em;
+
+  @include mq (o-sp-s) {
+    font-size: rem(30);
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(38);
+  }
+}
+
+.p-singleHeader-title-sub {
+  position: relative;
+  font-size: rem(12);
+  font-weight: 900;
+  letter-spacing: 0.075em;
+  margin-left: 16px;
+
+  @include mq (o-sp-s) {
+    margin-left: 28px;
+  }
+
+  @include mq (o-sp) {
+    font-size: rem(18);
+    margin-left: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $black;
+    border-radius: 15px;
+    width: 3px;
+    top: -3px;
+    height: 18px;
+    left: -9px;
+
+    @include mq (o-sp-s) {
+      height: 20px;
+      left: -14px;
+    }
+
+    @include mq (o-sp) {
+      height: 24px;
+      left: -22px;
+    }
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .p-singleHeader-title-sub {
+  font-weight: 800;
+}

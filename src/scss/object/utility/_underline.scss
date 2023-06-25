@@ -1,0 +1,116 @@
+@use "global" as *;
+
+// message アンダーライン
+
+.js-underLine,
+.js-underLine02,
+.js-underLine03 {
+  position: relative;
+  padding: 0 5px;
+  background-image: linear-gradient(#00b0ff, #00b0ff);
+  background-size: 0 100%;
+  /*幅をゼロにしておく*/
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+}
+
+
+.js-underLine {
+  transition: background-size 3s 1s;
+
+  @include mq (o-sp) {
+    transition: background-size 2s 0.5s;
+  }
+}
+
+.js-underLine02 {
+  transition: background-size 2s 2s;
+}
+
+.js-underLine03 {
+  transition: background-size 2s 3s;
+}
+
+/*アニメーション後*/
+.is-underL_scroll {
+  background-size: 100% 100%;
+}
+
+// interview アンダーライン
+
+.js-underLine-interviewTop,
+.js-underLine-interviewTop02,
+.js-underLine-interviewTop03 {
+  padding: 2px 8px 2px 8px;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  background-size: 0 80%;
+  background-position: 0px 80%;
+  background-repeat: no-repeat;
+  transition: background-size 1s 0.5s;
+  box-decoration-break: clone;
+
+  @include mq (o-tb) {
+    padding: 0 14px 0 14px;
+  }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .js-underLine-interviewTop,
+.js-underLine-interviewTop02,
+.js-underLine-interviewTop03 {
+  padding: 1.5px 8px 1.5px 8px;
+  background-position: 0 64%;
+
+  @include mq (o-sp) {
+    padding: 1.5px 8px 1.5px 8px;
+  }
+
+  @include mq (o-tb) {
+    padding: 3px 7px 3px 7px;
+  }
+}
+
+.js-underLine-interviewTop02 {
+  transition: background-size 1s 0.6s;
+}
+
+.js-underLine-interviewTop03 {
+  transition: background-size 1s 0.7s;
+}
+
+.is-underL_scroll-interviewTop {
+  background-size: 100% 80%;
+}
+
+.js-underLine-interviewText-green,
+.js-underLine-interviewText-pink,
+.js-underLine-interviewText-blue {
+  padding: 0 5px;
+  background-size: 0 100%;
+  background-position: 0px 100%;
+  background-repeat: no-repeat;
+  transition: background-size 1.5s 0.2s ease;
+  box-decoration-break: clone;
+}
+
+.js-underLine-interviewText-green {
+  background-image: linear-gradient(#00ffbc, #00ffbc);
+}
+
+.js-underLine-interviewText-pink {
+  background-image: linear-gradient(#FF8EBA, #FF8EBA);
+}
+
+.js-underLine-interviewText-blue {
+  background-image: linear-gradient(#00D8FF, #00D8FF);
+}
+
+.is-underL_scroll-interviewText {
+  background-size: 100% 100%;
+
+  @include mq (o-sp) {
+    background-size: 100% 96%;
+  }
+}

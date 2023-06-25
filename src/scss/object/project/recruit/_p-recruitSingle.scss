@@ -1,0 +1,496 @@
+@use "global" as *;
+
+.p-recruitSingle {
+  padding: 22px 20px 20px 20px;
+
+  @include mq (o-sp) {
+    padding-top: 30px;
+  }
+}
+
+.p-recruitSingle-inner {
+  max-width: 990px;
+  margin: 0 auto;
+
+  @include mq (o-bigPc) {
+    max-width: 1200px;
+  }
+}
+
+.p-recruitSingle-intro {
+  margin-bottom: 40px;
+}
+
+.p-recruitSingle-intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+
+  @include mq (o-sp) {
+    margin-bottom: 12px;
+  }
+}
+
+.p-recruitSingle-intro-tag {
+  color: $skyBlue;
+  border: 2px solid $skyBlue;
+  border-radius: 4px;
+  font-size: rem(12);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: calc(20/12);
+  padding: 0px 20px;
+  // padding: 4px 20px;
+  margin-bottom: 8px;
+
+  @include mq (o-sp) {
+    font-size: rem(14);
+    padding: 0px 24px;
+    line-height: calc(27/14);
+    // padding: 6.5px 24px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @include mq (o-sp) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.p-recruitSingle-intro-title {
+  font-size: rem(18);
+  font-weight: 700;
+  margin-bottom: 40px;
+  -webkit-font-smoothing: antialiased;
+
+  @include mq (o-sp) {
+    font-size: rem(30);
+  }
+}
+
+.p-recruitSingle-intro-content {
+  p {
+    font-size: rem(15);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: calc(26/15);
+
+    @include mq (o-sp) {
+      font-size: rem(16);
+    }
+  }
+
+  p+p {
+    margin-top: 20px;
+
+    @include mq (o-sp) {
+      margin-top: 24px;
+    }
+  }
+}
+
+.p-recruitSingle-content {}
+
+.p-recruitSingle-info {}
+
+.p-recruitSingle-info-list {
+  padding: 20px 0;
+  border-bottom: 1px solid #E1E0DA;
+
+  @include mq (o-sp) {
+    display: flex;
+    align-items: center;
+    padding: 26px 0;
+  }
+
+  &:first-child {
+    border-top: 1px solid #E1E0DA;
+  }
+}
+
+.p-recruitSingle-info-term {
+  font-size: rem(15);
+  font-weight: 700;
+  letter-spacing: 0.040em;
+  margin-bottom: 10px;
+
+  @include mq (o-sp) {
+    margin-bottom: 0;
+    width: 200px;
+  }
+
+  @include mq (o-tb) {
+    width: 240px;
+    font-size: rem(18);
+  }
+}
+
+.p-recruitSingle-info-desc {
+  font-size: rem(14);
+  font-weight: 400;
+  letter-spacing: 0.040em;
+  line-height: 1.614286;
+
+
+  @include mq (o-sp) {
+    width: calc(100% - 200px);
+  }
+
+  @include mq (o-tb) {
+    width: calc(100% - 240px);
+    font-size: rem(16);
+  }
+
+  p {
+    position: relative;
+    padding-top: 4px;
+
+    @include mq (o-tb) {
+      padding-top: 1px;
+    }
+
+    &:not(:last-child) {
+      p+span {
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    padding-top: 4px;
+
+    @include mq (o-tb) {
+      padding-top: 1px;
+      padding-left: 22px;
+    }
+
+    &::before {
+      content: "・";
+      position: absolute;
+      top: 4px;
+      left: 0.5px;
+
+      @include mq (o-tb) {
+        top: 0px;
+        left: 5.5px;
+      }
+    }
+
+    em {
+      position: relative;
+      display: inline-block;
+      font-size: rem(12);
+      margin-top: 10px;
+      font-style: inherit;
+
+      @include mq (o-tb) {
+        font-size: rem(14);
+        margin-top: 4px;
+        margin-bottom: 8px;
+      }
+    }
+
+    strong {
+      position: relative;
+      display: block;
+      padding-left: 16px;
+      font-size: rem(12);
+      font-weight: 400;
+
+
+      @include mq (o-tb) {
+        font-size: rem(14);
+        margin-bottom: 10px;
+      }
+
+      &::before {
+        content: "※";
+        position: absolute;
+        left: 0px;
+      }
+    }
+
+  }
+
+  ul+p {
+    margin-top: 8px;
+
+    @include mq (o-tb) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.p-recruitSingle-flow {
+  padding-top: 30px;
+
+  @include mq (o-sp) {
+    padding-top: 40px;
+  }
+}
+
+.p-recruitSingle-flow-title {
+  font-size: rem(15);
+  font-weight: 700;
+  margin-bottom: 45px;
+
+  @include mq (o-tb) {
+    font-size: rem(18);
+  }
+}
+
+.p-recruitSingle-flow-list {
+  margin-bottom: 100px;
+}
+
+.p-recruitSingle-flow-item {
+  position: relative;
+  padding: 30px 20px 30px 20px;
+  border: 3px solid $skyBlue;
+  border-radius: 10px;
+
+  @include mq (o-sp) {
+    padding: 0;
+  }
+
+
+
+  &:first-child {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.01";
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.02";
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.03";
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.04";
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.05";
+      }
+    }
+  }
+
+  &:nth-child(6) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.06";
+      }
+    }
+  }
+
+  &:nth-child(7) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.07";
+      }
+    }
+  }
+
+  &:nth-child(8) {
+    .p-recruitSingle-flow-item-term {
+      &::after {
+        content: "STEP.08";
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    position: relative;
+    margin-bottom: 96px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 135%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      width: 58px;
+      height: 20px;
+      background-image: url(../images/recruit/img_flow_arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+
+      @include mq (o-sp) {
+        top: 150%;
+      }
+    }
+  }
+}
+
+.p-recruitSingle-flow-item-list {
+  @include mq (o-sp) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-recruitSingle-flow-item-term {
+  position: relative;
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $skyBlue;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include mq (o-sp) {
+    font-size: rem(24);
+    width: 240px;
+    margin-bottom: 0;
+    border-right: 3px solid $skyBlue;
+    padding: 39px 0;
+  }
+
+  &::after {
+    position: absolute;
+    font-size: rem(14);
+    font-weight: 700;
+    font-family: $ff-eng;
+    letter-spacing: .08em;
+    color: $white;
+    background-color: $skyBlue;
+    border-radius: 13px;
+    width: 104px;
+    text-align: center;
+    line-height: 22px;
+    top: -32px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mq (o-sp) {
+      top: -2px;
+    }
+  }
+}
+
+.p-recruitSingle-flow-item-desc {
+  font-size: rem(14);
+  text-align: justify;
+  line-height: calc(24/14);
+  font-weight: 400;
+
+  @include mq (o-sp) {
+    font-size: rem(16);
+    width: calc(100% - 240px);
+    padding: 0 24px;
+  }
+
+  @include mq (o-tb) {
+    padding: 0 60px;
+  }
+}
+
+.p-recruitSingle-flow-btn {
+  width: 280px;
+  margin: 0 auto;
+  font-size: rem(22);
+  letter-spacing: 0.08em;
+  -webkit-font-smoothing: antialiased;
+  line-height: 63px;
+  background: linear-gradient(135deg, rgba(75, 172, 255, 1) 0%, rgba(25, 166, 255, 1) 59%, rgba(110, 246, 255, 1) 100%);
+  transition: all 0.3s;
+
+  @include mq (o-sp-s) {
+    width: 335px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      left: 91.3%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0);
+      transition: all 0.3s;
+
+      &::before {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &:hover {
+      background-size: 270% auto;
+      background-position: left;
+      background-position: 100% 50%;
+
+      span {
+        width: 34px;
+        height: 34px;
+        background-color: $white;
+      }
+
+      &::after {
+        background-image: url(../images/recruit/arrow_skyblue2.png);
+      }
+    }
+  }
+
+  @include mq (o-sp) {
+    width: 260px;
+    line-height: 52px;
+    font-size: rem(22);
+
+    span {
+      left: 87.8%;
+    }
+  }
+
+  &::after {
+    top: 24.5px;
+    left: 85%;
+    transform: translate(0, 0) rotate(0deg);
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/recruit/arrow_white.png);
+    transition: all .4s;
+
+    @include mq (o-sp-s) {
+      left: 88.5%;
+    }
+
+    @include mq (o-sp) {
+      top: 19.5px;
+      left: 84.5%;
+    }
+  }
+}
+
+.p-recruitSingle-return {
+  padding: 80px;
+}

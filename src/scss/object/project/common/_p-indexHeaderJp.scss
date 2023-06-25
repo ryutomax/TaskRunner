@@ -1,0 +1,152 @@
+@use "global" as *;
+
+.p-indexHeaderJp {
+    padding-top: 15px;
+
+    &+.p-cultureLead {
+        margin-top: 30px;
+    }
+
+    @include mq(o-sp) {
+        padding-top: 55px;
+
+        &+.p-cultureLead {
+            margin-top: 55px;
+        }
+    }
+}
+
+.p-indexHeaderJp-inner {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+
+
+    @include mq (o-bigPc) {
+        max-width: 1200px;
+    }
+
+    @include mq (o-sp) {
+        max-width: 1030px;
+        padding: 0 20px;
+        padding: 0;
+    }
+}
+
+.p-indexHeaderJp-title {
+    &+.p-indexHeader-content {
+        margin-top: 35px;
+    }
+
+    @include mq (o-sp) {
+        padding: 0 20px;
+
+        &+.p-indexHeader-content {
+            margin-top: 60px;
+        }
+    }
+
+    @include mq (o-pc) {
+        padding: 0;
+    }
+}
+
+.p-indexHeaderJp-title-en {
+    font-family: $ff-eng;
+    font-weight: 600;
+    font-size: rem(30);
+    font-stretch: condensed;
+    letter-spacing: .02em;
+
+
+    @include mq (sp-tb) {
+        font-size: rem(38);
+    }
+
+    @include mq (o-sp) {
+        font-size: rem(38);
+    }
+}
+
+.p-indexHeaderJp-title-ja {
+    font-weight: 900;
+    font-size: rem(12);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    margin-left: 14px;
+    letter-spacing: .075em;
+    line-height: 1.2em;
+
+    &:before {
+        content: '';
+        width: 3px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 1.5px;
+        background: #000;
+        left: 0;
+    }
+
+
+    @include mq (o-sp) {
+        font-size: rem(18);
+        margin-left: 20px;
+        padding-left: 20px;
+        height: 24px;
+
+        &:before {
+            height: 100%;
+            left: 0;
+        }
+    }
+}
+
+.p-indexHeaderJp-title-sub {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include mq (o-sp) {
+        // flex-direction: row;
+        // align-items: center;
+        margin-bottom: 13px;
+
+    }
+
+
+}
+
+.p-indexHeaderJp-title-main {
+    font-weight: 900;
+    font-size: rem(32);
+    margin: 3px 0 30px;
+    line-height: calc(100/80);
+    letter-spacing: .075em;
+
+    br {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+
+    @include mq (o-sp) {
+        font-size: rem(80);
+        margin: 5px 0 55px;
+
+        br {
+            display: block;
+        }
+
+        .sp {
+            display: none;
+        }
+    }
+}

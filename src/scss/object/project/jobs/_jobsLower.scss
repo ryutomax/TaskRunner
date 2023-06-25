@@ -1,0 +1,756 @@
+@use "global" as *;
+
+.p-jobsLower {
+  padding: 10px 20px 0;
+  margin: 0 auto;
+
+  @include mq (o-tb) {
+    width: 1022px;
+    max-width: 100%;
+    padding: 45px 15px 0;
+  }
+
+  @include mq (o-pc) {
+    width: 1022px;
+    padding: 45px 15px 0;
+  }
+}
+
+.p-jobsLower-head {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:before {
+    content: '';
+    background: #000;
+    width: 100%;
+    height: 5px;
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  em {
+    font-size: rem(30);
+    font-family: $ff-eng;
+    font-style: normal;
+    font-stretch: condensed;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: rem(12);
+    margin-left: 14px;
+    padding-left: 14px;
+    position: relative;
+    font-weight: 700;
+
+    &:before {
+      content: '';
+      width: 3px;
+      height: 20px;
+      background: #000;
+      position: absolute;
+      border-radius: 1.5px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  p {
+    font-size: rem(12);
+    margin-left: 14px;
+    padding-left: 14px;
+    position: relative;
+    font-weight: 700;
+
+    &:before {
+      content: '';
+      width: 3px;
+      height: 20px;
+      background: #000;
+      position: absolute;
+      border-radius: 1.5px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include mq (o-tb) {
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+
+    em {
+      font-size: rem(34);
+    }
+
+    p {
+      font-size: rem(16);
+      margin-left: 15px;
+      padding-left: 15px;
+
+      &:before {
+        height: 24px;
+      }
+    }
+
+  }
+
+  @include mq (o-pc) {
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+
+    em {
+      font-size: rem(38);
+    }
+
+    p {
+      font-size: rem(18);
+      margin-left: 20px;
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        height: 24px;
+      }
+    }
+
+  }
+}
+
+.p-jobsLower-kv {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.p-jobsLower-ttlwrap {
+  margin-bottom: 38px;
+}
+
+.p-jobsLower-ttl {
+  font-size: rem(18);
+  line-height: calc(30/18);
+
+  @include mq (o-tb) {
+    font-size: rem(24);
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(30);
+  }
+}
+
+.p-jobsLower-catewrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @include mq (o-pc) {
+    margin-bottom: 16px;
+  }
+}
+
+.p-jobsLower-cate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid;
+  padding: 0 20px;
+  height: 24px;
+  margin-right: 10px;
+  border: 2px solid;
+  border-radius: 3px;
+  font-size: rem(12);
+  font-weight: 700;
+  background: #fff;
+  border-color: #6C6C6C;
+  color: #6C6C6C;
+
+  @include mq (o-pc) {}
+
+  &--planner,
+  &--writer,
+  &--engineer,
+  &--designer,
+  &--illustrator,
+  &--others,
+  &--column,
+  &--episode,
+  &--illustrator {
+    @extend .p-jobsLower-cate;
+  }
+
+  &--planner {
+    color: #2FD193;
+    border-color: #2FD193;
+  }
+
+  &--writer {
+    color: #B385F4;
+    border-color: #B385F4;
+  }
+
+  &--engineer {
+    color: #19B8FF;
+    border-color: #19B8FF;
+  }
+
+  &--designer {
+    color: #FF4EA0;
+    border-color: #FF4EA0;
+  }
+
+  &--illustrator {
+    color: #FF4EA0;
+    border-color: #FF4EA0;
+  }
+
+  &--others {
+    color: #FF9D00;
+    border-color: #FF9D00;
+  }
+}
+
+.p-jobsLower-cont {
+  h2 {
+    font-size: rem(16);
+    line-height: calccalc(26/16);
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      background: #19B8FF;
+      ;
+      width: 3px;
+      height: 16px;
+      display: block;
+      margin-right: 6px;
+    }
+  }
+
+  h3 {
+    color: #19B8FF;
+    font-size: rem(15);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: rem(14);
+    line-height: calc(26/14)+em;
+
+    &+p {
+      margin-top: 26px;
+    }
+
+    &+h2 {
+      margin-top: 45px;
+    }
+
+    &+h3 {
+      margin-top: 20px;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 20px auto 30px;
+  }
+
+  ul,
+  ol {
+    background: #F4F4F4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    border-radius: 4px;
+    font-size: rem(14);
+    line-height: calc(22/14)+em;
+    margin-bottom: 50px;
+
+    ::marker {
+      color: #19B8FF;
+      font-weight: 700;
+    }
+
+    li {
+      margin-left: 17px;
+
+      &+li {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: calc(175 / 375 * 100vw);
+    margin: 30px auto 45px;
+  }
+
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  .is-layout-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px auto 30px;
+
+    .is-layout-flow {
+      width: calc(161/335*100%);
+    }
+
+    img,
+    figure {
+      width: 100%;
+    }
+
+    p {
+      font-size: rem(14);
+      line-height: calc(26/14)+em;
+      font-weight: 500;
+
+      &+p {
+        margin-top: 26px;
+      }
+
+      &+h2 {
+        margin-top: 45px;
+      }
+
+      &+h3 {
+        margin-top: 20px;
+      }
+    }
+
+    h3 {
+      font-size: rem(18);
+      margin-bottom: 6px;
+      padding-left: 40px;
+
+      &+p {
+        padding-left: 40px;
+      }
+    }
+
+    p {
+      font-size: rem(16);
+      line-height: calccalc(26/16);
+
+      &+p {
+        margin-top: 26px;
+      }
+
+      &+h2 {
+        margin-top: 70px;
+      }
+
+      &+h3 {
+        margin-top: 25px;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 40px auto 48px;
+      width: 680px;
+
+      &.large {
+        width: 100%;
+      }
+    }
+
+    iframe {
+      width: 680px;
+      height: 356px;
+      margin: 40px auto 65px;
+    }
+
+    ul,
+    ol {
+      padding: 30px;
+      border-radius: 10px;
+      width: 912px;
+      margin: 0 auto 65px;
+
+      .is-layout-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto 0px;
+
+        .is-layout-flow {
+          width: calc(161/335*100%);
+        }
+
+        img,
+        figure {
+          width: 100%;
+        }
+      }
+
+      &+li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .is-layout-flow {
+    margin: 35px auto 40px;
+
+    ul,
+    ol {
+      padding: 30px;
+      border-radius: 10px;
+      width: 912px;
+      margin: 0 auto 65px;
+
+      li {
+        font-size: rem(16);
+
+        @include mq (o-tb) {
+          h2 {
+            font-size: rem(19);
+            line-height: calc(26/22);
+            margin-bottom: 18px;
+
+            &:before {
+              width: 5px;
+              height: 24px;
+              margin-right: 6px;
+            }
+          }
+
+          h3 {
+            font-size: rem(16);
+            margin-bottom: 6px;
+            padding-left: 40px;
+
+            &+p {
+              padding-left: 40px;
+            }
+          }
+
+          p {
+            font-size: rem(15);
+            line-height: calc(26/16);
+
+            &+p {
+              margin-top: 26px;
+            }
+
+            &+h2 {
+              margin-top: 70px;
+            }
+
+            &+h3 {
+              margin-top: 25px;
+            }
+          }
+
+          img {
+            display: block;
+            margin: 40px auto 48px;
+            width: 680px;
+
+            &.large {
+              width: 100%;
+            }
+          }
+
+          iframe {
+            width: 680px;
+            height: 356px;
+            margin: 40px auto 65px;
+          }
+
+          ul,
+          ol {
+            padding: 30px;
+            border-radius: 10px;
+            width: 912px;
+            margin: 0 auto 65px;
+
+            li {
+              font-size: rem(15);
+
+              &+li {
+                margin-top: 8px;
+              }
+            }
+          }
+
+          .is-layout-flow {
+            margin: 25px auto 40px;
+
+            .wp-block-image {
+              width: 476px;
+
+              img {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+
+      @include mq (o-pc) {
+        h2 {
+          font-size: rem(22);
+          line-height: calc(26/22);
+          margin-bottom: 18px;
+
+          &:before {
+            width: 5px;
+            height: 24px;
+            margin-right: 6px;
+          }
+        }
+
+        h3 {
+          font-size: rem(18);
+          margin-bottom: 6px;
+          padding-left: 40px;
+
+          &+p {
+            padding-left: 40px;
+          }
+        }
+
+        p {
+          font-size: rem(16);
+          line-height: calc(26/16);
+
+          &+p {
+            margin-top: 26px;
+          }
+
+          &+h2 {
+            margin-top: 70px;
+          }
+
+          &+h3 {
+            margin-top: 25px;
+          }
+        }
+
+        img {
+          display: block;
+          margin: 40px auto 48px;
+          width: 680px;
+
+          &.large {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .is-layout-flow {
+      margin: 25px auto 40px;
+
+      .wp-block-image {
+        width: 476px;
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.p-jobsLower-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 40px 15px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  align-items: center;
+  margin-top: 65px;
+  margin-bottom: 20px;
+
+  @include mq (o-pc) {
+    flex-direction: row;
+    padding: 40px 40px 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+    justify-content: flex-start;
+  }
+
+}
+
+.p-jobsLower-profile-head {
+  position: absolute;
+  background: #fff;
+  width: 178px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(15);
+  font-weight: 700;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  top: -25px;
+
+  @include mq (o-tb) {
+    font-size: rem(16);
+    width: 199px;
+    right: auto;
+    left: 20px;
+
+    &:before {
+      content: '';
+      background-image: url('../images/jobs/wite.svg');
+      background-size: cover;
+      display: block;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+    }
+  }
+
+  &:before {
+    content: '';
+    background-image: url('../images/jobs/wite.svg');
+    background-size: cover;
+    display: block;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+  }
+
+  @include mq (o-pc) {
+    font-size: rem(17);
+    width: 199px;
+    right: auto;
+    left: 20px;
+
+    &:before {
+      content: '';
+      background-image: url('../images/jobs/wite.svg');
+      background-size: cover;
+      display: block;
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+    }
+  }
+
+}
+
+.p-jobsLower-profile-desc {
+  em {
+    font-family: $ff-eng;
+    font-size: rem(18);
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-stretch: condensed;
+    font-weight: 600;
+    letter-spacing: .075em;
+  }
+
+  p {
+    font-size: rem(13);
+    line-height: calc(20/13)+em;
+    font-weight: 700;
+
+  }
+
+  @include mq (o-pc) {
+    margin: 0;
+    margin-right: 30px;
+
+    em {
+      font-size: 32px;
+      margin-bottom: 7px;
+      text-align: left;
+      font-style: normal;
+    }
+
+    p {
+      font-size: rem(15);
+    }
+  }
+}
+
+.p-jobsLower-profile-pct {
+  width: 100px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  @include mq (o-pc) {
+    margin: 0;
+    margin-right: 30px;
+    width: 150px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-jobsLower-twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1DA1F2;
+  background: #1DA1F2;
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+  width: 94px;
+  height: 28px;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: .3s;
+
+  path {
+    transition: .3s;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    background: #fff;
+    color: #1DA1F2;
+
+    path {
+      fill: #1DA1F2;
+    }
+  }
+}

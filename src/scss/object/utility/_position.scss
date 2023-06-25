@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.u-top-40 {
+  top: -40px;
+
+  @include mq (o-sp-s) {
+    top: -46px;
+  }
+
+  @include mq (o-sp) {
+    top: -36px;
+  }
+
+  @include mq (o-tb) {
+    top: -54px;
+  }
+}

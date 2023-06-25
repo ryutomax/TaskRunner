@@ -1,0 +1,105 @@
+<% const info={ title : "よくある質問｜採用情報｜Happy Elements株式会社" , desc : "京都に主要拠点に、モバイルゲームの開発・運営を行うHappy Elements株式会社の採用情報サイトです。採用に関するよくあるご質問についてお答えします。" , css: "../../" }; %>
+  <%- include("../../include/_head",{meta: info}) -%>
+    <div class="l-wrap">
+      <!-- 閉じタグは_footer.ejs -->
+      <!-- 画像相対パス(dist参照) -->
+      <% const path=["../../assets/images/"]%>
+        <%- include("../../include/_header", {path: '../../' }) -%>
+          <%- include("../../include/_threecanvas", {path: '../../' }) -%>
+            <main class="l-main">
+              <button class="c-toUpBtn js-toUpBtn u-zindex_1">
+              </button>
+              <section class="p-sectionHeader">
+                <div class="p-sectionHeader-inner">
+                  <div class="p-sectionHeader-title">
+                    <h3 class="p-sectionHeader-title-sub">RECRUIT<span>採用情報</span></h3>
+                    <h2 class="p-sectionHeader-title-main">
+                      <ul class="p-sectionHeader-title-main-fonts js-title">
+                        <li class="p-sectionHeader-title-main-font js-title-font">よ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">く</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">あ</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">る</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">質</li>
+                        <li class="p-sectionHeader-title-main-font js-title-font">問</li>
+                      </ul>
+                    </h2>
+                  </div>
+                  <!-- /.p-sectionHeader-title -->
+                  <div class="p-sectionHeader-content">
+                    <p class="p-sectionHeader-content-text">過去、応募された方からいただいた質問の中で、多く寄せられたものをまとめました。エントリーを検討される際の参考にご覧ください。</p>
+                    <p class="p-sectionHeader-content-text">また、こちらに掲載のない採用に関するご質問等については、コーポレートサイトの<a href="https://www.happyelements.co.jp/contact/form_6/" target="_blank" rel="noopener noreferrer">お問い合わせフォームの「その他（個人の方）」</a>から送信をお願いいたします。こちらに掲載された内容につきましては、予告なく変更される場合がありますので、予めご了承ください。</p>
+                  </div>
+                  <!-- /.p-sectionHeader-content -->
+                </div>
+                <!-- /.p-sectionHeader-inner -->
+              </section>
+              <section class="p-faq">
+                <div class="p-faq-inner">
+                  <ul class="p-faq-list">
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">インターンシップ制度はありますか？</dt>
+                        <dd class="p-faq-item-a">不定期ではありますが、実施実績はございます。なお、今期の募集は終了しております。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">新卒採用はしていますか？</dt>
+                        <dd class="p-faq-item-a">大変申し訳ございません、新卒採用は行っておりません。学生アルバイトの方に卒業後も社員として働いていただけるように、在学中に内定を出し、卒業後に社員として登用する新卒登用制度を敷いています。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">リモートでの勤務は可能でしょうか？</dt>
+                        <dd class="p-faq-item-a">あいにくのところ、リモート勤務での募集は行っておりません。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">入社後の配属先はどのように決まるのですか？</dt>
+                        <dd class="p-faq-item-a">スキルやご経験、適性やプロジェクトなどの状況を踏まえまして、配属を決定いたします。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">一度不採用になった場合、再応募は可能ですか？</dt>
+                        <dd class="p-faq-item-a">同職種への応募の場合、前回の応募から6ヶ月経過した際には、応募していただけます。ただし、応募職種が前回のものと違う場合には、6カ月以内でもご応募いただけます。</dd>
+                        <dd class="p-faq-item-example"><span>例）</span>前回応募がイラストレーター（キャラクター）で、今回の応募がイラストレーター（背景）の場合は、6ヶ月以内に応募が可能。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">応募書類・作品を郵送でお送りしてもよいでしょうか？</dt>
+                        <dd class="p-faq-item-a">大変申し訳ございませんが、郵送での必要書類などのご提出はお断りしております。応募フォームに従って、ご応募ください。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">ゲーム開発経験がない場合でも応募は可能でしょうか？</dt>
+                        <dd class="p-faq-item-a">職種によって、必須としているご経験やスキルが異なりますので、ご希望職種の募集要項をお読みいただきますようお願いいたします。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">芸術系の大学を卒業していませんが、イラストレーター職に応募できますか？</dt>
+                        <dd class="p-faq-item-a">はい、イラストレーター職は学歴不問ですので、ご応募いただけます。ただし、職種によっては、必須条件が異なる場合がありますので、希望の職種の募集要項にてご確認ください。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">高校生でも学生アルバイトに応募できますか？</dt>
+                        <dd class="p-faq-item-a">はい、応募いただけます。ただし、18歳未満の方は対象外となり、ご応募いただけません。</dd>
+                      </dl>
+                    </li>
+                    <li class="p-faq-item js-content-show">
+                      <dl class="p-faq-item-inner">
+                        <dt class="p-faq-item-q">外国籍でも応募可能でしょうか？</dt>
+                        <dd class="p-faq-item-a">可能です。業務に支障なく日本語でコミュニケーションがとれる方を求めています。</dd>
+                      </dl>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.p-faq-inner -->
+              </section>
+            </main>
+            <%- include("../../include/_footer", {js: "../../" }) -%>

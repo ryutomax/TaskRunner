@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.p-jobsMain{
+    & + .p-footer{
+        background: #f4f4f4;
+
+        @include mq(o-pc){
+            padding-top: 25px;
+        }
+    }
+}

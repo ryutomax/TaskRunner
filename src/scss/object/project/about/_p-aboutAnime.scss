@@ -1,0 +1,1035 @@
+@use "global" as *;
+
+.p-aboutAnime {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 153px;
+    position: relative;
+
+    .pc {
+        display: none;
+    }
+
+
+    @include mq (o-bigPc) {
+        max-width: 1200px;
+    }
+
+    @include mq (o-sp) {
+        padding: 0;
+        margin-top: 147px;
+        width: calc(100% - 60px);
+
+        .pc {
+            display:    block;
+        }
+
+        .sp {
+            display: none;
+        }
+    }
+}
+
+
+
+
+.p-aboutAnime-head {
+    font-weight: 900;
+    font-size: rem(16);
+    margin-bottom: 66px;
+    color: #19B8FF;
+    padding-left: 23px;
+    position: relative;
+    letter-spacing: .04em;
+
+    .pc {
+        display: none !important;
+    }
+
+    &:before {
+        content: '';
+        background: #19B8FF;
+        width: 14px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        border-radius: 1.5px;
+    }
+
+    @include mq (o-sp) {
+        margin-bottom: 118px;
+        padding-left: 30px;
+        left: -7px;
+
+        &:before {
+            left: 6px;
+        }
+    }
+
+    @include mq (o-pc) {
+        margin-bottom: 118px;
+        padding-left: 30px;
+
+        &:before {
+            left: 6px;
+        }
+    }
+}
+
+
+.p-aboutAnime-anime {
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+    }
+
+    @include mq (o-sp) {
+        width: 759px;
+        left: -95px;
+        position: relative;
+    }
+
+    @include mq (o-pc) {
+        width: 759px;
+        left: -95px;
+        position: relative;
+    }
+}
+
+.p-aboutAnime-boxwrap {
+    margin: 12px auto 0;
+
+    @include mq (o-sp) {
+        width: 530px;
+        margin: 0 auto;
+    }
+
+    @include mq (o-pc) {
+        width: 530px;
+        margin: 0 auto;
+    }
+}
+
+
+.p-aboutAnime-box {
+    display: block;
+    position: relative;
+    width: calc(335 / 375 * 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+
+    .pc {
+        display: none !important;
+    }
+
+    &:nth-child(n+2) {
+        margin-top: calc(6 / 375 * 100vw);
+    }
+
+    &:nth-child(1) {
+        height: calc(135 / 375 * 100vw);
+        background-image: url('../images/about/anime_bg_03_sp.png');
+
+        &:before {
+            background: #83D1F7;
+            right: -47px;
+        }
+    }
+
+    &:nth-child(2) {
+        height: calc(76 / 375 * 100vw);
+        background-image: url('../images/about/anime_bg_02_sp.png');
+
+        &:before {
+            background: #6BC1FA;
+            right: -133px;
+        }
+    }
+
+    &:nth-child(3) {
+        height: calc(76 / 375 * 100vw);
+        background-image: url('../images/about/anime_bg_01_sp.png');
+
+        &:before {
+            background: #4EAEFE;
+            right: -226px;
+        }
+    }
+
+    @include mq (o-sp) {
+        height: 130px;
+        width: 100%;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .sp {
+            display: none !important;
+        }
+
+        .pc {
+            display: block !important;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 230px;
+            bottom: 0;
+            position: absolute;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        &:nth-child(n+2) {
+            margin-top: 13px;
+        }
+
+        &:nth-child(1) {
+            height: 135px;
+            background-image: url('../images/about/anime_bg_03_pc.png');
+
+            &:before {
+                background: #83D1F7;
+                right: -47px;
+            }
+        }
+
+        &:nth-child(2) {
+            height: 126px;
+            background-image: url('../images/about/anime_bg_02_pc.png');
+
+            &:before {
+                background: #6BC1FA;
+                right: -133px;
+            }
+        }
+
+        &:nth-child(3) {
+            height: 132px;
+            background-image: url('../images/about/anime_bg_01_pc.png');
+
+            &:before {
+                background: #4EAEFE;
+                right: -226px;
+            }
+        }
+    }
+
+    @include mq (o-pc) {
+        height: 130px;
+        width: 100%;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .sp {
+            display: none !important;
+        }
+
+        .pc {
+            display: block !important;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 230px;
+            bottom: 0;
+            position: absolute;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        &:nth-child(n+2) {
+            margin-top: 13px;
+        }
+
+        &:nth-child(1) {
+            height: 135px;
+            background-image: url('../images/about/anime_bg_03_pc.png');
+
+            &:before {
+                background: #83D1F7;
+                right: -47px;
+            }
+        }
+
+        &:nth-child(2) {
+            height: 126px;
+            background-image: url('../images/about/anime_bg_02_pc.png');
+
+            &:before {
+                background: #6BC1FA;
+                right: -133px;
+            }
+        }
+
+        &:nth-child(3) {
+            height: 132px;
+            background-image: url('../images/about/anime_bg_01_pc.png');
+
+            &:before {
+                background: #4EAEFE;
+                right: -226px;
+            }
+        }
+    }
+}
+
+.p-aboutAnime-txtwrap {
+    font-weight: 700;
+
+    &--01,
+    &--02,
+    &--03 {
+        @extend .p-aboutAnime-txtwrap;
+    }
+
+    @include mq (o-sp) {
+        font-size: rem(15);
+        line-height: calc(24/15);
+        position: absolute;
+        bottom: 7px;
+        white-space: nowrap;
+
+        p+p {
+            margin-left: 25px;
+        }
+
+        &--03 {
+            left: 530px;
+        }
+
+        &--02 {
+            left: 432px;
+        }
+
+        &--01 {
+            left: 350px;
+        }
+    }
+
+    @include mq (o-pc) {
+        font-size: rem(15);
+        line-height: calc(24/15);
+        position: absolute;
+        bottom: 7px;
+        white-space: nowrap;
+
+        p+p {
+            margin-left: 25px;
+        }
+
+        &--03 {
+            left: 530px;
+        }
+
+        &--02 {
+            left: 432px;
+        }
+
+        &--01 {
+            left: 350px;
+        }
+    }
+}
+
+.p-aboutAnime-centertxt {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    &--01,
+    &--02,
+    &--03 {
+        @extend .p-aboutAnime-centertxt;
+    }
+
+    &--01 {
+        top: calc(54 / 375 * 100vw);
+        height: calc(76 / 375 * 100vw);
+    }
+
+    &--02 {
+        top: calc(3 / 375 * 100vw);
+        height: calc(68 / 375 * 100vw);
+    }
+
+    &--03 {
+        top: calc(8 / 375 * 100vw);
+        height: calc(58 / 375 * 100vw);
+    }
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    @include mq (o-sp) {
+        height: 47px;
+
+        &--01 {
+            top: 70px;
+        }
+
+        &--02 {
+            top: 46px;
+        }
+
+        &--03 {
+            top: 45px;
+        }
+    }
+
+    @include mq (o-pc) {
+        height: 47px;
+
+        &--01 {
+            top: 70px;
+        }
+
+        &--02 {
+            top: 46px;
+        }
+
+        &--03 {
+            top: 45px;
+        }
+    }
+}
+
+.p-aboutAnime-boxhead {
+    position: relative;
+    width: 100%;
+    height: 37vw;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pc {
+        display: none !important;
+    }
+
+    &>img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 59.4vw;
+        top: 5.2vw;
+    }
+
+    p {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        bottom: calc(34 / 375 * 100vw);
+        font-size: calc(12 / 375 * 100vw);
+        line-height: calc(16/12);
+        letter-spacing: .14em;
+        font-weight: 700;
+    }
+
+    @include mq (o-sp) {
+        width: 673px;
+        height: 235px;
+        right: -146px;
+        margin-bottom: 20px;
+
+        &>img {
+            top: 29px;
+            width: 392px;
+        }
+
+        p {
+            font-size: rem(15);
+            line-height: calc(24/15);
+            bottom: 62px;
+            font-weight: 700;
+        }
+
+        .sp {
+            display: none !important;
+        }
+
+        .pc {
+            display: block !important;
+        }
+    }
+
+    @include mq (o-pc) {
+        width: 673px;
+        height: 235px;
+        right: -146px;
+        margin-bottom: 20px;
+
+        &>img {
+            top: 29px;
+            width: 392px;
+        }
+
+        p {
+            font-size: rem(15);
+            line-height: calc(24/15);
+            bottom: 62px;
+            font-weight: 700;
+        }
+
+        .sp {
+            display: none !important;
+        }
+
+        .pc {
+            display: block !important;
+        }
+    }
+}
+
+@keyframes flash01 {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes flash02 {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    100% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+}
+
+.p-aboutAnime-boxstar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    li {
+        position: absolute;
+        max-width: none;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            img {
+                animation: flash01 2s linear infinite;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            img {
+                animation: flash02 2s linear infinite;
+            }
+        }
+
+        &:nth-child(1) {
+            width: calc(34 /375 * 100vw);
+            right: calc(2 /375 * 100vw);
+            top: calc(-40 /375 * 100vw);
+        }
+
+        &:nth-child(2) {
+            width: calc(24 /375 * 100vw);
+            bottom: calc(-30 /375 * 100vw);
+            left: 0;
+        }
+
+        &:nth-child(3) {
+            width: calc(24 /375 * 100vw);
+            top: calc(-30 /375 * 100vw);
+            left: 0;
+        }
+
+        &:nth-child(4) {
+            width: calc(34 /375 * 100vw);
+            bottom: calc(-40 /375 * 100vw);
+            right: 0;
+        }
+    }
+
+    @include mq (o-sp) {
+        li {
+            &:nth-child(1) {
+                width: 59px;
+                left: -76px;
+                bottom: -11px;
+                top: auto;
+                right: auto;
+            }
+
+            &:nth-child(2) {
+                width: 29px;
+                top: -34px;
+                right: -40px;
+                bottom: auto;
+                left: auto;
+            }
+
+            &:nth-child(3) {
+                width: 24px;
+                top: -50px;
+                left: -23px;
+                right: auto;
+                bottom: auto;
+            }
+
+            &:nth-child(4) {
+                width: 60px;
+                bottom: -11px;
+                right: -64px;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+
+    @include mq (o-pc) {
+        li {
+            &:nth-child(1) {
+                width: 59px;
+                left: -76px;
+                bottom: -11px;
+                top: auto;
+                right: auto;
+            }
+
+            &:nth-child(2) {
+                width: 29px;
+                top: -34px;
+                right: -40px;
+                bottom: auto;
+                left: auto;
+            }
+
+            &:nth-child(3) {
+                width: 24px;
+                top: -50px;
+                left: -23px;
+                right: auto;
+                bottom: auto;
+            }
+
+            &:nth-child(4) {
+                width: 60px;
+                bottom: -11px;
+                right: -64px;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+}
+
+/***************************************************
+ * Generated by SVG Artista on 12/1/2022, 10:05:55 PM
+ * MIT license (https://opensource.org/licenses/MIT)
+ * W. https://svgartista.net
+ **************************************************/
+
+// @-webkit-keyframes animate-svg-stroke-1 {
+//     0% {
+//         stroke-dashoffset: 858.9544677734375px;
+//         stroke-dasharray: 858.9544677734375px;
+//     }
+
+//     100% {
+//         stroke-dashoffset: 0;
+//         stroke-dasharray: 858.9544677734375px;
+//     }
+// }
+
+// @keyframes animate-svg-stroke-1 {
+//     0% {
+//         stroke-dashoffset: 858.9544677734375px;
+//         stroke-dasharray: 858.9544677734375px;
+//     }
+
+//     100% {
+//         stroke-dashoffset: 0;
+//         stroke-dasharray: 858.9544677734375px;
+//     }
+// }
+
+// .svg-elem-1 {
+//     -webkit-animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+//     animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+// }
+
+// @-webkit-keyframes animate-svg-stroke-2 {
+//     0% {
+//         stroke-dashoffset: 24.21729850769043px;
+//         stroke-dasharray: 24.21729850769043px;
+//     }
+
+//     100% {
+//         stroke-dashoffset: 0;
+//         stroke-dasharray: 24.21729850769043px;
+//     }
+// }
+
+// @keyframes animate-svg-stroke-2 {
+//     0% {
+//         stroke-dashoffset: 24.21729850769043px;
+//         stroke-dasharray: 24.21729850769043px;
+//     }
+
+//     100% {
+//         stroke-dashoffset: 0;
+//         stroke-dasharray: 24.21729850769043px;
+//     }
+// }
+
+// .svg-elem-2 {
+//     -webkit-animation: animate-svg-stroke-2 1s ease-in-out 1.5s both;
+//     animation: animate-svg-stroke-2 1s ease-in-out 1.5s both;
+// }
+
+
+// @include mq (o-pc) {
+//     @-webkit-keyframes animate-svg-stroke-1 {
+//         0% {
+//             stroke-dashoffset: 1659.9898681640625px;
+//             stroke-dasharray: 1659.9898681640625px;
+//         }
+
+//         100% {
+//             stroke-dashoffset: 0;
+//             stroke-dasharray: 1659.9898681640625px;
+//         }
+//     }
+
+//     @keyframes animate-svg-stroke-1 {
+//         0% {
+//             stroke-dashoffset: 1659.9898681640625px;
+//             stroke-dasharray: 1659.9898681640625px;
+//         }
+
+//         100% {
+//             stroke-dashoffset: 0;
+//             stroke-dasharray: 1659.9898681640625px;
+//         }
+//     }
+
+//     // .svg-elem-1 {
+//     //     -webkit-animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+//     //     animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+//     // }
+
+//     @-webkit-keyframes animate-svg-stroke-2 {
+//         0% {
+//             stroke-dashoffset: 46.97199630737305px;
+//             stroke-dasharray: 46.97199630737305px;
+//         }
+
+//         100% {
+//             stroke-dashoffset: 0;
+//             stroke-dasharray: 46.97199630737305px;
+//         }
+//     }
+
+//     @keyframes animate-svg-stroke-2 {
+//         0% {
+//             stroke-dashoffset: 46.97199630737305px;
+//             stroke-dasharray: 46.97199630737305px;
+//         }
+
+//         100% {
+//             stroke-dashoffset: 0;
+//             stroke-dasharray: 46.97199630737305px;
+//         }
+//     }
+
+//     // .svg-elem-2 {
+//     //     -webkit-animation: animate-svg-stroke-2 1s ease-in-out 1.5s both;
+//     //     animation: animate-svg-stroke-2 1s ease-in-out 1.5s both;
+//     // }
+
+// }
+
+.p-aboutAnime-anime {
+
+    .p-aboutAnime-boxhead svg {
+        opacity: 0;
+    }
+
+    &.is-start {
+        .p-aboutAnime-boxhead svg {
+            opacity: 1;
+        }
+    }
+
+    @include mq (o-pc) {
+
+        .p-aboutAnime-box,
+        .p-aboutAnime-txtwrap p,
+        .p-aboutAnime-centertxt,
+        .p-aboutAnime-boxhead img,
+        .p-aboutAnime-boxhead p {
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .svg-elem-1-pc {
+            // animation-delay: .9s !important;
+            animation-delay: .15s !important;
+        }
+
+        .svg-elem-2-pc {
+            // animation-delay: 1.9s !important;
+            animation-delay: 1.15s !important;
+        }
+
+        .p-aboutAnime-boxhead>img {
+            // transition-delay: 2.2s;
+            transition-delay: 1.45s
+        }
+
+        .p-aboutAnime-boxhead p {
+            // transition-delay: 2.4s;
+            transition-delay: 1.65s
+        }
+
+        .p-aboutAnime-box {
+            transition-delay: calc(.1s + 1.7s);
+
+            &:nth-child(3) {
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.15s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.2s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.25s + 1.7s);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                transition-delay: calc(.3s + 1.7s);
+
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.35s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.4s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.45s + 1.7s);
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                transition-delay: calc(.5s + 1.7s);
+
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.55s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.6s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.65s + 1.7s);
+                    }
+                }
+            }
+        }
+
+        &.is-start {
+
+            .p-aboutAnime-box,
+            .p-aboutAnime-txtwrap p,
+            .p-aboutAnime-centertxt,
+            .p-aboutAnime-boxhead img,
+            .p-aboutAnime-boxhead p {
+                opacity: 1;
+            }
+
+            .p-aboutAnime-boxstar {}
+
+            .svg-elem-1-pc {
+                -webkit-animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+                animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+            }
+
+            .svg-elem-2-pc {
+                -webkit-animation: animate-svg-stroke-2 18s ease-in-out 1.5s both;
+                animation: animate-svg-stroke-2 .18s ease-in-out 1.5s both;
+            }
+        }
+    }
+
+    & {
+
+        .p-aboutAnime-box,
+        .p-aboutAnime-txtwrap p,
+        .p-aboutAnime-centertxt,
+        .p-aboutAnime-boxhead>img,
+        .p-aboutAnime-boxhead p,
+        .p-aboutAnime-boxstar li {
+            opacity: 0;
+            transition: opacity .2s;
+        }
+
+        .svg-elem-1-pc {
+            // animation-delay: .9s !important;
+            animation-delay: .15s !important;
+        }
+
+        .svg-elem-2-pc {
+            // animation-delay: 1.9s !important;
+            animation-delay: 1.15s !important;
+        }
+
+        .p-aboutAnime-boxhead>img {
+            // transition-delay: 2.2s;
+            transition-delay: 1.45s
+        }
+
+        .p-aboutAnime-boxhead p {
+            // transition-delay: 2.4s;
+            transition-delay: 1.65s
+        }
+
+        .p-aboutAnime-box {
+            transition-delay: calc(.1s + 1.7s);
+
+            &:nth-child(1) {
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.15s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.2s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.25s + 1.7s);
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                transition-delay: calc(.3s + 1.7s);
+
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.35s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.4s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.45s + 1.7s);
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                transition-delay: calc(.5s + 1.7s);
+
+                .p-aboutAnime-centertxt {
+                    transition-delay: calc(.55s + 1.7s);
+                }
+
+                .p-aboutAnime-txtwrap p {
+                    &:first-child {
+                        transition-delay: calc(.6s + 1.7s);
+                    }
+
+                    &:last-child {
+                        transition-delay: calc(.65s + 1.7s);
+                    }
+                }
+            }
+        }
+
+        .p-aboutAnime-boxstar>li:nth-child(1),
+        .p-aboutAnime-boxstar>li:nth-child(2) {
+            transition-delay: 2.6s;
+        }
+
+        .p-aboutAnime-boxstar>li:nth-child(3),
+        .p-aboutAnime-boxstar>li:nth-child(4) {
+            transition-delay: 3.6s;
+        }
+
+        &.is-start {
+
+            .p-aboutAnime-box,
+            .p-aboutAnime-txtwrap p,
+            .p-aboutAnime-centertxt,
+            .p-aboutAnime-boxhead img,
+            .p-aboutAnime-boxhead p,
+            .p-aboutAnime-boxstar li {
+                opacity: 1;
+            }
+
+            .svg-elem-1-sp {
+                -webkit-animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+                animation: animate-svg-stroke-1 1s ease-in-out 0.5s both;
+            }
+
+            .svg-elem-2-sp {
+                -webkit-animation: animate-svg-stroke-2 .18s ease-in-out 1.5s both;
+                animation: animate-svg-stroke-2 .18s ease-in-out 1.5s both;
+            }
+        }
+    }
+}

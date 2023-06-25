@@ -1,0 +1,99 @@
+@use "color" as *;
+
+@font-face {
+  //@75,400
+  font-family: 'Anek Latin';
+  src: url('../fonts/AnekLatin/AnekLatin_Condensed/AnekLatin_Condensed-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: condensed;
+}
+
+@font-face {
+  //@75,500
+  font-family: 'Anek Latin';
+  src: url('../fonts/AnekLatin/AnekLatin_Condensed/AnekLatin_Condensed-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: condensed;
+}
+
+@font-face {
+  //@75,600
+  font-family: 'Anek Latin';
+  src: url('../fonts/AnekLatin/AnekLatin_Condensed/AnekLatin_Condensed-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: condensed;
+}
+
+@font-face {
+  //@75,700
+  font-family: 'Anek Latin';
+  src: url('../fonts/AnekLatin/AnekLatin_Condensed/AnekLatin_Condensed-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: condensed;
+}
+
+@font-face {
+  //@85,400
+  font-family: 'Anek Latin SemiCondensed';
+  src: url('../fonts/AnekLatin/AnekLatin_SemiCondensed/AnekLatin_SemiCondensed-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: semi-condensed;
+}
+
+@font-face {
+  //@85,500
+  font-family: 'Anek Latin SemiCondensed';
+  src: url('../fonts/AnekLatin/AnekLatin_SemiCondensed/AnekLatin_SemiCondensed-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: semi-condensed;
+}
+
+@font-face {
+  //@85,600
+  font-family: 'Anek Latin SemiCondensed';
+  src: url('../fonts/AnekLatin/AnekLatin_SemiCondensed/AnekLatin_SemiCondensed-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: semi-condensed;
+}
+
+@font-face {
+  //@85,700
+  font-family: 'Anek Latin SemiCondensed';
+  src: url('../fonts/AnekLatin/AnekLatin_SemiCondensed/AnekLatin_SemiCondensed-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: semi-condensed;
+}
+
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../fonts/Noto_Sans_JP/NotoSansJP-Medium.otf') format('otf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../fonts/Noto_Sans_JP/NotoSansJP-Bold.otf') format('otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../fonts/Noto_Sans_JP/NotoSansJP-Black.otf') format('otf');
+  font-style: normal;
+  font-weight: 900;
+}
+
+$ff-eng: 'Anek Latin', 'Anek Latin SemiCondensed', sans-serif;
+$ff-jp: 'Noto Sans JP', sans-serif;
+$ff-mix: 'Anek Latin', 'Anek Latin SemiCondensed', 'Noto Sans JP', sans-serif;
