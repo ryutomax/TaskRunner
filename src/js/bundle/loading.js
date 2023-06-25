@@ -3,7 +3,7 @@ import $ from 'jquery'
 
 export default class Loading {
   constructor() {
-    window.addEventListener('pageshow', function (event) {
+    window.addEventListener('pageshow', (event) => {
       if (event.persisted) {
         // bfcache発動時の処理
         // $('body').removeClass('ja-load');
