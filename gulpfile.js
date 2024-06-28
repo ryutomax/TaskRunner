@@ -1,30 +1,28 @@
 "use strict";
+/* eslint no-undef: 0 */
 
 //----------------------------------------------------------------------
 //  モジュール読み込み
 //----------------------------------------------------------------------
-const gulp = require("gulp");
 const { src, dest, watch, series, parallel } = require("gulp");
 
 const sassGlob = require("gulp-sass-glob-use-forward");
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const mqPacker = require('css-mqpacker');
-const purgecss = require("gulp-purgecss");
-const cleancss = require("gulp-clean-css");
+const cleanCss = require("gulp-clean-css");
+
+const browserSync = require("browser-sync").create();  //変更を即座にブラウザへ反映
+const terser = require("gulp-terser");               //jsファイル圧縮用 ES6でも可
 
 const ejs = require('gulp-ejs');                       //EJS
 const htmlBeautify = require("gulp-html-beautify");    //HTML生成後のコードを綺麗にする
 
-const browserSync = require("browser-sync").create();  //変更を即座にブラウザへ反映
-const uglify = require("gulp-uglifyes");               //jsファイル圧縮用 ES6でも可
-
-const connectPhp = require('gulp-connect-php');        //PHP用
-
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");     // webpackの設定ファイルの読み込み
+// webpackの設定をdevelopmentモードで読み込む
+const webpackDevConfig = webpackConfig({ production: false });
 
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");                 //デスクトップ通知
@@ -34,6 +32,7 @@ const rename = require('gulp-rename');                 //ファイル出力時�
 // ** path
 // ========================================
 const srcPath = {
+  'src': './src/',
   'scss': './src/scss/**/*.scss',
   'img': './src/images/**/*',
   'js': './src/js/**/*.js',
@@ -42,11 +41,11 @@ const srcPath = {
 
 };
 const distPath = {
+  'dist': './dist/',
   'css': './dist/assets/css',
-  'html':'./dist/**/*.html',
   'img': './dist/assets/images',
-  'js': './dist/assets/js/nonBundle',
-  'item': './dist',
+  'js': './dist/assets/js/parts',
+  'item': './dist/assets/',
 };
 
 // ========================================
@@ -54,26 +53,15 @@ const distPath = {
 // ========================================
 const webpackTask = () => {
   return webpackStream(webpackConfig, webpack)
-    .pipe(dest("./dist/assets/js/"));
-}
-
-// ========================================
-// ** js copy
-// ========================================
-const jsFunc = () => {
-  return src('./src/js/noBundle/*.js')
-    .pipe(uglify())
-    .pipe(rename({
-          extname: '-min.js'
-    }))
-    .pipe(dest(distPath.js))
+    .pipe(webpackStream(webpackDevConfig, webpack))
+    .pipe(dest(`${distPath.dist}assets/js/`));
 }
 
 // ========================================
 // ** ejs
 // ========================================
 
-const ejsFunc = () => {
+const ejsTask = () => {
   return src([
     srcPath.ejs,
     srcPath.Ejs
@@ -92,38 +80,39 @@ const ejsFunc = () => {
       basename: 'index', //ファイル名
       extname: '.html' //拡張子
     }))
-    .pipe(notify({
-    message: 'ejs compile completely!', //通知コメント
-    onLast: true
-  }))
-    .pipe(dest('./dist'))
+    .pipe(dest('./dist/'))
 }
+
+// ========================================
+// ** js copy
+// ========================================
+const jsMin = () => {
+  return src(`${srcPath.src}js/parts/*.js`)
+    .pipe(terser())
+    .pipe(rename({
+          extname: '-min.js'
+    }))
+    .pipe(dest(distPath.js))
+}
+
 // ========================================
 // ** Sass
 // ========================================
 const cssSass = () => {
   return src(srcPath.scss)
-  .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) )                                  // watch中にエラーが発生してもwatchが止まらないようにする
+  .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
   .pipe( sassGlob() )                                 // glob機能
   .pipe( sass({
     includePaths: ['./scss/']                         // sassコンパイル
   }))
   .pipe(postcss([
     autoprefixer({}),                                 //package.jsonにブラウザリスト記載
-    mqPacker({ sort: true }),                         //メディアクエリまとめる
   ]))
-  .pipe(purgecss({                                    //未使用のスタイルを削除
-    content: [srcPath.js, srcPath.ejs, srcPath.Ejs],  //src()のファイルで使用される可能性のあるファイルを全て指定
-    }))
-  .pipe(cleancss())                                   //コード内の不要な改行やインデントを削除
+  .pipe(cleanCss())                                   //コード内の不要な改行やインデントを削除
   .pipe(rename({
     extname: '-min.css'
   }))
-  .pipe(notify({
-    message: 'Sass compile completely!',              //通知コメント
-    onLast: true
-  }))
-  .pipe(dest("./dist/assets/css/"));
+  .pipe(dest(distPath.css));
 }
 
 // ========================================
@@ -137,7 +126,7 @@ const changed = require("gulp-changed");
 
 const imgMin = () => {
   return src(srcPath.img)
-  .pipe(changed("./dist/assets/images/"))
+  .pipe(changed(distPath.img))
   .pipe(
     imageMin([
       pngquant({
@@ -150,10 +139,6 @@ const imgMin = () => {
       imageMin.gifsicle({ optimizationLevel: 3 }),
     ])
   )
-  .pipe(notify({
-    message: 'image minify completely!',
-    onLast: true
-  }))
   .pipe(dest(distPath.img));
 }
 
@@ -162,7 +147,7 @@ const imgMin = () => {
 // ========================================
 const buildServer = () => {
   browserSync.init({
-    server: './dist/',
+    server: distPath.dist,
     port: 8080,
     ui: false,
   });
@@ -177,22 +162,29 @@ const browserReload = (done) => {
 // ========================================
 // ** buildTask管理(起動時)
 // ========================================
-const buildTask = series(cssSass, jsFunc, webpackTask, ejsFunc, imgMin);
+const buildTask = series(ejsTask, cssSass, jsMin, webpackTask, imgMin);
 
 // ========================================
 // ** watch管理(変更時)
 // ========================================
 const watchTask = () => {
-  watch(srcPath.ejs, parallel(ejsFunc, browserReload));
+  watch(srcPath.img, parallel(imgMin));
+  watch(srcPath.scss, series(cssSass));
+  watch(srcPath.js, parallel(jsMin));
+  watch(srcPath.js, series(webpackTask));
+}
+
+//ブラウザリロード
+const watchReload = () => {
+  watch(srcPath.ejs, parallel(ejsTask, browserReload));
   watch(srcPath.img, parallel(imgMin, browserReload));
   watch(srcPath.scss, series(cssSass, browserReload));
-  watch(srcPath.js, parallel(jsFunc, browserReload));
+  watch(srcPath.js, parallel(jsMin, browserReload));
   watch(srcPath.js, series(webpackTask, browserReload));
-
 }
 
 // =========================
 // ** parallel：並列処理
 // =========================
-//exports.w = parallel(watchTask);
-exports.def = parallel(buildTask, watchTask, buildServer);
+exports.def = parallel(buildTask, watchReload, buildServer);
+exports.wp = parallel(buildTask, watchTask);

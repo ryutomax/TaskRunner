@@ -2,12 +2,12 @@
 1. yarn のインストール
 npm install
 npm i yarn -D
-yarn -v
+yarn -v  (./node_modules/.bin/yarn -v)
 
 v1.22.19
 
 2. 監視状態/ローカルサーバ起動
-yarn start
+yarn start  (./node_modules/.bin/yarn start)
 
 基本的にsrc内のファイルで作業していただきます。
 
@@ -28,7 +28,7 @@ yarn start
    globeフォルダに含まれるファイルを参照可能です
 
 7. メディアクエリを使用する際は_breakpoint.scssでまとめて管理しているので参考にしてください。
-   @include mq (o-pc)) {} >>>> print, screen and (min-width:1201px) {}
+   @include mq (o-pc) {} >>>> print, screen and (min-width:1201px) {}
 
 # js
 
@@ -49,7 +49,7 @@ import Script from './bundle/Script'
 
 インスタンス「new Script();」追加
 
-3. bundleさせたくないものはnoBundleに追加してください。
+3. bundleさせたくないものはpartsに追加してください。
 圧縮のみ行われます。
 
 # image
