@@ -1,5 +1,6 @@
 "use strict";
 /* eslint no-undef: 0 */
+/* eslint no-unused-vars: 0 */
 
 //----------------------------------------------------------------------
 //  モジュール読み込み
@@ -47,6 +48,12 @@ const distPath = {
   'js': './dist/assets/js/parts',
   'item': './dist/assets/',
 };
+const distPathWp = {
+  'dist': '../assets/',
+  'css': '../assets/css',
+  'img': '../assets/images',
+  'js': '../assets/js/parts',
+};
 
 // ========================================
 // ** webpack連携
@@ -60,7 +67,6 @@ const webpackTask = () => {
 // ========================================
 // ** ejs
 // ========================================
-
 const ejsTask = () => {
   return src([
     srcPath.ejs,
@@ -94,7 +100,6 @@ const jsMin = () => {
     }))
     .pipe(dest(distPath.js))
 }
-
 // ========================================
 // ** Sass
 // ========================================
@@ -114,11 +119,9 @@ const cssSass = () => {
   }))
   .pipe(dest(distPath.css));
 }
-
 // ========================================
 // img最適化
 // ========================================
-
 const imageMin = require("gulp-imagemin");              // npm i -D gulp-imagemin@7.1.0
 const mozjpeg = require("imagemin-mozjpeg");
 const pngquant = require("imagemin-pngquant");

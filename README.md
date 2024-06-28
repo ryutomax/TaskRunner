@@ -1,13 +1,14 @@
 # タスクランナー
 1. yarn のインストール
-npm install
-npm i yarn -D
-yarn -v  (./node_modules/.bin/yarn -v)
-
+$ npm i yarn -D
+$ yarn -v  (./node_modules/.bin/yarn -v)
 v1.22.19
 
+$ yarn install
+
 2. 監視状態/ローカルサーバ起動
-yarn start  (./node_modules/.bin/yarn start)
+$ yarn def
+$ yarn wp 
 
 基本的にsrc内のファイルで作業していただきます。
 
