@@ -22,11 +22,10 @@ const htmlBeautify = require("gulp-html-beautify");    //HTML生成後のコー�
 const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");     // webpackの設定ファイルの読み込み
-// webpackの設定をdevelopmentモードで読み込む
-const webpackDevConfig = webpackConfig({ production: false });
+const webpackDevConfig = webpackConfig({ production: false }); // webpackの設定をdevelopmentモードで読み込む
 
 const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");                 //デスクトップ通知
+const notify = require("gulp-notify");                 //通知
 const rename = require('gulp-rename');                 //ファイル出力時にファイル名を変える
 
 // ========================================
@@ -41,19 +40,21 @@ const srcPath = {
   'Ejs': '!./src/ejs/include/*.ejs',  //除外指定
 
 };
+
 const distPath = {
-  'dist': './dist/',
-  'css': './dist/assets/css',
-  'img': './dist/assets/images',
-  'js': './dist/assets/js/parts',
-  'item': './dist/assets/',
-};
-const distPathWp = {
-  'dist': '../assets/',
-  'css': '../assets/css',
-  'img': '../assets/images',
-  'js': '../assets/js/parts',
-};
+    'dist': './dist/',
+    'css': './dist/assets/css',
+    'img': './dist/assets/images',
+    'js': './dist/assets/js/parts',
+    'item': './dist/assets/',
+  };
+
+//const distPath = {
+//   'dist': '../',
+//   'css': '../assets/css',
+//   'img': '../assets/images',
+//   'js': '../assets/js/parts',
+// };
 
 // ========================================
 // ** webpack連携
@@ -92,7 +93,7 @@ const ejsTask = () => {
 // ========================================
 // ** js copy
 // ========================================
-const jsMin = () => {
+const jsTask = () => {
   return src(`${srcPath.src}js/parts/*.js`)
     .pipe(terser())
     .pipe(rename({
@@ -103,46 +104,46 @@ const jsMin = () => {
 // ========================================
 // ** Sass
 // ========================================
-const cssSass = () => {
+const cssTask = () => {
   return src(srcPath.scss)
-  .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
-  .pipe( sassGlob() )                                 // glob機能
-  .pipe( sass({
-    includePaths: ['./scss/']                         // sassコンパイル
-  }))
-  .pipe(postcss([
-    autoprefixer({}),                                 //package.jsonにブラウザリスト記載
-  ]))
-  .pipe(cleanCss())                                   //コード内の不要な改行やインデントを削除
-  .pipe(rename({
-    extname: '-min.css'
-  }))
-  .pipe(dest(distPath.css));
+    .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
+    .pipe( sassGlob() )                                 // glob機能
+    .pipe( sass({
+      includePaths: ['./scss/']                         // sassコンパイル
+    }))
+    .pipe(postcss([
+      autoprefixer({}),                                 //package.jsonにブラウザリスト記載
+    ]))
+    .pipe(cleanCss())                                   //コード内の不要な改行やインデントを削除
+    .pipe(rename({
+      extname: '-min.css'
+    }))
+    .pipe(dest(distPath.css));
 }
 // ========================================
 // img最適化
 // ========================================
-const imageMin = require("gulp-imagemin");              // npm i -D gulp-imagemin@7.1.0
+const imageMin = require("gulp-imagemin");              // yarn add gulp-imagemin@7.1.0
 const mozjpeg = require("imagemin-mozjpeg");
 const pngquant = require("imagemin-pngquant");
 const changed = require("gulp-changed");
 
-const imgMin = () => {
-  return src(srcPath.img)
-  .pipe(changed(distPath.img))
-  .pipe(
-    imageMin([
-      pngquant({
-          quality: [0.6, 0.7],
-          speed: 1,
-      }),
-      mozjpeg({ quality: 65 }),
-      imageMin.svgo(),
-      imageMin.optipng(),
-      imageMin.gifsicle({ optimizationLevel: 3 }),
-    ])
-  )
-  .pipe(dest(distPath.img));
+const imgTask = () => {
+  return src(srcPath.img, {encoding: false})
+    .pipe(changed(distPath.img))
+    .pipe(
+      imageMin([
+        pngquant({
+            quality: [0.6, 0.7],
+            speed: 1,
+        }),
+        mozjpeg({ quality: 65 }),
+        imageMin.svgo(),
+        imageMin.optipng(),
+        imageMin.gifsicle({ optimizationLevel: 3 }),
+      ])
+    )
+    .pipe(dest(distPath.img));
 }
 
 // ========================================
@@ -165,24 +166,24 @@ const browserReload = (done) => {
 // ========================================
 // ** buildTask管理(起動時)
 // ========================================
-const buildTask = series(ejsTask, cssSass, jsMin, webpackTask, imgMin);
+const buildTask = series(ejsTask, cssTask, imgTask, webpackTask, jsTask);
 
 // ========================================
 // ** watch管理(変更時)
 // ========================================
 const watchTask = () => {
-  watch(srcPath.img, parallel(imgMin));
-  watch(srcPath.scss, series(cssSass));
-  watch(srcPath.js, parallel(jsMin));
+  watch(srcPath.img, parallel(imgTask));
+  watch(srcPath.scss, series(cssTask));
+  watch(srcPath.js, parallel(jsTask));
   watch(srcPath.js, series(webpackTask));
 }
 
 //ブラウザリロード
 const watchReload = () => {
   watch(srcPath.ejs, parallel(ejsTask, browserReload));
-  watch(srcPath.img, parallel(imgMin, browserReload));
-  watch(srcPath.scss, series(cssSass, browserReload));
-  watch(srcPath.js, parallel(jsMin, browserReload));
+  watch(srcPath.img, parallel(imgTask, browserReload));
+  watch(srcPath.scss, series(cssTask, browserReload));
+  watch(srcPath.js, parallel(jsTask, browserReload));
   watch(srcPath.js, series(webpackTask, browserReload));
 }
 
