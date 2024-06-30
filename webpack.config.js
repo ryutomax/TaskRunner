@@ -1,9 +1,9 @@
 "use strict";
 /* eslint no-undef: 0 */
 
-const TerserPlugin = require('terser-webpack-plugin');
+import TerserPlugin from 'terser-webpack-plugin';
 
-module.exports = (env) => {
+export default (env) => {
   return {
     mode: env.production ? "production" : "development",
 

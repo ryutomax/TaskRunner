@@ -1,3 +1,3 @@
-import About from './bundle/about/About'
+import About from './bundle/about/About.js'
 
 new About();

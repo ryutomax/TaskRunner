@@ -2,6 +2,7 @@
   "name": "web_dev",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "entry.js",
   "scripts": {
     "dev": "webpack --mode development",

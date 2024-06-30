@@ -5,28 +5,11 @@
 //----------------------------------------------------------------------
 //  モジュール読み込み
 //----------------------------------------------------------------------
-const { src, dest, watch, series, parallel } = require("gulp");
+import { src, dest, watch, series, parallel } from "gulp";
 
-const sassGlob = require("gulp-sass-glob-use-forward");
-const sass = require('gulp-sass')(require('sass'));
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cleanCss = require("gulp-clean-css");
-
-const browserSync = require("browser-sync").create();  //変更を即座にブラウザへ反映
-const terser = require("gulp-terser");               //jsファイル圧縮用 ES6でも可
-
-const ejs = require('gulp-ejs');                       //EJS
-const htmlBeautify = require("gulp-html-beautify");    //HTML生成後のコードを綺麗にする
-
-const webpackStream = require("webpack-stream");
-const webpack = require("webpack");
-const webpackConfig = require("./webpack.config");     // webpackの設定ファイルの読み込み
-const webpackDevConfig = webpackConfig({ production: false }); // webpackの設定をdevelopmentモードで読み込む
-
-const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");                 //通知
-const rename = require('gulp-rename');                 //ファイル出力時にファイル名を変える
+import plumber from "gulp-plumber";
+import notify from "gulp-notify";                 //通知
+import rename from 'gulp-rename';                 //ファイル出力時にファイル名を変える
 
 // ========================================
 // ** path
@@ -59,8 +42,14 @@ const distPath = {
 // ========================================
 // ** webpack連携
 // ========================================
+import webpackStream from "webpack-stream";
+import webpack from "webpack";
+import webpackConfig from "./webpack.config.js";     // webpackの設定ファイルの読み込み
+const webpackDevConfig = webpackConfig({ production: false }); // webpackの設定をdevelopmentモードで読み込む
+
 const webpackTask = () => {
   return webpackStream(webpackConfig, webpack)
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(webpackStream(webpackDevConfig, webpack))
     .pipe(dest(`${distPath.dist}assets/js/`));
 }
@@ -68,12 +57,16 @@ const webpackTask = () => {
 // ========================================
 // ** ejs
 // ========================================
+import ejs from 'gulp-ejs';                       //EJS
+import htmlBeautify from "gulp-html-beautify";    //HTML生成後のコードを綺麗にする
+
 const ejsTask = () => {
   return src([
     srcPath.ejs,
     srcPath.Ejs
   ])
     .pipe(ejs({}, {}, {ext: '.html'}))
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(htmlBeautify({
       "indent_size": 2,
       "indent_char": " ",
@@ -89,10 +82,11 @@ const ejsTask = () => {
     }))
     .pipe(dest('./dist/'))
 }
-
 // ========================================
 // ** js copy
 // ========================================
+import terser from "gulp-terser";               //jsファイル圧縮用 ES6でも可
+
 const jsTask = () => {
   return src(`${srcPath.src}js/parts/*.js`)
     .pipe(terser())
@@ -104,11 +98,19 @@ const jsTask = () => {
 // ========================================
 // ** Sass
 // ========================================
+import sass from 'gulp-sass';
+import dartSass from 'sass';
+const gulpSass = sass(dartSass);
+import sassGlob from "gulp-sass-glob-use-forward";
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cleanCss from "gulp-clean-css";
+
 const cssTask = () => {
   return src(srcPath.scss)
     .pipe( plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }) ) // watch中にエラーが発生してもwatchが止まらないようにする
     .pipe( sassGlob() )                                 // glob機能
-    .pipe( sass({
+    .pipe( gulpSass({
       includePaths: ['./scss/']                         // sassコンパイル
     }))
     .pipe(postcss([
@@ -123,13 +125,14 @@ const cssTask = () => {
 // ========================================
 // img最適化
 // ========================================
-const imageMin = require("gulp-imagemin");              // yarn add gulp-imagemin@7.1.0
-const mozjpeg = require("imagemin-mozjpeg");
-const pngquant = require("imagemin-pngquant");
-const changed = require("gulp-changed");
+import imageMin from "gulp-imagemin";              // yarn add gulp-imagemin@7.1.0
+import mozjpeg from "imagemin-mozjpeg";
+import pngquant from "imagemin-pngquant";
+import changed from "gulp-changed";
 
 const imgTask = () => {
   return src(srcPath.img, {encoding: false})
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed(distPath.img))
     .pipe(
       imageMin([
@@ -149,6 +152,9 @@ const imgTask = () => {
 // ========================================
 // **ローカルサーバー起動
 // ========================================
+import browserSync from "browser-sync";  //変更を即座にブラウザへ反映
+browserSync.create();
+
 const buildServer = () => {
   browserSync.init({
     server: distPath.dist,
@@ -190,5 +196,5 @@ const watchReload = () => {
 // =========================
 // ** parallel：並列処理
 // =========================
-exports.def = parallel(buildTask, watchReload, buildServer);
-exports.wp = parallel(buildTask, watchTask);
+export const def = parallel(buildTask, watchReload, buildServer);
+export const wp = parallel(buildTask, watchTask);
